@@ -27,6 +27,19 @@ Drie onderwerpen die je profiel versterken: causal inference voor consulting ('w
 - **Opdracht:** schat het causale effect van een interventie op een publieke dataset, mét en zonder correctie voor confounders.
 - **Opdracht:** een GNN voor node-classificatie; daarna een time-series-model op eigen crypto- of beursdata (met eerlijke backtest).
 
+## 💼 Praktijkopdracht: Werkte de kortingsactie echt?
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Supermarktketen Buurtwinkel** (fictief; denk aan een grote Nederlandse supermarkt). Ze stuurden klanten persoonlijke kortingsbonnen. |
+| **De vraag** | "Klanten die een bon kregen, gaven daarna meer uit. Marketing wil het budget verdubbelen. Is dat terecht?" |
+| **Wat je krijgt** | De [Dunnhumby *The Complete Journey*-dataset](https://www.dunnhumby.com/source-files/): twee jaar aankopen van 2.500 huishoudens, inclusief campagnes en bonnen. |
+| **Wat je oplevert** | Een causale analyse (bijv. propensity score matching en difference-in-differences) met een causaal diagram van je aannames, en een memo voor de marketingdirecteur. |
+| **Het addertje** | De bonnen gingen vooral naar klanten die al veel kochten. Hoeveel van het 'effect' is dus gewoon selectie? |
+| **Wanneer is het goed?** | Je scheidt correlatie en causaliteit expliciet, je benoemt je aannames, en je advies geeft een realistische schatting met onzekerheid. |
+
 ## Belangrijkste bronnen
 
 - 📖 Matheus Facure, [*Causal Inference for the Brave and True*](https://matheusfacure.github.io/python-causality-handbook/) (gratis)

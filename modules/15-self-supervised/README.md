@@ -32,6 +32,19 @@ En de grootste self-supervised modellen van allemaal? Dat zijn de taalmodellen z
 - **Opdracht:** implementeer SimCLR op CIFAR-10 en meet met een linear probe hoe goed de representaties zijn, vergeleken met een supervised model.
 - **Opdracht:** gebruik CLIP voor zero-shot classificatie en zoeken in een eigen fotocollectie ("vind alle foto's van een fiets in de sneeuw").
 
+## 💼 Praktijkopdracht: Zoeken in een museumcollectie zonder labels
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Een groot Nederlands museum** (denk aan het Rijksmuseum). Ze hebben honderdduizenden gedigitaliseerde werken, maar de beschrijvingen zijn onvolledig. |
+| **De vraag** | "Bezoekers willen zoeken op wat er te zien is ("een hond bij een open haard"), niet op inventarisnummer. Kan dat zonder alles met de hand te labelen?" |
+| **Wat je krijgt** | Open data en afbeeldingen van het Rijksmuseum via [data.rijksmuseum.nl](https://data.rijksmuseum.nl), met CLIP- of DINO-embeddings. |
+| **Wat je oplevert** | Een zoekdemo (tekst-naar-beeld en beeld-naar-beeld), een kleine evaluatie op zelf gelabelde zoekvragen, en een analyse van waar het misgaat. |
+| **Het addertje** | CLIP is getraind op moderne internetfoto's. Hoe goed werkt het op 17e-eeuwse schilderijen, en kun je dat verbeteren zonder labels? |
+| **Wanneer is het goed?** | Je meet de zoekkwaliteit (bijv. recall@10) in plaats van alleen mooie voorbeelden te tonen, en je benoemt eerlijk de grenzen. |
+
 ## Belangrijkste bronnen
 
 - 📄 [SimCLR](https://arxiv.org/abs/2002.05709) · [DINO](https://arxiv.org/abs/2104.14294) · [MAE](https://arxiv.org/abs/2111.06377) · [CLIP](https://arxiv.org/abs/2103.00020)

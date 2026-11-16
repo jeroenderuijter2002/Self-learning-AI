@@ -32,6 +32,19 @@ RL is de techniek achter AlphaGo, robotica en (via module 2) RLHF en reasoning-m
 - **Opdracht:** Q-learning en DQN op Gymnasium-omgevingen (CartPole, LunarLander).
 - **Opdracht:** PPO van scratch, daarna vergelijken met een bibliotheekimplementatie.
 
+## 💼 Praktijkopdracht: Handelen met een thuisbatterij-park
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Energiebedrijf Wadstroom** (fictief; denk aan een Nederlandse energieleverancier). Ze beheren een groot batterijpark en handelen op de stroommarkt. |
+| **De vraag** | "Een tech-bureau belooft dat reinforcement learning onze batterij slimmer laat handelen dan ons huidige optimalisatiemodel. Klopt dat?" |
+| **Wat je krijgt** | Historische Nederlandse day-ahead-stroomprijzen van [energy-charts.info](https://energy-charts.info). |
+| **Wat je oplevert** | Een RL-agent (bijv. DQN of PPO) en een eerlijke vergelijking met een baseline die jij als regeltechnicus al kent: een LP of MPC met perfecte en met voorspelde prijzen. Plus een advies aan de directie. |
+| **Het addertje** | In de backtest lijkt RL te winnen, maar is dat ook zo op een periode die het nooit gezien heeft (bijv. de prijspieken van 2022)? |
+| **Wanneer is het goed?** | Je vergelijking is eerlijk (zelfde informatie, zelfde periode, out-of-sample), en je advies zegt wanneer RL hier wél en niet de moeite waard is. |
+
 ## Belangrijkste bronnen
 
 - 📖 Sutton & Barto, [*Reinforcement Learning: An Introduction*](http://incompleteideas.net/book/the-book-2nd.html) (gratis)

@@ -23,7 +23,7 @@ Na deze cursus kun je:
 
 **Uitgangspunt:** de ML-basis wordt **niet** opnieuw uitgelegd. Waar een module erop voortbouwt, staat een korte "🔁 Weet je nog?"-verwijzing in plaats van een herhaling. Elke module vermeldt bovenaan welke voorkennis wordt overgeslagen.
 
-**Filosofie:** zelf bouwen gaat boven lezen. Elke module krijgt uitleg in verhaalvorm, figuren met echte data, speeltuinen en opdrachten waarin je dingen vanaf nul implementeert, plus een voorbeeld uit de praktijk (🌍) dat laat zien waarom het ertoe doet. Een module is een hoofdstuk, geen collegeblok. Werk in je eigen tempo.
+**Filosofie:** zelf bouwen gaat boven lezen. Elke module krijgt uitleg in verhaalvorm, figuren met echte data, speeltuinen en opdrachten waarin je dingen vanaf nul implementeert, plus een voorbeeld uit de praktijk (🌍) dat laat zien waarom het ertoe doet, en een 💼 praktijkopdracht waarin je als consultant een klantvraag oplost. Een module is een hoofdstuk, geen collegeblok. Werk in je eigen tempo.
 
 ---
 
@@ -193,13 +193,15 @@ Elke module noemt daarnaast zijn eigen papers, boeken en tools onder *Belangrijk
 ```
 README.md               ← je bent hier
 SOFTWARE.md             ← installatie
+STIJLGIDS.md            ← hoe een module gemaakt wordt (voor Claude en voor jezelf)
+PROMPT-NIEUWE-MODULE.md ← de prompt om een module in een nieuwe chat te laten uitwerken
 minis/                  ← korte deep-dives (+ figures/)
 modules/
   01-transformers/
     README.md           ← leerdoelen, leespad, planning
     notes/              ← uitleg (lees deze in volgorde)
     figures/            ← alle figuren uit de notes
-    opdrachten/         ← opdrachten + Python-skeletons
+    opdrachten/         ← opdrachten + Python-skeletons + 💼 praktijkopdracht
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
   02-training/ … 20-recommender-systems/
@@ -218,4 +220,5 @@ tools/
 2. Wissel **notes** af met **video's** en **speeltuinen**. De notes zeggen wanneer je wat opent (▶ Probeer het zelf).
 3. Doe de **opdrachten**. De code-opdrachten hebben ingebouwde tests: als `python oX_....py` "Alle tests geslaagd!" print, ben je klaar.
 4. Maak de **zelftoets** zonder te spieken. Kun je een vraag niet beantwoorden, ga dan terug naar de notes.
-5. Zet de module in het [routediagram](#aanbevolen-route) op groen: pas `class ... had` aan en verplaats de 📍 naar je volgende module.
+5. Sluit af met de **💼 praktijkopdracht**: een consultancy-case waarin een (fictieve) klant met een echte vraag komt, met publieke data. Hier pas je alles toe, en het levert portfoliomateriaal op.
+6. Zet de module in het [routediagram](#aanbevolen-route) op groen: pas `class ... had` aan en verplaats de 📍 naar je volgende module.

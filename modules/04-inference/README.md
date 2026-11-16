@@ -29,6 +29,19 @@ Een model trainen gebeurt één keer; het draaien gebeurt miljarden keren. Koste
 - **Opdracht:** draai een open model lokaal in 16-, 8- en 4-bit en meet snelheid, geheugen en kwaliteit.
 - **Opdracht:** LoRA-fine-tune op je laptop of Colab; vergelijk met volledige fine-tuning op een klein model.
 
+## 💼 Praktijkopdracht: De AI-rekening moet omlaag
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Startup Tolkie** (fictief; denk aan een vertaal- of chat-startup). Hun product draait op een open model op gehuurde GPU's. |
+| **De vraag** | "Onze GPU-rekening groeit harder dan onze omzet. Kunnen we dezelfde kwaliteit leveren voor een vijfde van de kosten?" |
+| **Wat je krijgt** | Het model en de evaluatieset uit je praktijkopdracht van module 2 of 3, en een gratis Colab- of gehuurde GPU. |
+| **Wat je oplevert** | Metingen van latency, throughput, geheugen en kwaliteit voor minstens drie varianten (bijv. FP16, 4-bit quantization, een gedistilleerd kleiner model), en een kostenmodel per 1.000 gebruikers. |
+| **Het addertje** | De CEO wil ook dat antwoorden binnen 1 seconde beginnen (time to first token). Sommige besparingen maken dat juist slechter. |
+| **Wanneer is het goed?** | Je presenteert een duidelijke afweging (kosten tegenover kwaliteit tegenover snelheid) als grafiek, en een keuze die je kunt verdedigen. |
+
 ## Belangrijkste bronnen
 
 - 📄 [LoRA](https://arxiv.org/abs/2106.09685) · [QLoRA](https://arxiv.org/abs/2305.14314) · [FlashAttention](https://arxiv.org/abs/2205.14135) · [Distillation (Hinton)](https://arxiv.org/abs/1503.02531)

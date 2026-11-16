@@ -30,6 +30,19 @@ Moderne AI is in de kern een rekenprobleem: wie de hardware het slimst benut, tr
 - **Opdracht:** schrijf een fused softmax-kernel in Triton en meet de versnelling tegenover PyTorch.
 - **Opdracht:** train je mini-GPT uit O3 met DDP over meerdere GPU's (Colab of een gehuurde cloud-GPU) en meet de schaalbaarheid.
 
+## 💼 Praktijkopdracht: Training binnen budget
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **AI-startup Taalkracht** (fictief). Ze trainen een eigen klein taalmodel, maar de training duurt een week en de investeerders kijken mee. |
+| **De vraag** | "Maak onze training minstens drie keer zo snel, en vertel ons wat een model twee keer zo groot zou kosten." |
+| **Wat je krijgt** | Je mini-GPT uit opdracht O3 (module 1), en gratis of goedkope GPU's (Colab, Kaggle, of een gehuurde GPU van een paar euro per uur). |
+| **Wat je oplevert** | Een profileringsrapport (waar gaat de tijd heen?), een geoptimaliseerde versie (mixed precision, `torch.compile`, fused kernels, eventueel meerdere GPU's), de gemeten versnelling en MFU, en een kostenprognose. |
+| **Het addertje** | Het budget voor deze opdracht is €50 aan GPU-tijd. Plan je experimenten zo dat je daarbinnen blijft. |
+| **Wanneer is het goed?** | Elke versnelling is gemeten en verklaard, je kostenprognose rust op je eigen metingen, en je bleef binnen budget. |
+
 ## Belangrijkste bronnen
 
 - 📖 Hugging Face, [*The Ultra-Scale Playbook*](https://huggingface.co/spaces/nanotron/ultrascale-playbook): gratis, interactief, over trainen op duizenden GPU's

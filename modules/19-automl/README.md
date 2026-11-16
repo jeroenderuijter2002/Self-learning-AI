@@ -32,6 +32,19 @@ Het is precies het probleem van deze module: je wilt een functie optimaliseren w
 - **Opdracht:** implementeer Bayesiaanse optimalisatie met een GP en Expected Improvement vanaf nul, en vergelijk met random search en Optuna op een echt model.
 - **Opdracht:** zet AutoGluon tegenover je eigen, met de hand getunede gradient boosting uit module 14. Wie wint, en wat kost het?
 
+## 💼 Praktijkopdracht: Kunnen we ons data science-team vervangen door AutoML?
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Verzekeraar Polderpolis** (fictief). De CFO las dat AutoML 'net zo goed is als een data scientist'. |
+| **De vraag** | "Kunnen we bezuinigen op ons team en alles met AutoML doen? Wij willen een eerlijk antwoord, geen verkooppraatje." |
+| **Wat je krijgt** | Vijf tot tien datasets van [OpenML](https://www.openml.org), [AutoGluon](https://auto.gluon.ai), en je eigen getunede modellen uit module 14. |
+| **Wat je oplevert** | Een benchmark van AutoML tegenover handwerk (kwaliteit, rekentijd, kosten), plus een analyse van wat AutoML níet doet, en een memo voor de CFO. |
+| **Het addertje** | Op de benchmark wint AutoML vaak. Maar de lastigste fouten in de praktijk (verkeerde doelvariabele, datalekken) zitten vóór de modelkeuze. Hoe laat je dat zien? |
+| **Wanneer is het goed?** | Je memo is genuanceerd en concreet: waar AutoML het team versterkt, waar het tekortschiet, met cijfers uit je eigen benchmark. |
+
 ## Belangrijkste bronnen
 
 - 📖 Hutter, Kotthoff & Vanschoren (red.), [*Automated Machine Learning*](https://www.automl.org/book/) (gratis, open access)

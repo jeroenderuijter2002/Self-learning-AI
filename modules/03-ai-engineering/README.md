@@ -32,6 +32,19 @@ Dit is wat bedrijven nu het meest bouwen en wat consultancies als QuantumBlack e
 - **Opdracht:** bouw een kleine agent met 3 tools en schrijf evals voor zijn faalgevallen.
 - Dit project zet je in module 11 in productie: samen een sterk portfolio-item.
 
+## 💼 Praktijkopdracht: Een juridische assistent die zijn bronnen noemt
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Advocatenkantoor Van Dijk & De Boer** (fictief). Hun juristen zoeken dagelijks in wetgeving en willen een AI-assistent. |
+| **De vraag** | "Bouw een assistent die vragen over het arbeidsrecht beantwoordt. Maar hij mag nooit iets verzinnen: elk antwoord moet naar een wetsartikel verwijzen." |
+| **Wat je krijgt** | Wetteksten van [wetten.overheid.nl](https://wetten.overheid.nl), bijvoorbeeld Boek 7 Titel 10 BW (de arbeidsovereenkomst). |
+| **Wat je oplevert** | Een werkend RAG-systeem met bronvermelding, een evaluatieset van minstens 30 vragen met de juiste artikelen, en een rapport over waar het systeem faalt. |
+| **Het addertje** | Een partner test het met een vraag waarvan het antwoord **niet** in de wet staat. Je systeem moet durven zeggen dat het het niet weet. |
+| **Wanneer is het goed?** | Je meet retrieval en antwoordkwaliteit apart, je kent de foutcategorieën van je systeem, en je kunt aantonen dat het 'ik weet het niet' zegt wanneer dat moet. |
+
 ## Belangrijkste bronnen
 
 - 📖 Chip Huyen, *AI Engineering* (O'Reilly, 2025)

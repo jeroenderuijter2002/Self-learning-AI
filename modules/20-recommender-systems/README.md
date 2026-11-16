@@ -32,6 +32,19 @@ Hoeveel recommenders waard zijn, schreven twee Netflix-topmensen in 2015: het aa
 - **Opdracht:** bouw op MovieLens een recommender in drie stappen: populariteit, matrixfactorisatie en een two-tower-model. Vergelijk ze op recall@10 en op hoe gevarieerd de aanbevelingen zijn.
 - **Opdracht:** simuleer een feedback loop: laat je model steeds trainen op klikken die het zelf heeft veroorzaakt, en meet hoe de aanbevelingen versmallen.
 
+## 💼 Praktijkopdracht: Aanbevelingen voor een streamingdienst
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Streamingdienst Kijkdoos** (fictief; denk aan Netflix of Videoland). Ze willen kijkers langer vasthouden met betere aanbevelingen. |
+| **De vraag** | "Bouw een aanbevelingssysteem dat beter is dan 'meest bekeken'. En zorg dat nieuwe abonnees ook meteen iets goeds zien." |
+| **Wat je krijgt** | [MovieLens](https://grouplens.org/datasets/movielens/) (miljoenen echte filmbeoordelingen). |
+| **Wat je oplevert** | Een recommender in stappen (populariteit, matrixfactorisatie, two-tower), offline evaluatie (recall@k, diversiteit, dekking), een cold-start-oplossing, en een A/B-testplan voor de lancering. |
+| **Het addertje** | De contentafdeling wil dat eigen Nederlandse producties vaker worden getoond, ook als het model ze lager inschat. Hoe verwerk je dat, en wat kost het? |
+| **Wanneer is het goed?** | Je verslaat de populariteits-baseline aantoonbaar, je cold-start-aanpak werkt, en je maakt de afweging tussen kijkersgedrag en bedrijfsdoelen expliciet. |
+
 ## Belangrijkste bronnen
 
 - 📄 Koren, Bell & Volinsky, [*Matrix Factorization Techniques for Recommender Systems*](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf) (2009, van het winnende Netflix Prize-team)

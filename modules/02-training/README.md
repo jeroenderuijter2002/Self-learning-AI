@@ -31,6 +31,19 @@ Module 1 eindigde met een raadsel: GPT-2 en Claude hebben grofweg dezelfde archi
 - **Opdracht:** train een mini reward model op voorkeursparen en gebruik het om antwoorden te rangschikken.
 - **Experiment:** reproduceer een scaling-curve met je mini-GPT uit O3 (3–4 modelgroottes, zelfde data).
 
+## 💼 Praktijkopdracht: Fine-tunen of prompten?
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Verzekeraar Zeeland Zeker** (fictief; denk aan een middelgrote Nederlandse verzekeraar). Ze willen een AI-assistent voor hun klantenservice. |
+| **De vraag** | "Een leverancier wil ons een eigen, gefinetuned model verkopen voor een flink bedrag. Is dat nodig, of kan een bestaand model met een goede prompt het ook?" |
+| **Wat je krijgt** | De [Bitext customer support-dataset](https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset) en een klein open model zoals [Qwen2.5-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct), met [TRL](https://huggingface.co/docs/trl) voor de training. |
+| **Wat je oplevert** | Een vergelijking van drie varianten (basismodel met prompt, LoRA-SFT, en SFT plus DPO), een kleine evaluatieset die je zelf opstelt, en een adviespresentatie van 5 slides. |
+| **Het addertje** | Juridische zaken eist dat de assistent **nooit** een dekking toezegt die niet in de polis staat. Hoe meet je dat, en welke variant gaat er het best mee om? |
+| **Wanneer is het goed?** | Je advies rust op metingen, niet op gevoel: kwaliteit, kosten en risico staan naast elkaar, en je kunt uitleggen *waarom* fine-tuning hier wel of niet helpt. |
+
 ## Belangrijkste bronnen
 
 - 🎬 Karpathy, [*Deep Dive into LLMs like ChatGPT*](https://www.youtube.com/watch?v=7xTGNNLPyMI): het hele trainingsverhaal in 3,5 uur

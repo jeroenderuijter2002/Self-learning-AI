@@ -30,6 +30,19 @@
 - **Opdracht:** werk 6 systeemontwerp-cases schriftelijk uit en laat ze door Claude kritisch beoordelen als 'interviewer'.
 - **Opdracht:** analyseer een A/B-test op een publieke dataset, inclusief power-berekening.
 
+## 💼 Praktijkopdracht: Het ontwerpgesprek met de partner
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Maaltijdbezorger Hapklaar** (fictief; denk aan een maaltijdbezorgplatform). Klanten klagen dat de verwachte bezorgtijd nooit klopt. |
+| **De vraag** | "Ontwerp het systeem dat de bezorgtijd voorspelt. Je presenteert het morgen aan de partner." |
+| **Wat je krijgt** | Geen dataset: dit is een ontwerpopdracht. Gebruik openbare blogs van bezorgbedrijven als inspiratie. |
+| **Wat je oplevert** | Een ontwerpdocument van maximaal 4 pagina's (doel, metrics, data, model, serving, evaluatie, A/B-test, risico's), en een gesprek van 45 minuten waarin Claude de kritische partner speelt. |
+| **Het addertje** | De partner vraagt: "Is het niet beter om de tijd iets te ruim te schatten?" Wat is de juiste metric, en wie bepaalt dat? |
+| **Wanneer is het goed?** | Je begint bij het bedrijfsdoel en niet bij het model, je maakt bewuste afwegingen, en je blijft overeind bij doorvragen. |
+
 ## Belangrijkste bronnen
 
 - 📖 Chip Huyen, *Designing Machine Learning Systems*

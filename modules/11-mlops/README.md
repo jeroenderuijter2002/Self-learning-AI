@@ -30,6 +30,19 @@ Een model dat in een notebook werkt is pas het begin. Bij een klant is de vraag:
 - **Eindproject:** zet het RAG-systeem uit module 3 in productie: gecontaineriseerd, met CI/CD, tracing, monitoring en een dashboard.
 - Samen met module 3 is dit je sterkste portfolioproject voor sollicitaties.
 
+## 💼 Praktijkopdracht: Een model dat stilletjes slechter wordt
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Deelfietsbedrijf Trapper** (fictief; denk aan een deelfietsaanbieder). Ze voorspellen de vraag per station om fietsen te herverdelen. |
+| **De vraag** | "Ons model werkte in de zomer prima, maar in de herfst ging het mis en niemand merkte het. Zorg dat dat nooit meer gebeurt." |
+| **Wat je krijgt** | Openbare ritdata van [Capital Bikeshare](https://capitalbikeshare.com/system-data), plus [MLflow](https://mlflow.org) en [Evidently](https://www.evidentlyai.com). |
+| **Wat je oplevert** | Een pipeline met experiment tracking, automatische deployment, een monitoringdashboard dat drift detecteert, en een hertrainingsbeleid. Simuleer een jaar 'in productie' door de data maand voor maand af te spelen. |
+| **Het addertje** | Niet elke drift is erg. Wanneer hertrain je, en wanneer is het een vals alarm? |
+| **Wanneer is het goed?** | Je systeem slaat alarm vóórdat de fout duur wordt, je hertrainingsbeleid is onderbouwd, en je kunt het verhaal van Zillow (de 🌍-case) erbij vertellen. |
+
 ## Belangrijkste bronnen
 
 - 🎓 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) (DataTalksClub, gratis)

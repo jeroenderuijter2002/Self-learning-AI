@@ -62,10 +62,11 @@ Een paar van de 15 figuren in deze module, allemaal gemaakt met echte modeldata:
 | 13 | ▶ Speeltuin | [Sampling](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/sampling.html) | 10 min |
 | 14 | 🛠️ Opdracht | [O4: GPT-2 onder de loep](opdrachten/O4-gpt2-onder-de-loep.md) | 1–2 u |
 | 15 | ✅ Toets | [Zelftoets](zelftoets.md) | 30 min |
+| 16 | 💼 Praktijk | [P1: De Nederlandse token-belasting](opdrachten/P1-token-belasting.md): een consultancy-opdracht voor een uitgever | 3–4 u |
 
-**Totaal:** ongeveer 15–20 uur. Verspreid over 2–3 weken naast je thesis is dat goed te doen.
+**Totaal:** ongeveer 18–24 uur. Verspreid over 2–3 weken naast je thesis is dat goed te doen.
 
-> De ▶-links werken zodra GitHub Pages aan staat (zie de [hoofd-README](../../README.md#-speeltuinen-interactief)). Lokaal kun je de bestanden in [`interactief/`](../../interactief/) ook gewoon openen.
+> De ▶-speeltuinen werken online, maar je kunt de bestanden in [`interactief/`](../../interactief/) ook lokaal openen.
 
 ## Externe speeltuinen (ook leuk)
 

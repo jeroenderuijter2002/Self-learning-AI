@@ -28,6 +28,19 @@ Wat gebeurt er écht in de gewichten? In module 1 zag je al previous-token heads
 - **Opdracht:** vind en ablateer de induction heads in GPT-2 met TransformerLens.
 - **Opdracht:** train een kleine sparse autoencoder op GPT-2-activaties en interpreteer een paar features.
 
+## 💼 Praktijkopdracht: Waarom zegt het model dat?
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Reviewplatform Proefmaar** (fictief; denk aan een platform met restaurantrecensies). Ze gebruiken een taalmodel om recensies te classificeren. |
+| **De vraag** | "Een journalist beweert dat ons model recensies anders beoordeelt als er een bepaalde naam in staat. Zoek uit of dat klopt, en zo ja: waar het in het model zit." |
+| **Wat je krijgt** | Een klein open taalmodel (bijv. GPT-2 of Pythia) met [TransformerLens](https://github.com/TransformerLensOrg/TransformerLens), en een set recensies die je zelf varieert. |
+| **Wat je oplevert** | Een auditrapport: een gecontroleerd experiment dat het effect meet, een analyse met probes of activation patching die laat zien wáár het effect ontstaat, en een voorstel om het te verhelpen. |
+| **Het addertje** | Het effect is klein en wisselend. Hoe toon je overtuigend aan dat het echt is, en geen ruis? |
+| **Wanneer is het goed?** | Je experiment is statistisch eerlijk (controlegroep, genoeg voorbeelden), en je mechanistische analyse wijst een concrete plek in het model aan. |
+
 ## Belangrijkste bronnen
 
 - 📄 Anthropic, [transformer-circuits.pub](https://transformer-circuits.pub), o.a. [*Toy Models of Superposition*](https://transformer-circuits.pub/2022/toy_model/index.html)

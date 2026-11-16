@@ -29,6 +29,19 @@ Vergelijk dat met AlphaGo in 2016 (module 5): bij Go werkt puur zoeken niet meer
 
 - **Opdracht:** A* voor een routeplanner; daarna een LLM als heuristiek inzetten en vergelijken.
 
+## 💼 Praktijkopdracht: De planner die geen fouten mag maken
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Pakketbezorger Snelpost** (fictief; denk aan een Nederlandse pakketdienst). Planners maken nu dagelijks met de hand de routes. |
+| **De vraag** | "Een leverancier wil een LLM-agent die onze routes plant. Wij twijfelen. Wat is de beste aanpak?" |
+| **Wat je krijgt** | Klassieke VRP-benchmarkinstanties met tijdvensters (Solomon-instanties) en [Google OR-Tools](https://developers.google.com/optimization). |
+| **Wat je oplevert** | Drie aanpakken naast elkaar: een klassieke solver, een LLM die direct een planning maakt, en een hybride (de LLM vertaalt wensen van planners naar constraints, de solver rekent). Plus een advies. |
+| **Het addertje** | Planners geven wensen in gewone taal ("mevrouw Jansen nooit voor tienen"). Welke aanpak gaat daar het best mee om, zonder fouten? |
+| **Wanneer is het goed?** | Je meet kwaliteit én het aantal geschonden constraints, en je advies laat zien dat je weet waar LLM's goed en slecht in zijn. |
+
 ## Belangrijkste bronnen
 
 - 📖 Russell & Norvig, [*Artificial Intelligence: A Modern Approach*](https://aima.cs.berkeley.edu)

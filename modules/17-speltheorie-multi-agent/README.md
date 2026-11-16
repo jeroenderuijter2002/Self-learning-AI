@@ -32,6 +32,19 @@ Zodra er meerdere beslissers zijn, verandert alles: wat voor jou optimaal is, ha
 - **Opdracht:** implementeer CFR voor Kuhn poker (een poker-variant met 3 kaarten) en zie hoe het naar het Nash-evenwicht convergeert.
 - **Opdracht:** train meerdere agents in een PettingZoo-omgeving en vergelijk onafhankelijk leren met gedeelde training.
 
+## 💼 Praktijkopdracht: Welke veiling levert het meest op?
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Advertentieplatform Adlijn** (fictief; denk aan een online advertentiemarkt). Adverteerders bieden automatisch op advertentieplekken. |
+| **De vraag** | "We twijfelen tussen een first-price- en een second-price-veiling. Wat levert ons het meest op, en blijven adverteerders tevreden?" |
+| **Wat je krijgt** | Geen dataset: je bouwt een simulatie met lerende biedagenten (bijv. no-regret-algoritmes of multi-agent RL). |
+| **Wat je oplevert** | Een simulatie waarin agents leren bieden onder beide veilingvormen, een vergelijking van platformomzet en adverteerderswinst, en een advies met speltheoretische onderbouwing. |
+| **Het addertje** | Adverteerders leren ook. Wat in week 1 de meeste omzet geeft, kan na een maand heel anders uitpakken. |
+| **Wanneer is het goed?** | Je koppelt je simulatie aan de theorie (Nash-evenwicht, revenue equivalence), en je advies kijkt naar het evenwicht op lange termijn, niet naar de eerste dag. |
+
 ## Belangrijkste bronnen
 
 - 📖 Albrecht, Christianos & Schäfer, *Multi-Agent Reinforcement Learning: Foundations and Modern Approaches* (MIT Press, 2024; gratis online)

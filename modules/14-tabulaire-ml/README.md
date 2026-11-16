@@ -32,6 +32,19 @@ Je kent de theorie. Maar in het bedrijfsleven gaat het meeste ML-werk nog steeds
 - **Opdracht:** doe mee aan een Kaggle-competitie op tabeldata; doel is een plek in de top 20%.
 - **Opdracht:** bouw een churn- of fraudemodel van begin tot eind, inclusief SHAP-uitleg voor een niet-technisch publiek.
 
+## 💼 Praktijkopdracht: Welke klanten gaan weg, en wat doen we eraan?
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Telecomaanbieder Belbaar** (fictief; denk aan een Nederlandse telecomprovider). Elke opzegging kost ze gemiddeld honderden euro's aan gemiste omzet. |
+| **De vraag** | "Voorspel welke klanten gaan opzeggen, zodat we ze een aanbod kunnen doen. Maar het aanbod kost ook geld." |
+| **Wat je krijgt** | De [Telco Customer Churn-dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn). |
+| **Wat je oplevert** | Een gradient boosting-model met SHAP-uitleg, en vooral: een winstcurve die laat zien hoeveel klanten je moet benaderen om de meeste winst te maken. |
+| **Het addertje** | In de data zit een kenmerk dat te mooi is om waar te zijn. Vind het voordat het je advies verpest. |
+| **Wanneer is het goed?** | Je advies gaat over euro's, niet over AUC, je vangt het datalek, en je kunt per klant uitleggen waarom het model hem riskant vindt. |
+
 ## Belangrijkste bronnen
 
 - 📄 [XGBoost](https://arxiv.org/abs/1603.02754) · [*Why do tree-based models still outperform deep learning on tabular data?*](https://arxiv.org/abs/2207.08815)

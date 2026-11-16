@@ -28,6 +28,19 @@ Tekst is niet de enige modaliteit. Hoe genereert een model een foto uit ruis, en
 - **Opdracht:** train een klein diffusion-model op MNIST of een eenvoudige dataset.
 - **Opdracht:** gebruik CLIP voor zero-shot classificatie van eigen foto's.
 
+## 💼 Praktijkopdracht: Productfoto's zonder fotoshoot
+
+*Je werkt als consultant. Een klant komt met een echte vraag; jij levert een onderbouwd antwoord.*
+
+| | |
+|---|---|
+| **De klant** | **Modemerk Grachtengoed** (fictief; denk aan een Nederlandse online kledingwinkel). Elke productfoto kost ze een studiosessie. |
+| **De vraag** | "Kunnen we met generatieve AI productfoto's maken in onze eigen huisstijl, voor een fractie van de kosten?" |
+| **Wat je krijgt** | De [Fashion Product Images-dataset](https://huggingface.co/datasets/ashraq/fashion-product-images-small) en een open diffusionmodel dat je met LoRA finetunet. |
+| **Wat je oplevert** | Een gefinetuned model, een evaluatie met CLIP-score en een blinde test (laat vrienden echte en gegenereerde foto's raden), en een advies met kosten en risico's. |
+| **Het addertje** | Marketing vindt de foto's prachtig, maar Legal vraagt: mag dit eigenlijk, en wat als een klant iets anders ontvangt dan op de foto? |
+| **Wanneer is het goed?** | Je laat zien wat het model goed en slecht doet (met voorbeelden), meet in plaats van te gokken, en neemt de juridische en reputatierisico's serieus mee. |
+
 ## Belangrijkste bronnen
 
 - 📖 Lilian Weng, [*What are diffusion models?*](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
