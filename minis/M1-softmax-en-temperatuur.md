@@ -24,6 +24,10 @@ $$p_i = \text{softmax}(\mathbf{z} / \tau)_i$$
 | 2,0 | vlakker | [0,51, 0,31, 0,19] |
 | ∞ | uniform | [0,33, 0,33, 0,33] |
 
+![Temperatuur](figures/M1-temperatuur.png)
+
+*Figuur M1. Links: dezelfde drie logits bij vijf temperaturen. Rechts: de entropie (onzekerheid) van de verdeling als functie van τ. Die loopt van 0 (zeker, one-hot) naar ln 3 (volledig uniform). Een echt voorbeeld met GPT-2 staat in figuur 1.13 van notes 1.4.*
+
 **De naam komt uit de statistische fysica:** de Boltzmann-verdeling $p_i \propto e^{-E_i/kT}$. Bij hoge temperatuur zijn alle toestanden even waarschijnlijk (chaos), bij lage temperatuur zit alles in de laagste-energietoestand.
 
 ### 🔬 Probeer het (5 minuten)

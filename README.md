@@ -66,15 +66,20 @@ Korte deep-dives over één concept dat steeds terugkomt.
 ```
 README.md               ← je bent hier
 SOFTWARE.md             ← installatie
-minis/                  ← korte deep-dives
+minis/                  ← korte deep-dives (+ figures/)
 modules/
   01-transformers/
     README.md           ← leerdoelen, leespad, planning
     notes/              ← uitleg (lees deze in volgorde)
+    figures/            ← alle figuren uit de notes
     opdrachten/         ← opdrachten + Python-skeletons
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
+tools/
+  make_figures.py       ← maakt alle figuren opnieuw, met echte modeldata
 ```
+
+**Over de figuren:** waar mogelijk zijn de figuren gemaakt met **echte data**: attention-patronen en voorspellingen van GPT-2, de echte GPT-4-tokenizer, en tijdmetingen. Ze zijn dus geen illustraties, maar resultaten die je zelf kunt reproduceren met `python tools/make_figures.py`. Het script zelf lezen is ook leerzaam: het laat zien hoe je in een model kijkt.
 
 ## Hoe werk je een module door?
 

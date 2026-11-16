@@ -27,7 +27,11 @@ De afgeleide van softmax is $\partial p_i / \partial z_j = p_i(\delta_{ij} - p_j
 - **verdwijnende gradiënten**: de attention-gewichten leren niet meer;
 - elk token kijkt (willekeurig) naar precies één ander token, in plaats van informatie te mengen.
 
-Je zag dit al in O2: zonder schaling was het gemiddelde maximale gewicht ~0,97, met schaling ~0,42.
+Je zag dit al in O2: zonder schaling was het gemiddelde maximale gewicht ~0,97, met schaling ~0,42. Over verschillende dimensies:
+
+![Schaling](figures/M2-schaling.png)
+
+*Figuur M2. Simulatie met 16 tokens en willekeurige q, k ~ N(0,1). Zonder schaling loopt het grootste attention-gewicht naar 1 (one-hot) naarmate d_k groeit. Met /√d_k blijft de verdeling even "zacht", ongeacht de dimensie. Dat is precies wat je wilt: het gedrag van attention mag niet afhangen van hoe breed je de heads maakt.*
 
 ## 🔬 Verifieer het zelf
 

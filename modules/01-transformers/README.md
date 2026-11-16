@@ -25,6 +25,17 @@ Na deze module kun je:
 
 Je hebt al: lineaire algebra, gradient descent, cross-entropy, basis neurale netwerken. Is backprop wat weggezakt? Kijk dan eerst Karpathy's [micrograd-video](https://www.youtube.com/watch?v=VMj-3S1tku0) (optioneel).
 
+## Wat je gaat zien
+
+Een paar van de 15 figuren in deze module, allemaal gemaakt met echte modeldata:
+
+| | |
+|---|---|
+| ![](figures/1.2-gpt2-attention-heads.png) | ![](figures/1.3-logit-lens.png) |
+| *Echte attention-heads uit GPT-2 (1.2)* | *GPT-2 "denkt" laag voor laag naar Amsterdam toe (1.3)* |
+| ![](figures/1.1-embeddings-pca.png) | ![](figures/1.4-kvcache-meting.png) |
+| *Maanden vormen een ring in de embedding-ruimte (1.1)* | *KV-cache gemeten: 45 s → 8 s (1.4)* |
+
 ## Leespad
 
 | Stap | Type | Wat | Tijd |
