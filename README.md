@@ -6,35 +6,66 @@
 
 ## Cursusdoelen
 
-Je kent machine learning: optimalisatie, generalisatie, probabilistische modellen, Bayesiaanse inferentie. Deze cursus bouwt daarop verder, op het terrein waar de meeste ML-opleidingen stoppen: **de technologie achter huidige AI-systemen**.
+Je kent machine learning: optimalisatie, generalisatie, regressie en classificatie, probabilistische modellen, Bayesiaanse inferentie. Deze cursus bouwt daarop verder, op twee terreinen waar de meeste ML-opleidingen stoppen:
+
+1. **De technologie achter huidige AI-systemen:** hoe een model als Claude werkt en getraind wordt.
+2. **Het vak van ML engineer:** van een model in een notebook naar een systeem dat in productie draait.
 
 Na deze cursus kun je:
 - uitleggen, tot op matrixniveau, wat er gebeurt als een taalmodel een woord voorspelt;
 - beschrijven hoe een model als Claude wordt getraind: pretraining, post-training en RL;
 - zelf LLM-systemen bouwen en evalueren (RAG, agents, tools);
+- een ML-systeem ontwerpen, bouwen, uitrollen en bewaken zoals in het bedrijfsleven;
 - de bredere AI-wereld plaatsen: RL, generatieve beeldmodellen, interpretability en klassieke AI.
 
-**Filosofie:** zelf bouwen gaat boven lezen. Elke module heeft uitleg, video's en opdrachten waarin je dingen vanaf nul implementeert. Een module is een hoofdstuk, geen collegeblok. Werk in je eigen tempo.
+**Uitgangspunt:** de ML-basis wordt **niet** opnieuw uitgelegd. Waar een module erop voortbouwt, staat een korte "🔁 Weet je nog?"-verwijzing in plaats van een herhaling. Elke module vermeldt bovenaan welke voorkennis wordt overgeslagen.
+
+**Filosofie:** zelf bouwen gaat boven lezen. Elke module heeft uitleg, figuren, speeltuinen en opdrachten waarin je dingen vanaf nul implementeert. Een module is een hoofdstuk, geen collegeblok. Werk in je eigen tempo.
 
 ---
 
 ## Modules
 
-| # | Module | Status | Notes | Opdrachten | Video's |
-|---|--------|--------|-------|------------|---------|
-| ⚪ 1 | **Transformers van binnen** | ✅ beschikbaar | [README](modules/01-transformers/README.md) · [1.1](modules/01-transformers/notes/1.1-tokens-en-embeddings.md) · [1.2](modules/01-transformers/notes/1.2-attention.md) · [1.3](modules/01-transformers/notes/1.3-transformer-block.md) · [1.4](modules/01-transformers/notes/1.4-van-model-naar-tekst.md) | [O1](modules/01-transformers/opdrachten/O1-tokenizer.md) · [O2](modules/01-transformers/opdrachten/O2-attention-numpy.md) · [O3](modules/01-transformers/opdrachten/O3-bouw-je-eigen-gpt.md) · [O4](modules/01-transformers/opdrachten/O4-gpt2-onder-de-loep.md) | [Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY) · [3B1B](https://www.youtube.com/watch?v=eMlx5fFNoYc) |
-| ⚪ 2 | Hoe een model als Claude gemaakt wordt (pretraining, RLHF, Constitutional AI, reasoning) | 🔜 | | | |
-| ⚪ 3 | AI engineering: RAG, tools, agents, evals | 🔜 | | | |
-| ⚪ 4 | Inference & efficiëntie: quantization, LoRA, distillation | 🔜 | | | |
-| 🟢 5 | Reinforcement learning | 🔜 | | | |
-| 🟢 6 | Generatieve modellen: diffusion, multimodaal | 🔜 | | | |
-| 🟢 7 | Interpretability & alignment | 🔜 | | | |
-| 🔵 8 | Klassieke & symbolische AI | 🔜 | | | |
-| 🔵 9 | Zijpaden: causal inference, GNN's, time-series | 🔜 | | | |
+| # | Module | Status | Wat je leert |
+|---|--------|--------|--------------|
+| ⚪ 1 | [**Transformers van binnen**](modules/01-transformers/README.md) | ✅ beschikbaar | tokens, embeddings, attention, het transformer-block, generatie, KV-cache |
+| ⚪ 2 | [Van tekstvoorspeller naar assistent](modules/02-training/README.md) | 🔜 | pretraining, scaling laws, fine-tuning, RLHF, Constitutional AI, reasoning-modellen |
+| ⚪ 3 | [AI engineering: LLM's in systemen](modules/03-ai-engineering/README.md) | 🔜 | prompting, embeddings en vector search, RAG, tool use en agents, evals |
+| ⚪ 4 | [Inference en efficiëntie](modules/04-inference/README.md) | 🔜 | quantization, LoRA, distillation, serving, lokaal draaien |
+| 🟢 5 | [Reinforcement learning](modules/05-reinforcement-learning/README.md) | 🔜 | Q-learning, DQN, policy gradients, PPO, MCTS |
+| 🟢 6 | [Generatieve modellen: beeld en multimodaal](modules/06-generatieve-modellen/README.md) | 🔜 | diffusion, flow matching, CLIP, vision transformers |
+| 🟢 7 | [Interpretability en alignment](modules/07-interpretability/README.md) | 🔜 | circuits, superposition, sparse autoencoders, alignment-problemen |
+| 🔵 8 | [Klassieke en symbolische AI](modules/08-klassieke-ai/README.md) | 🔜 | zoeken, planning, logica, neuro-symbolisch |
+| 🔵 9 | [Zijpaden: causal inference, GNN's, time series](modules/09-zijpaden/README.md) | 🔜 | causaliteit, graph neural networks, tijdreeksen met deep learning |
+| 🟠 10 | [Software engineering voor ML](modules/10-software-engineering/README.md) | 🔜 | professionele Python, testen, git, FastAPI, Docker |
+| 🟠 11 | [Van notebook naar productie: MLOps en LLMOps](modules/11-mlops/README.md) | 🔜 | experiment tracking, CI/CD, deployment, monitoring, LLMOps |
+| 🟠 12 | [Data engineering](modules/12-data-engineering/README.md) | 🔜 | gevorderde SQL, pipelines, dbt, grote data, datakwaliteit |
+| 🟠 13 | [ML-systeemontwerp en evaluatie](modules/13-systeemontwerp/README.md) | 🔜 | systemen ontwerpen, A/B-testen, sollicitatiecases |
+| 🟠 14 | [Klassieke ML in de praktijk](modules/14-tabulaire-ml/README.md) | 🔜 | gradient boosting, feature engineering, data leakage, SHAP |
 
-⚪ = kern (hoe moderne AI werkt) · 🟢 = verbreding · 🔵 = verdieping/zijpad
+⚪ = kern (hoe moderne AI werkt) · 🟢 = verbreding · 🔵 = verdieping/zijpad · 🟠 = engineering (van model naar product)
 
-**Aanbevolen volgorde:** 1 → 2 → 3, daarna vrij kiezen.
+### Aanbevolen route
+
+```mermaid
+flowchart LR
+    M1["1 Transformers ✅"] --> M2["2 Training"] --> M3["3 AI engineering"]
+    M3 --> M10["10 Software eng."] --> M11["11 MLOps"]
+    M11 --> M13["13 Systeemontwerp"]
+    M14["14 Tabulaire ML"] --> M13
+    M12["12 Data eng."] --> M11
+    M3 -.-> M4["4 Inference"]
+    M2 -.-> M5["5 RL"]
+    M2 -.-> M7["7 Interpretability"]
+    M1 -.-> M6["6 Generatief"]
+    M8["8 Klassieke AI"]
+    M9["9 Zijpaden"]
+    style M1 fill:#cde2fb,stroke:#2a78d6
+```
+
+- **Hoofdroute (doorgetrokken pijlen):** 1 → 2 → 3 geeft je de AI-kennis waarmee je opvalt. Daarna 10 → 11, waarin je het project uit module 3 in productie zet: samen je sterkste portfolioproject. Rond af met 13 voor sollicitaties.
+- **12 en 14** kun je parallel doen. 14 is vooral belangrijk voor consulting, waar veel klantdata tabeldata is.
+- **4–9** naar interesse. De stippellijnen tonen welke voorkennis handig is.
 
 ---
 
