@@ -21,7 +21,7 @@
 | 13.1 Het raamwerk | Van bedrijfsdoel naar ML-probleem: doelvariabele, metrics, randvoorwaarden (latency, kosten, privacy). |
 | 13.2 Evaluatie die ertoe doet | Offline tegenover online metrics, de juiste validatiestrategie (tijdsgebonden splits), kalibratie, bedrijfsmetrics. |
 | 13.3 Experimenteren | A/B-testen, power-analyse, valkuilen (peeking, netwerkeffecten), multi-armed bandits. |
-| 13.4 Klassieke systemen | Aanbevelingen, zoeken en ranking, fraudedetectie, vraagvoorspelling: de standaardarchitecturen. |
+| 13.4 Klassieke systemen | Aanbevelingen, zoeken en ranking, fraudedetectie, vraagvoorspelling: de standaardarchitecturen op ontwerpniveau (de techniek zelf in module 16 en 20). |
 | 13.5 LLM-systemen ontwerpen | Wanneer wel en niet een LLM, kosten-batenafweging, guardrails, human-in-the-loop. |
 | 13.6 Oefencases | Uitgewerkte casussen in sollicitatieformat, om hardop te oefenen. |
 

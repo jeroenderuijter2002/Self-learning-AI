@@ -9,8 +9,8 @@
 Je kent machine learning al: regressie en classificatie, neurale netwerken en CNN's, Bayesiaanse ML, optimalisatie en OR, MDP's, regeltechniek en MPC (het groene deel van het [routediagram](#aanbevolen-route)). Deze cursus bouwt daarop verder, op drie terreinen waar de meeste ML-opleidingen stoppen:
 
 1. ⚪ **De technologie achter huidige AI-systemen** (modules 1–4): hoe een model als Claude werkt, getraind wordt en efficiënt draait.
-2. 🟢🔵 **De bredere AI-wereld** (modules 5–9 en 15–17): RL, generatieve modellen, interpretability, klassieke AI, self-supervised learning, anomaly detection en multi-agent systemen.
-3. 🟠 **Het vak van ML engineer** (modules 10–14 en 18): van een model in een notebook naar een systeem dat in productie draait, tot en met trainen op GPU-clusters.
+2. 🟢🔵 **De bredere AI-wereld** (modules 5–9, 15–17 en 20): RL, generatieve modellen, interpretability, klassieke AI, self-supervised learning, anomaly detection, multi-agent systemen en recommenders.
+3. 🟠 **Het vak van ML engineer** (modules 10–14, 18 en 19): van een model in een notebook naar een systeem dat in productie draait, tot en met AutoML en trainen op GPU-clusters.
 
 Na deze cursus kun je:
 - uitleggen, tot op matrixniveau, wat er gebeurt als een taalmodel een woord voorspelt;
@@ -29,7 +29,7 @@ Na deze cursus kun je:
 
 ## Modules
 
-**Status:** module 1 is volledig uitgewerkt (notes, figuren, speeltuinen, opdrachten, zelftoets). Modules 2–18 hebben al een overzichtspagina met motivatie, praktijkvoorbeeld, hoofdstukken, opdrachten en bronnen; de volledige uitwerking volgt module voor module.
+**Status:** module 1 is volledig uitgewerkt (notes, figuren, speeltuinen, opdrachten, zelftoets). Modules 2–20 hebben al een overzichtspagina met motivatie, praktijkvoorbeeld, hoofdstukken, opdrachten en bronnen; de volledige uitwerking volgt module voor module.
 
 | # | Module | Status | Wat je leert | 🌍 Bekend van |
 |---|--------|--------|--------------|---|
@@ -51,6 +51,8 @@ Na deze cursus kun je:
 | 🔵 16 | [Anomaly detection](modules/16-anomaly-detection/README.md) | 🔜 | Isolation Forest, autoencoders, tijdreeksen, evaluatie bij scheve klassen | Visa: ~$25 mld fraude per jaar voorkomen |
 | 🟢 17 | [Speltheorie en multi-agent systemen](modules/17-speltheorie-multi-agent/README.md) | 🔜 | Nash-evenwicht, CFR, multi-agent RL, self-play, mechanism design | Pluribus verslaat pokerprofs (2019) |
 | 🟠 18 | [GPU-programmering en distributed training](modules/18-gpu-distributed/README.md) | 🔜 | Triton/CUDA, mixed precision, DDP/FSDP/ZeRO, pipeline-parallelisme | DeepSeek-V3 getraind voor ~$5,6 mln (2024) |
+| 🟠 19 | [AutoML en hyperparameter-optimalisatie](modules/19-automl/README.md) | 🔜 (kort gehad) | Bayesiaanse optimalisatie, Hyperband, NAS, AutoGluon | AlphaGo: 50% → 66,5% winst door BO (2016) |
+| 🔵 20 | [Recommender systems](modules/20-recommender-systems/README.md) | 🔜 (kort gehad) | matrixfactorisatie, two-tower, retrieval + ranking, cold start, feedback loops | Netflix: >$1 mld per jaar (2015) |
 
 ⚪ = kern (hoe moderne AI werkt) · 🟢 = verbreding · 🔵 = verdieping/zijpad · 🟠 = engineering (van model naar product)
 
@@ -74,15 +76,18 @@ flowchart LR
     M3 -.-> M4["4 Inference"]
     M2 -.-> M5["5 RL<br/>🟡 deels gehad"]
     MDP -.-> M5
+    OR -.-> M8["8 Klassieke AI"]
     M2 -.-> M7["7 Interpretability"]
     M1 -.-> M6["6 Generatief"]
     BAY -.-> M6
     MLB -.-> M9["9 Zijpaden"]
-    OR -.-> M8["8 Klassieke AI"]
     M2 -.-> M15["15 Self-supervised"]
     M14 -.-> M16["16 Anomaly detection"]
     M5 -.-> M17["17 Speltheorie &<br/>multi-agent"]
     M4 -.-> M18["18 GPU & distributed"]
+    BAY -.-> M19["19 AutoML<br/>🟡 kort gehad"]
+    M14 -.-> M19
+    M14 -.-> M20["20 Recommenders<br/>🟡 kort gehad"]
 
     subgraph NIET["Niet in deze cursus (≈ dichtstbijzijnde module)"]
         direction LR
@@ -94,15 +99,13 @@ flowchart LR
         X8["Expert systems & fuzzy logic ≈ 8"]
         X12["Privacy & federated learning ≈ 11"]
         X13["Verantwoorde AI ✅"]
-        X6["AutoML ≈ 14"]
         X5["Learning theory ≈ ML-basis"]
         X14["Quantum-ML"]
         X1 ~~~ X10
         X2 ~~~ X3
         X7 ~~~ X8
         X12 ~~~ X13
-        X6 ~~~ X5
-        X14
+        X5 ~~~ X14
     end
     M13 ~~~ NIET
 
@@ -111,17 +114,17 @@ flowchart LR
     classDef nu fill:#cde2fb,stroke:#2a78d6,stroke-width:3px,color:#0b0b0b
     classDef niet fill:#f4f3f0,stroke:#a8a7a2,color:#6b6a66,stroke-dasharray:4 3
     class W,OPT,MLB,NN,OR,MDP had
-    class BAY,M5 bezig
+    class BAY,M5,M19,M20 bezig
     class M1 nu
-    class X1,X2,X3,X5,X6,X8,X10,X12,X14 niet
+    class X1,X2,X3,X5,X8,X10,X12,X14 niet
     class X7,X13 had
     style NIET fill:#fafaf8,stroke:#d6d5d0,color:#52514e
 ```
 
-- 🟩 **Groen** = al gehad (vak, stage of thesis) · 🟨 **geel** = nu bezig · 🟦 **blauw omlijnd** = waar je nu bent · paars = modules in deze cursus · ⬜ **grijs gestippeld** = niet in deze cursus (met de module waar het het dichtst bij ligt).
+- 🟩 **Groen** = al gehad (vak, stage of thesis) · 🟨 **geel** = nu bezig of al kort gehad · 🟦 **blauw omlijnd** = waar je nu bent · paars = modules in deze cursus · ⬜ **grijs gestippeld** = niet in deze cursus (met de module waar het het dichtst bij ligt).
 - **Hoofdroute (doorgetrokken pijlen):** 1 → 2 → 3 geeft je de AI-kennis waarmee je opvalt. Daarna 10 → 11, waarin je het project uit module 3 in productie zet: samen je sterkste portfolioproject. Rond af met 13 voor sollicitaties.
 - **12 en 14** kun je parallel doen. 14 is vooral belangrijk voor consulting, waar veel klantdata tabeldata is.
-- **4–9 en 15–18** naar interesse. De stippellijnen tonen welke voorkennis handig is: RL (5) bouwt bijvoorbeeld voort op je MDP-kennis uit Stochastic Decision Theory.
+- **4–9 en 15–20** naar interesse. De stippellijnen tonen welke voorkennis handig is: RL (5) bouwt bijvoorbeeld voort op je MDP-kennis uit Stochastic Decision Theory.
 
 ### Wat bewust buiten deze cursus valt
 
@@ -133,7 +136,6 @@ De grijze vakjes rechts in het diagram, met uitleg:
 | Spraak & audio | spraakherkenning, tekst-naar-spraak, audiomodellen | eigen vakgebied; de principes (transformers, diffusion) zie je in M1 en M6 |
 | 3D & graphics | NeRF, 3D-reconstructie, gaussian splatting | niche, ver van je doelen |
 | Learning theory | PAC-learning, VC-dimensie, generalisatiebewijzen | voor onderzoekers, niet nodig als engineer |
-| AutoML & recommender systems | automatisch modellen en hyperparameters kiezen; aanbevelingen | AutoML is vooral een tool (komt kort langs in M14); recommenders als ontwerpcase in M13 |
 | Evolutionaire algoritmen ✅ | genetische algoritmen, optimalisatie via "natuurlijke selectie" | al gehad |
 | Expert systems & fuzzy logic | regelgebaseerde AI uit de jaren '80–'90 | vooral historisch |
 | Robotica & embodied AI | AI in fysieke systemen | je regeltechniek-achtergrond is hier de basis; eigen vakgebied |
@@ -200,7 +202,7 @@ modules/
     opdrachten/         ← opdrachten + Python-skeletons
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
-  02-training/ … 18-gpu-distributed/
+  02-training/ … 20-recommender-systems/
     README.md           ← overzicht; notes en opdrachten volgen
 interactief/             ← speeltuinen (HTML), werken via GitHub Pages of lokaal
 tools/
