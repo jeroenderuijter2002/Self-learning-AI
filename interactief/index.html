@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speeltuinen: module 1</title>
+<link rel="stylesheet" href="style.css"><script src="common.js"></script>
+</head>
+<body><main>
+<nav></nav>
+<h1>Speeltuinen bij module 1</h1>
+<p class="lead">Lezen is één ding, zelf aan de knoppen draaien is iets anders. Elke speeltuin hoort bij een hoofdstuk uit de notes. Alles draait in je browser; de modeldata komt uit het echte GPT-2.</p>
+
+<div class="cards">
+  <a class="card" href="tokenizer.html"><div class="panel">
+    <h3>🔤 Tokenizer</h3>
+    <p>Typ zelf tekst en zie hoe GPT-2, GPT-4 en GPT-4o hem opknippen. Daarna: voer BPE stap voor stap zelf uit.</p>
+    <p class="hint">Hoort bij notes 1.1 en opdracht O1</p></div></a>
+  <a class="card" href="attention.html"><div class="panel">
+    <h3>👀 Attention</h3>
+    <p>Speel met de attention-formule, en verken daarna alle 144 heads van GPT-2: waar kijkt elk token naar?</p>
+    <p class="hint">Hoort bij notes 1.2 en opdracht O2/O4</p></div></a>
+  <a class="card" href="logitlens.html"><div class="panel">
+    <h3>🔭 Logit lens</h3>
+    <p>Kijk mee in de residual stream: wat zou GPT-2 voorspellen na laag 1, 2, … 12?</p>
+    <p class="hint">Hoort bij notes 1.3</p></div></a>
+  <a class="card" href="sampling.html"><div class="panel">
+    <h3>🎲 Sampling</h3>
+    <p>Draai aan temperatuur, top-k en top-p op echte GPT-2-voorspellingen en trek zelf tokens.</p>
+    <p class="hint">Hoort bij notes 1.4 en mini M1</p></div></a>
+</div>
+
+<div class="callout">De tokenizer-pagina haalt de echte tokenizers op van internet, dus die heeft een verbinding nodig. De andere pagina's werken ook offline. De data is gemaakt met <span class="mono">tools/export_interactive_data.py</span>.</div>
+</main></body></html>

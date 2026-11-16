@@ -5,6 +5,8 @@
 ## Doel
 De attention-formule omzetten in werkende code, zonder PyTorch. Als je dit kunt, kun je in een sollicitatiegesprek bij QuantumBlack of BCG X attention op een whiteboard uitschrijven.
 
+> ▶ **Eerst een gevoel krijgen?** In de [Attention-speeltuin](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/attention.html) staat het rekenvoorbeeld uit figuur 1.6 met aanpasbare getallen. Je code moet precies dezelfde gewichten geven.
+
 ## Deel A: implementeren (verplicht)
 
 Open [`o2_attention.py`](o2_attention.py) en implementeer:
@@ -41,7 +43,7 @@ Zet gemaskeerde scores op `-np.inf` **vóór** de softmax: `np.where(mask, score
 
 ## Deel B: experimenten (aanbevolen)
 
-1. **De √d_k-schaling.** De test print het gemiddelde maximale gewicht met en zonder schaling. Waarom wordt de softmax zonder schaling bijna one-hot? Wat betekent dat voor de gradiënten? Lees [Mini M2](../../minis/M2-waarom-wortel-dk.md) en check je verklaring.
+1. **De √d_k-schaling.** De test print het gemiddelde maximale gewicht met en zonder schaling. Waarom wordt de softmax zonder schaling bijna one-hot? Wat betekent dat voor de gradiënten? Lees [Mini M2](../../../minis/M2-waarom-wortel-dk.md) en check je verklaring.
 2. **Visualiseer een attention pattern.**
    ```python
    import matplotlib.pyplot as plt

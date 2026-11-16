@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logit lens</title>
+<link rel="stylesheet" href="style.css"><script src="common.js"></script>
+<script src="data/logitlens.js"></script>
+<style>
+  #tbl td { white-space: nowrap; }
+  #tbl .cell { display: inline-block; font-family: var(--mono); font-size: 13px; padding: 3px 6px; border-radius: 5px; margin-right: 4px; }
+  #tbl .hit { outline: 2px solid var(--orange); }
+</style>
+</head>
+<body><main>
+<nav></nav>
+<h1>🔭 Logit lens</h1>
+<p class="lead">Weet je nog, de residual stream uit notes 1.3? Elke laag schrijft er iets bij, en aan het eind zet de unembedding hem om in een voorspelling. Maar je kunt die unembedding ook <b>halverwege</b> toepassen, alsof je het model onderbreekt en vraagt: "wat denk je nu?"</p>
+
+<div class="panel">
+  <div class="row"><label>Prompt <select id="prompt"></select></label> <span class="hint">doel-token: <b class="mono" id="target"></b></span></div>
+  <svg id="chart" width="100%" height="220" style="margin-top:12px"></svg>
+  <table id="tbl" style="margin-top:12px"></table>
+</div>
+<div class="callout"><b>Om over na te denken:</b>
+<ul style="margin:6px 0">
+<li>In de vroege lagen staan er vaak tokens bovenaan die alleen op het <i>laatste woord</i> lijken te reageren ("is" → "now", "located"). Pas later komt het juiste antwoord. Wat zegt dat over wat vroege en late lagen doen?</li>
+<li>Bij "The capital of the Netherlands is" piekt " Amsterdam" in laag 11 en zakt het daarna weer. De laatste laag maakt de voorspelling "voorzichtiger". Zie je dat bij andere prompts ook?</li>
+<li>Bij de telreeks is het model in laag 10 ineens 98% zeker, veel zekerder dan bij een hoofdstad. Waarom zou een patroon makkelijker zijn dan een feit?</li>
+<li>Bij de Eiffeltoren gokt het model in laag 10 eerst <b>London</b>, en pas in laag 11 <b>Paris</b>. Je ziet het model letterlijk "twijfelen" tussen grote Europese steden.</li>
+</ul></div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+LENS_DATA.forEach((d, i) => $("prompt").insertAdjacentHTML("beforeend", `<option value="${i}">${esc(d.prompt)}</option>`));
+function render() {
+  const d = LENS_DATA[+$("prompt").value];
+  $("target").textContent = vis(d.target);
+  const svg = $("chart"), W = svg.clientWidth || 900, H = 220, l = 50, b = 30, t = 14;
+  const max = Math.max(5, ...d.layers.map((x) => x.target)) * 1.15;
+  const X = (i) => l + i * (W - l - 20) / 12, Y = (v) => t + (H - t - b) * (1 - v / max);
+  let g = "";
+  for (let k = 0; k <= 4; k++) { const v = max * k / 4; g += `<line x1="${l}" x2="${W - 10}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${l - 6}" y="${Y(v) + 4}" text-anchor="end">${v.toFixed(0)}%</text>`; }
+  d.layers.forEach((_, i) => g += `<text x="${X(i)}" y="${H - 10}" text-anchor="middle">${i ? i : "emb"}</text>`);
+  g += `<polyline fill="none" stroke="var(--blue)" stroke-width="2" points="${d.layers.map((x, i) => X(i) + "," + Y(x.target)).join(" ")}"/>`;
+  d.layers.forEach((x, i) => g += `<circle cx="${X(i)}" cy="${Y(x.target)}" r="5" fill="var(--blue)" stroke="var(--panel)" stroke-width="2"><title>laag ${i}: ${x.target}%</title></circle>`);
+  g += `<text x="${l}" y="10" style="font-weight:600">P(${esc(d.target)}) na elke laag</text>`;
+  svg.innerHTML = g;
+  $("tbl").innerHTML = "<tr><th>laag</th><th>top-5 voorspellingen op dat moment</th></tr>" + d.layers.map((x, i) =>
+    `<tr><td>${i ? i : "emb"}</td><td>${x.top.map(([tk, p]) =>
+      `<span class="cell ${tk === d.target ? "hit" : ""}" style="background:rgba(42,120,214,${Math.min(1, 0.08 + p / 60)});color:${p > 35 ? "#fff" : "inherit"}">${vis(tk)} ${p < 1 ? p.toFixed(1) : p.toFixed(0)}%</span>`).join("")}</td></tr>`).join("");
+}
+$("prompt").onchange = render; window.onresize = render; render();
+</script>
+</body></html>

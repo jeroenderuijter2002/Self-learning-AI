@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sampling-speeltuin</title>
+<link rel="stylesheet" href="style.css"><script src="common.js"></script>
+<script src="data/sampling.js"></script>
+</head>
+<body><main>
+<nav></nav>
+<h1>🎲 Sampling-speeltuin</h1>
+<p class="lead">Het model geeft een kansverdeling over ~50.000 tokens. Hoe kies je daaruit het volgende woord? Draai aan de knoppen. Dit zijn de echte voorspellingen van GPT-2.</p>
+
+<div class="panel">
+  <div class="row"><label>Prompt <select id="prompt"></select></label></div>
+  <div class="row" style="margin-top:14px;gap:28px">
+    <label>temperatuur <input type="range" id="T" min="0.05" max="2" step="0.05" value="1"> <b class="mono" id="Tv"></b></label>
+    <label>top-k <input type="range" id="K" min="1" max="301" step="1" value="301"> <b class="mono" id="Kv"></b></label>
+    <label>top-p <input type="range" id="P" min="0.05" max="1" step="0.01" value="1"> <b class="mono" id="Pv"></b></label>
+  </div>
+  <div id="stats" style="margin-top:16px"></div>
+  <svg id="chart" width="100%" height="360"></svg>
+  <div class="row" style="margin-top:8px">
+    <button class="primary" id="draw">Trek 1 token</button>
+    <button id="draw20">Trek 20 tokens</button>
+    <button id="clear">Wis</button>
+    <span id="drawn" class="mono"></span>
+  </div>
+</div>
+
+<div class="callout"><b>Dingen om te proberen:</b>
+<ul style="margin:6px 0">
+<li>Zet de temperatuur op 0,05. Dit is (bijna) <b>greedy</b>: het model kiest altijd hetzelfde. Trek 20 tokens.</li>
+<li>Zet de temperatuur op 2 en kijk naar <b>"rest van vocab"</b>. Die balk is de kans op een van de ~50.000 andere tokens, meestal onzin. Trek 20 tokens: wat voor rommel komt eruit?</li>
+<li>Houd temperatuur 2 en zet top-p op 0,9. De staart is weg. Dit is waarom echte systemen temperatuur bijna altijd combineren met top-p.</li>
+<li>Vergelijk "The capital of the Netherlands is" met de Python-prompt. Bij code is het model veel zekerder (lagere entropie). Waarom?</li>
+</ul></div>
+<p class="hint">Technisch: de top-300 logits zijn exact; de overige ~49.950 tokens zijn als histogram opgeslagen, zodat "rest van vocab" bij elke temperatuur correct berekend wordt. Zie <span class="mono">tools/export_interactive_data.py</span>.</p>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+SAMPLING_DATA.forEach((d, i) => $("prompt").insertAdjacentHTML("beforeend", `<option value="${i}">${esc(d.prompt.replace(/\n/g, " ↵ "))}</option>`));
+let drawn = [];
+function dist() {
+  const d = SAMPLING_DATA[+$("prompt").value], T = +$("T").value, K = +$("K").value, P = +$("P").value;
+  const m = d.top[0][1] / T;
+  let top = d.top.map(([t, z]) => ({ t, w: Math.exp(z / T - m) }));
+  let rest = d.rest.reduce((s, [c, n]) => s + n * Math.exp(c / T - m), 0);
+  let Z = top.reduce((s, x) => s + x.w, 0) + rest;
+  top.forEach((x) => (x.p = x.w / Z)); rest /= Z;
+  // top-k
+  if (K <= 300) { top.forEach((x, i) => { if (i >= K) x.p = 0; }); rest = 0; }
+  // top-p
+  if (P < 1) { let c = 0; top.forEach((x) => { if (c >= P) x.p = 0; c += x.p; }); if (c >= P) rest = 0; }
+  const S = top.reduce((s, x) => s + x.p, 0) + rest;
+  top.forEach((x) => (x.p /= S)); rest /= S;
+  const H = -top.reduce((s, x) => s + (x.p > 0 ? x.p * Math.log(x.p) : 0), 0);
+  return { top, rest, H, kept: top.filter((x) => x.p > 0).length };
+}
+function render() {
+  $("Tv").textContent = (+$("T").value).toFixed(2);
+  $("Kv").textContent = +$("K").value > 300 ? "uit" : $("K").value;
+  $("Pv").textContent = +$("P").value >= 1 ? "uit" : (+$("P").value).toFixed(2);
+  const { top, rest, H, kept } = dist();
+  const N = 15, items = top.slice(0, N).map((x) => [x.t, x.p]).concat([["rest van vocab", rest]]);
+  const svg = $("chart"), W = svg.clientWidth || 900, h = 360, left = 150, bh = 18, gap = 4;
+  const max = Math.max(...items.map((x) => x[1]), 0.01);
+  svg.setAttribute("height", items.length * (bh + gap) + 10);
+  svg.innerHTML = items.map(([t, p], i) => {
+    const y = i * (bh + gap), w = (p / max) * (W - left - 70), isRest = i === items.length - 1;
+    return `<g><text x="${left - 8}" y="${y + 13}" text-anchor="end" style="font-family:var(--mono);${isRest ? "font-style:italic" : ""}">${isRest ? "rest van vocab" : vis(t)}</text>
+      <rect x="${left}" y="${y}" width="${Math.max(w, p > 0 ? 2 : 0)}" height="${bh}" rx="4" fill="${isRest ? "var(--orange)" : p > 0 ? "var(--blue)" : "var(--line)"}"/>
+      <text x="${left + w + 6}" y="${y + 13}">${p > 0 ? (p * 100).toFixed(p < 0.01 ? 2 : 1) + "%" : "weggefilterd"}</text></g>`;
+  }).join("");
+  $("stats").innerHTML = `<span class="stat"><b>${H.toFixed(2)}</b><span>entropie (nats, top-300)</span></span>` +
+    `<span class="stat"><b>${kept}${rest > 0 ? " + staart" : ""}</b><span>tokens met kans &gt; 0</span></span>`;
+}
+function sample() {
+  const { top, rest } = dist();
+  let r = Math.random(), c = 0;
+  for (const x of top) { c += x.p; if (r < c) return x.t; }
+  return "⟨iets uit de staart⟩";
+}
+function showDrawn() {
+  const counts = {}; drawn.forEach((t) => (counts[t] = (counts[t] || 0) + 1));
+  $("drawn").innerHTML = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([t, n]) => `<span class="tok c0" style="margin:2px">${t.startsWith("⟨") ? t : vis(t)}<small>${n}×</small></span>`).join("");
+}
+["T", "K", "P"].forEach((id) => ($(id).oninput = render));
+$("prompt").onchange = () => { drawn = []; showDrawn(); render(); };
+$("draw").onclick = () => { drawn.push(sample()); showDrawn(); };
+$("draw20").onclick = () => { for (let i = 0; i < 20; i++) drawn.push(sample()); showDrawn(); };
+$("clear").onclick = () => { drawn = []; showDrawn(); };
+window.onresize = render; render();
+</script>
+</body></html>

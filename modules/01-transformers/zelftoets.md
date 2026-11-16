@@ -21,6 +21,11 @@ In de embedding-matrix $E$ ($V \times d$) en de unembedding $W_U$ (bij weight ty
 De embedding is een lookup per token-id, zonder context. Attention-lagen mengen informatie van omringende tokens in de vector, zodat die na een paar lagen contextafhankelijk wordt.
 </details>
 
+**A4.** In figuur 1.5 staat "May" een beetje apart van de andere maanden. Waarom?
+<details><summary>Antwoord</summary>
+"May" is in het Engels ook een hulpwerkwoord ("you may go"), en dat gebruik komt veel vaker voor dan de maand. Omdat de embedding <i>contextloos</i> is, moet één vector beide betekenissen dragen. Hij ligt daardoor tussen "maand" en "hulpwerkwoord" in. Pas de attention-lagen kunnen in context uitzoeken welke "May" bedoeld is. Hetzelfde geldt voor "bank".
+</details>
+
 ## B. Attention ([1.2](notes/1.2-attention.md))
 
 **B1.** Schrijf de attention-formule op en geef de shape van elk tussenresultaat voor $T$ tokens en dimensie $d_k$.

@@ -40,21 +40,28 @@ Een paar van de 15 figuren in deze module, allemaal gemaakt met echte modeldata:
 
 | Stap | Type | Wat | Tijd |
 |------|------|-----|------|
+| 0 | 🟡 Opfrissen | Is het weggezakt? [Mini M3: het inproduct](../../minis/M3-inproduct-en-matrices.md) en [Mini M4: cross-entropy](../../minis/M4-cross-entropy.md). De notes verwijzen er steeds naar. | 15 min |
 | 1 | 🎬 Video | 3Blue1Brown, [*But what is a GPT?*](https://www.youtube.com/watch?v=wjZofJX0v4M): het grote plaatje | 27 min |
-| 2 | 📖 Notes | [1.1 Tokens en embeddings](notes/1.1-tokens-en-embeddings.md) | 30 min |
-| 3 | 🛠️ Opdracht | [O1: Bouw je eigen BPE-tokenizer](opdrachten/O1-tokenizer.md) | 1–2 u |
-| 4 | 🎬 Video | 3Blue1Brown, [*Attention in transformers, step-by-step*](https://www.youtube.com/watch?v=eMlx5fFNoYc) | 26 min |
-| 5 | 📖 Notes | [1.2 Attention](notes/1.2-attention.md) + [Mini M2](../../minis/M2-waarom-wortel-dk.md) | 45 min |
-| 6 | 🛠️ Opdracht | [O2: Attention from scratch in NumPy](opdrachten/O2-attention-numpy.md) | 1–2 u |
-| 7 | 📖 Notes | [1.3 Het transformer-block](notes/1.3-transformer-block.md) | 30 min |
-| 8 | 🎬🛠️ Video + opdracht | [O3: Bouw je eigen GPT](opdrachten/O3-bouw-je-eigen-gpt.md), met Karpathy's [*Let's build GPT*](https://www.youtube.com/watch?v=kCc8FmEb1nY) | 4–6 u |
-| 9 | 📖 Notes | [1.4 Van model naar tekst](notes/1.4-van-model-naar-tekst.md) + [Mini M1](../../minis/M1-softmax-en-temperatuur.md) | 40 min |
-| 10 | 🛠️ Opdracht | [O4: GPT-2 onder de loep](opdrachten/O4-gpt2-onder-de-loep.md) | 1–2 u |
-| 11 | ✅ Toets | [Zelftoets](zelftoets.md) | 30 min |
+| 2 | 📖 Notes | [1.1 Tokens en embeddings](notes/1.1-tokens-en-embeddings.md) | 50 min |
+| 3 | ▶ Speeltuin | [Tokenizer](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/tokenizer.html): typ zelf, en BPE stap voor stap | 15 min |
+| 4 | 🛠️ Opdracht | [O1: Bouw je eigen BPE-tokenizer](opdrachten/O1-tokenizer.md) | 1–2 u |
+| 5 | 🎬 Video | 3Blue1Brown, [*Attention in transformers, step-by-step*](https://www.youtube.com/watch?v=eMlx5fFNoYc) | 26 min |
+| 6 | 📖 Notes | [1.2 Attention](notes/1.2-attention.md) + [Mini M2](../../minis/M2-waarom-wortel-dk.md) | 60 min |
+| 7 | ▶ Speeltuin | [Attention](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/attention.html): de formule met de hand + 144 echte heads | 20 min |
+| 8 | 🛠️ Opdracht | [O2: Attention from scratch in NumPy](opdrachten/O2-attention-numpy.md) | 1–2 u |
+| 9 | 📖 Notes | [1.3 Het transformer-block](notes/1.3-transformer-block.md) + 🎬 3B1B [*How might LLMs store facts*](https://www.youtube.com/watch?v=9-Jl0dxWQs8) | 45 + 23 min |
+| 10 | ▶ Speeltuin | [Logit lens](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/logitlens.html) | 10 min |
+| 11 | 🎬🛠️ Video + opdracht | [O3: Bouw je eigen GPT](opdrachten/O3-bouw-je-eigen-gpt.md), met Karpathy's [*Let's build GPT*](https://www.youtube.com/watch?v=kCc8FmEb1nY) | 4–6 u |
+| 12 | 📖 Notes | [1.4 Van model naar tekst](notes/1.4-van-model-naar-tekst.md) + [Mini M1](../../minis/M1-softmax-en-temperatuur.md) | 50 min |
+| 13 | ▶ Speeltuin | [Sampling](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/sampling.html) | 10 min |
+| 14 | 🛠️ Opdracht | [O4: GPT-2 onder de loep](opdrachten/O4-gpt2-onder-de-loep.md) | 1–2 u |
+| 15 | ✅ Toets | [Zelftoets](zelftoets.md) | 30 min |
 
-**Totaal:** ongeveer 12–16 uur. Verspreid over 2–3 weken naast je thesis is dat goed te doen.
+**Totaal:** ongeveer 15–20 uur. Verspreid over 2–3 weken naast je thesis is dat goed te doen.
 
-## Speeltuinen (interactief, geen installatie)
+> De ▶-links werken zodra GitHub Pages aan staat (zie de [hoofd-README](../../README.md#-speeltuinen-interactief)). Lokaal kun je de bestanden in [`interactief/`](../../interactief/) ook gewoon openen.
+
+## Externe speeltuinen (ook leuk)
 
 Open deze naast de notes. Zelf aan knoppen draaien is de snelste weg naar intuïtie.
 - **[Tiktokenizer](https://tiktokenizer.vercel.app)**: typ tekst en zie hoe echte LLM's die opknippen

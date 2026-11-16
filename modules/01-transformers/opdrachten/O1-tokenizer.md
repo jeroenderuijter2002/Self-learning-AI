@@ -5,6 +5,8 @@
 ## Doel
 Het tokenization-algoritme achter GPT en Claude helemaal begrijpen, door het zelf te implementeren in ~50 regels Python.
 
+> ▶ **Eerst een gevoel krijgen?** In de [Tokenizer-speeltuin](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/tokenizer.html) kun je BPE stap voor stap doorklikken. Daarna weet je precies wat je functies moeten doen.
+
 ## Deel A: implementeren (verplicht)
 
 Open [`o1_bpe.py`](o1_bpe.py) en implementeer:

@@ -46,6 +46,23 @@ Korte deep-dives over één concept dat steeds terugkomt.
 |------|-----------|
 | 🟡 M1 | [Softmax en temperatuur](minis/M1-softmax-en-temperatuur.md) |
 | 🟡 M2 | [Waarom delen door √d_k?](minis/M2-waarom-wortel-dk.md) |
+| 🟡 M3 | [Het inproduct als "hoeveel lijken deze op elkaar?"](minis/M3-inproduct-en-matrices.md) (voorkennis-opfrisser) |
+| 🟡 M4 | [Cross-entropy, of "hoe verrast was het model?"](minis/M4-cross-entropy.md) (voorkennis-opfrisser) |
+
+---
+
+## ▶ Speeltuinen (interactief)
+
+Bij de notes horen interactieve pagina's die in je browser draaien, met echte GPT-2-data:
+
+| Speeltuin | Wat je doet | Hoort bij |
+|---|---|---|
+| [🔤 Tokenizer](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/tokenizer.html) | zelf tekst typen en zien hoe GPT-2/4/4o hem opknippen; BPE stap voor stap | 1.1, O1 |
+| [👀 Attention](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/attention.html) | de formule met de hand, en alle 144 heads van GPT-2 verkennen | 1.2, O2, O4 |
+| [🔭 Logit lens](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/logitlens.html) | zien wat GPT-2 "denkt" na elke laag | 1.3 |
+| [🎲 Sampling](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/sampling.html) | temperatuur, top-k en top-p op echte voorspellingen | 1.4, M1 |
+
+> **Eenmalig aanzetten:** de links werken zodra GitHub Pages aan staat. Ga op GitHub naar *Settings → Pages*, kies bij *Source* "Deploy from a branch", branch `main`, map `/ (root)`, en klik *Save*. Na een minuut of twee staat alles online. Je kunt de bestanden in `interactief/` ook gewoon lokaal openen met een dubbelklik.
 
 ---
 
@@ -75,8 +92,10 @@ modules/
     opdrachten/         ← opdrachten + Python-skeletons
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
+interactief/             ← speeltuinen (HTML), werken via GitHub Pages of lokaal
 tools/
   make_figures.py       ← maakt alle figuren opnieuw, met echte modeldata
+  export_interactive_data.py ← maakt de GPT-2-data voor de speeltuinen
 ```
 
 **Over de figuren:** waar mogelijk zijn de figuren gemaakt met **echte data**: attention-patronen en voorspellingen van GPT-2, de echte GPT-4-tokenizer, en tijdmetingen. Ze zijn dus geen illustraties, maar resultaten die je zelf kunt reproduceren met `python tools/make_figures.py`. Het script zelf lezen is ook leerzaam: het laat zien hoe je in een model kijkt.
@@ -84,6 +103,6 @@ tools/
 ## Hoe werk je een module door?
 
 1. Lees de **module-README** voor de leerdoelen en het leespad.
-2. Wissel **notes** af met **video's**. De notes verwijzen naar de juiste momenten.
+2. Wissel **notes** af met **video's** en **speeltuinen**. De notes zeggen wanneer je wat opent (▶ Probeer het zelf).
 3. Doe de **opdrachten**. De code-opdrachten hebben ingebouwde tests: als `python oX_....py` "Alle tests geslaagd!" print, ben je klaar.
 4. Maak de **zelftoets** zonder te spieken. Kun je een vraag niet beantwoorden, ga dan terug naar de notes.

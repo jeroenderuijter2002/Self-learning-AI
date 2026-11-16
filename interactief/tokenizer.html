@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokenizer-speeltuin</title>
+<link rel="stylesheet" href="style.css"><script src="common.js"></script>
+</head>
+<body><main>
+<nav></nav>
+<h1>🔤 Tokenizer-speeltuin</h1>
+<p class="lead">Een taalmodel ziet nooit letters of woorden, alleen token-ids. Typ hieronder wat je wilt en zie precies wat het model "ziet".</p>
+
+<h2>1. Typ zelf</h2>
+<div class="panel">
+  <div class="row" style="margin-bottom:10px">
+    <label>Tokenizer
+      <select id="enc">
+        <option value="r50k_base">GPT-2 (50k tokens, 2019)</option>
+        <option value="cl100k_base" selected>GPT-4 (100k tokens, 2023)</option>
+        <option value="o200k_base">GPT-4o (200k tokens, 2024)</option>
+      </select></label>
+    <label><input type="checkbox" id="showIds" checked> toon token-ids</label>
+  </div>
+  <textarea id="txt">Hallo, ik ben Jeroen en ik studeer AI in Eindhoven.</textarea>
+  <div class="row" style="margin-top:8px">
+    <span class="hint">Probeer:</span>
+    <button data-p="The quick brown fox jumps over the lazy dog.">Engels</button>
+    <button data-p="De snelle bruine vos springt over de luie hond.">Nederlands</button>
+    <button data-p="ongezelligheidsfactor  arbeidsongeschiktheidsverzekering">lange NL-woorden</button>
+    <button data-p="How many r's are in strawberry?">strawberry</button>
+    <button data-p="12345 + 67890 = 80235&#10;3.14159265358979">getallen</button>
+    <button data-p="hello Hello HELLO  hello   hello">spaties &amp; hoofdletters</button>
+    <button data-p="def add(a, b):&#10;    return a + b&#10;&#10;print(add(2, 3))">Python</button>
+    <button data-p="Ik 🚀 AI! 東京 Ελλάδα مرحبا">emoji &amp; andere schriften</button>
+  </div>
+  <div id="stats" style="margin-top:16px"></div>
+  <div id="out" class="tokens"></div>
+  <p class="hint" id="status">Tokenizer laden…</p>
+</div>
+
+<div class="callout">
+<b>Waar je op kunt letten</b> (en waarom het ertoe doet, zie <a href="https://github.com/jeroenderuijter2002/Self-learning-AI/blob/main/modules/01-transformers/notes/1.1-tokens-en-embeddings.md">notes 1.1</a>):
+<ul style="margin:6px 0">
+<li>De <b>spatie hoort bij het woord erna</b>: <span class="mono">␣Hello</span> en <span class="mono">Hello</span> zijn voor het model twee totaal verschillende tokens.</li>
+<li>Wissel tussen GPT-2 en GPT-4o met de Nederlandse zin. Een grotere vocabulaire kent meer Nederlandse woorddelen, dus minder tokens.</li>
+<li>Oranje-gestippelde blokjes zijn <b>losse bytes</b>: een emoji of teken dat de tokenizer niet als geheel kent, wordt in UTF-8-bytes opgeknipt. Daarom bestaat er nooit een "onbekend woord".</li>
+</ul>
+</div>
+
+<h2>2. BPE stap voor stap</h2>
+<p>Hoe komt een tokenizer aan zijn vocabulaire? Met het algoritme dat je in <b>opdracht O1</b> zelf bouwt: tel welk paar buren het vaakst voorkomt, plak het samen tot één nieuw token, herhaal. Klik zelf door de stappen.</p>
+<div class="panel">
+  <textarea id="bpeTxt" style="min-height:50px">de kat krabt de krullen van de trap, de kat krabt de kast</textarea>
+  <div class="row" style="margin-top:8px">
+    <button class="primary" id="bpeStep">Volgende merge ▶</button>
+    <button id="bpe10">10 merges ⏩</button>
+    <button id="bpeReset">Opnieuw ↺</button>
+    <button data-b="aaabdaaabac">voorbeeld uit de notes</button>
+  </div>
+  <div id="bpeStats" style="margin-top:14px"></div>
+  <div id="bpeOut" class="tokens"></div>
+  <div class="row" style="align-items:flex-start;gap:30px;margin-top:16px">
+    <div><h3>Meest voorkomende paren nu</h3><div id="bpePairs"></div></div>
+    <div><h3>Geleerde merges</h3><div id="bpeMerges" class="hint">nog geen</div></div>
+  </div>
+</div>
+<div class="callout">Zie je hoe <span class="mono">de␣</span> en <span class="mono">␣k</span> snel samensmelten? Veelvoorkomende stukjes worden als eerste één token. Precies daarom is <span class="mono">␣the</span> in GPT-4 één token, maar <span class="mono">ongezelligheid</span> niet: dat woord kwam in de trainingsdata gewoon te weinig voor.</div>
+</main>
+
+<script type="module">
+import { Tiktoken } from "https://esm.sh/js-tiktoken@1/lite";
+const cache = {};
+const $ = (id) => document.getElementById(id);
+async function getEnc(name) {
+  if (!cache[name]) {
+    $("status").textContent = "Tokenizer laden…";
+    const ranks = await (await fetch(`https://tiktoken.pages.dev/js/${name}.json`)).json();
+    cache[name] = new Tiktoken(ranks);
+  }
+  return cache[name];
+}
+async function render() {
+  const enc = await getEnc($("enc").value);
+  const text = $("txt").value;
+  const ids = enc.encode(text);
+  const showIds = $("showIds").checked;
+  $("out").innerHTML = ids.map((id, k) => {
+    const s = enc.decode([id]);
+    const isByte = s.includes("�");
+    const label = isByte ? "byte" : vis(s);
+    return `<span class="tok c${k % 4}${isByte ? " byte" : ""}" data-id="${id}" data-s="${esc(JSON.stringify(s))}">${label}${showIds ? `<small>${id}</small>` : ""}</span>`;
+  }).join("");
+  const chars = [...text].length;
+  $("stats").innerHTML =
+    `<span class="stat"><b>${ids.length}</b><span>tokens</span></span>` +
+    `<span class="stat"><b>${chars}</b><span>tekens</span></span>` +
+    `<span class="stat"><b>${ids.length ? (chars / ids.length).toFixed(2) : "–"}</b><span>tekens per token</span></span>`;
+  $("status").textContent = "";
+  document.querySelectorAll("#out .tok").forEach((el) => {
+    el.onmousemove = (e) => showTip(e, `token-id <b>${el.dataset.id}</b><br>tekst: <span class="mono">${el.dataset.s}</span>`);
+    el.onmouseleave = hideTip;
+  });
+}
+$("txt").addEventListener("input", render);
+$("enc").addEventListener("change", render);
+$("showIds").addEventListener("change", render);
+document.querySelectorAll("button[data-p]").forEach((b) => (b.onclick = () => { $("txt").value = b.dataset.p; render(); }));
+render().catch((e) => ($("status").textContent = "Kon de tokenizer niet laden (geen internet?): " + e));
+
+// ---------------- BPE stap voor stap (op bytes, zoals O1)
+let ids, vocab, merges;
+const dec = new TextDecoder("utf-8", { fatal: false });
+function bpeReset() {
+  ids = [...new TextEncoder().encode($("bpeTxt").value)];
+  vocab = {}; for (let i = 0; i < 256; i++) vocab[i] = [i];
+  merges = [];
+  bpeRender();
+}
+function pairCounts() {
+  const c = new Map();
+  for (let i = 0; i < ids.length - 1; i++) {
+    const k = ids[i] + "," + ids[i + 1];
+    c.set(k, (c.get(k) || 0) + 1);
+  }
+  return [...c.entries()].sort((a, b) => b[1] - a[1]);
+}
+const show = (id) => vis(dec.decode(new Uint8Array(vocab[id])));
+function bpeStep() {
+  const pc = pairCounts();
+  if (!pc.length || pc[0][1] < 2) return false;
+  const [a, b] = pc[0][0].split(",").map(Number);
+  const nid = 256 + merges.length;
+  vocab[nid] = [...vocab[a], ...vocab[b]];
+  merges.push([a, b, nid, pc[0][1]]);
+  const out = [];
+  for (let i = 0; i < ids.length; i++) {
+    if (i < ids.length - 1 && ids[i] === a && ids[i + 1] === b) { out.push(nid); i++; } else out.push(ids[i]);
+  }
+  ids = out; return true;
+}
+function bpeRender() {
+  const n0 = new TextEncoder().encode($("bpeTxt").value).length;
+  $("bpeStats").innerHTML =
+    `<span class="stat"><b>${ids.length}</b><span>tokens</span></span>` +
+    `<span class="stat"><b>${merges.length}</b><span>merges</span></span>` +
+    `<span class="stat"><b>${(n0 / ids.length).toFixed(2)}×</b><span>compressie</span></span>`;
+  const last = merges.length ? merges[merges.length - 1][2] : -1;
+  $("bpeOut").innerHTML = ids.map((id) =>
+    `<span class="tok ${id >= 256 ? "c" + ((id - 256) % 3 + 0) : ""} ${id === last ? "sel" : ""}" style="${id < 256 ? "background:var(--line)" : ""}">${show(id)}<small>${id}</small></span>`).join("");
+  const pc = pairCounts().slice(0, 6);
+  const max = pc.length ? pc[0][1] : 1;
+  $("bpePairs").innerHTML = pc.length ? "<table>" + pc.map(([k, n], i) => {
+    const [a, b] = k.split(",").map(Number);
+    return `<tr><td class="mono">${show(a)} + ${show(b)}</td><td><svg width="120" height="12"><rect class="bar ${i ? "dim" : ""}" width="${(n / max) * 120}" height="12" rx="3"/></svg></td><td>${n}×</td></tr>`;
+  }).join("") + "</table>" : "<span class='hint'>geen paren meer</span>";
+  $("bpeMerges").innerHTML = merges.length ? "<table>" + merges.slice(-8).reverse().map(([a, b, n, c]) =>
+    `<tr><td class="mono">${show(a)} + ${show(b)}</td><td>→</td><td class="mono"><b>${show(n)}</b></td><td class="hint">id ${n}, ${c}×</td></tr>`).join("") + "</table>" : "nog geen";
+}
+$("bpeStep").onclick = () => { bpeStep(); bpeRender(); };
+$("bpe10").onclick = () => { for (let i = 0; i < 10 && bpeStep(); i++); bpeRender(); };
+$("bpeReset").onclick = bpeReset;
+$("bpeTxt").addEventListener("input", bpeReset);
+document.querySelectorAll("button[data-b]").forEach((b) => (b.onclick = () => { $("bpeTxt").value = b.dataset.b; bpeReset(); }));
+bpeReset();
+</script>
+</body></html>

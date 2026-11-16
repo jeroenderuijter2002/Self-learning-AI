@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attention-speeltuin</title>
+<link rel="stylesheet" href="style.css"><script src="common.js"></script>
+<script src="data/attention.js"></script>
+<style>
+  .grid { border-collapse: separate; border-spacing: 3px; }
+  .grid td, .grid th { border: none; text-align: center; padding: 0; font-size: 13px; }
+  .grid th { color: var(--ink2); font-weight: 500; padding: 0 6px; }
+  .grid td { width: 54px; height: 38px; border-radius: 6px; font-variant-numeric: tabular-nums; }
+  .grid input { width: 50px; text-align: center; border: none; background: transparent; font: inherit; color: inherit; }
+  .masked { background: var(--line); color: var(--muted); }
+  #thumbs { display: grid; grid-template-columns: 26px repeat(12, 1fr); gap: 3px; max-width: 640px; }
+  #thumbs canvas { width: 100%; aspect-ratio: 1; border-radius: 4px; cursor: pointer; outline: 1px solid var(--line); }
+  #thumbs canvas.on { outline: 2.5px solid var(--orange); }
+  #thumbs .lab { font-size: 11px; color: var(--muted); display: flex; align-items: center; justify-content: center; }
+  #flow .tok { cursor: pointer; transition: background .1s; }
+  #big { width: 100%; max-width: 560px; image-rendering: pixelated; border-radius: 6px; }
+</style>
+</head>
+<body><main>
+<nav></nav>
+<h1>👀 Attention-speeltuin</h1>
+<p class="lead">Eerst speel je met de formule zelf. Daarna kijk je in de 144 attention-heads van het echte GPT-2.</p>
+
+<h2>1. De formule, met de hand</h2>
+<p>Weet je nog uit notes 1.2? <span class="mono">softmax(QKᵀ/√d + mask)</span>. Hieronder staan de scores <span class="mono">QKᵀ</span> voor vier tokens. <b>Pas zelf getallen aan</b> en kijk wat er met de gewichten gebeurt.</p>
+<div class="panel">
+  <div class="row" style="gap:30px;align-items:flex-start">
+    <div><h3>Scores (aanpasbaar)</h3><table class="grid" id="scoreGrid"></table></div>
+    <div><h3>Attention-gewichten</h3><table class="grid" id="wGrid"></table></div>
+  </div>
+  <div class="row" style="margin-top:14px;gap:26px">
+    <label><input type="checkbox" id="mask" checked> causal mask</label>
+    <label>schaalfactor (zoals 1/√d) <input type="range" id="scale" min="0.05" max="4" step="0.05" value="1"> <b id="scaleV" class="mono">1.00</b></label>
+  </div>
+</div>
+<div class="callout"><b>Probeer dit:</b>
+<ol style="margin:6px 0">
+<li>Zet de mask uit. Nu kijkt "De" ook naar de toekomst: tijdens training zou het model dan het antwoord kunnen spieken.</li>
+<li>Schuif de schaalfactor naar 4. De rijen worden bijna one-hot: elk token kijkt nog maar naar één ander. Naar 0,05: alles wordt uniform. Dit is precies <a href="https://github.com/jeroenderuijter2002/Self-learning-AI/blob/main/minis/M2-waarom-wortel-dk.md">mini M2</a>: zonder 1/√d zit je bij grote dimensies vast aan de "4"-kant.</li>
+<li>Geef in de rij van "op" de kolom "kat" een score van 5. Hoeveel gewicht blijft er over voor de rest?</li>
+</ol></div>
+
+<h2>2. Kijk in GPT-2</h2>
+<p>GPT-2 small heeft 12 lagen × 12 heads = 144 heads. Elk vakje hieronder is één head (rij = laag, kolom = head). <b>Klik op een vakje</b> om het groot te zien.</p>
+<div class="panel">
+  <div class="row" style="margin-bottom:12px">
+    <label>Zin <select id="sent"></select></label>
+    <span class="hint">Bekende heads:</span>
+    <button data-h="4,11,0">previous-token</button>
+    <button data-h="5,1,0">attention sink</button>
+    <button data-h="10,7,0">naam-head (Mary)</button>
+    <button data-h="5,5,3">induction head</button>
+  </div>
+  <div id="thumbs"></div>
+</div>
+<div class="panel">
+  <h3 id="headTitle"></h3>
+  <p class="hint">Klik op een token: de achtergrond van de eerdere tokens laat zien hoeveel aandacht het geklikte token eraan geeft.</p>
+  <div id="flow" class="tokens" style="margin-bottom:16px"></div>
+  <canvas id="big"></canvas>
+  <p class="hint">Heatmap: rij = token dat kijkt, kolom = token waarnaar gekeken wordt. Beweeg erover voor de waarden.</p>
+</div>
+<div class="callout"><b>Opdrachten:</b>
+<ul style="margin:6px 0">
+<li>Kies de zin <i>"Harry Potter studied at Hogwarts. Harry Potter was a wizard."</i> en zoek een head waarin het tweede "Potter" sterk naar het token <b>na</b> het eerste "Potter" kijkt. Dat heet een <b>induction head</b> (spoiler: probeer laag 5, head 5): "dit stukje heb ik eerder gezien, dus wat kwam er toen na?". Het is een van de belangrijkste ontdekkingen uit interpretability-onderzoek.</li>
+<li>Kies <i>"The cat sat on the mat because it was tired."</i>, klik op "it" en zoek een head die van "it" naar "cat" kijkt.</li>
+<li>Kijk naar laag 0 tegenover laag 11. Waar zijn de patronen eenvoudiger?</li>
+</ul></div>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const blue = (a) => `rgba(42,120,214,${a})`;
+
+// ---------- 1. formule
+const toks = ["De", "kat", "zat", "op"];
+let S = [[2.9, -3.6, 0.6, -0.8], [-0.6, -0.3, -2.8, -0.3], [-1.2, 4.7, 0.3, -0.5], [-0.4, -0.9, -1.5, -0.5]];
+function drawFormula() {
+  const scale = +$("scale").value, mask = $("mask").checked;
+  $("scaleV").textContent = scale.toFixed(2);
+  let html = "<tr><th></th>" + toks.map((t) => `<th>${t}</th>`).join("") + "</tr>";
+  toks.forEach((t, i) => {
+    html += `<tr><th>${t}</th>` + toks.map((_, j) =>
+      (mask && j > i) ? `<td class="masked">−∞</td>` :
+      `<td style="background:var(--surface);outline:1px solid var(--line)"><input data-i="${i}" data-j="${j}" value="${S[i][j]}"></td>`).join("") + "</tr>";
+  });
+  $("scoreGrid").innerHTML = html;
+  document.querySelectorAll("#scoreGrid input").forEach((inp) => inp.onchange = () => {
+    const v = parseFloat(inp.value.replace(",", ".")); if (!isNaN(v)) S[+inp.dataset.i][+inp.dataset.j] = v; drawFormula();
+  });
+  let w = "<tr><th></th>" + toks.map((t) => `<th>${t}</th>`).join("") + "</tr>";
+  toks.forEach((t, i) => {
+    const z = S[i].map((v, j) => (mask && j > i) ? -Infinity : v * scale);
+    const m = Math.max(...z); const e = z.map((v) => Math.exp(v - m)); const s = e.reduce((a, b) => a + b);
+    w += `<tr><th>${t}</th>` + e.map((v) => {
+      const p = v / s; return `<td style="background:${blue(0.08 + 0.92 * p)};color:${p > 0.55 ? "#fff" : "inherit"}">${p.toFixed(2)}</td>`;
+    }).join("") + "</tr>";
+  });
+  $("wGrid").innerHTML = w;
+}
+$("scale").oninput = drawFormula; $("mask").onchange = drawFormula; drawFormula();
+
+// ---------- 2. GPT-2
+let si = 0, L = 4, H = 11, sel = null;
+ATTN_DATA.forEach((d, i) => $("sent").insertAdjacentHTML("beforeend", `<option value="${i}">${esc(d.text)}</option>`));
+const get = (d, l, h, i, j) => (j <= i ? d.A[l][h][i][j] / 100 : 0);
+function drawMap(cv, d, l, h, px) {
+  const T = d.tokens.length; cv.width = cv.height = T * px;
+  const c = cv.getContext("2d");
+  c.fillStyle = getComputedStyle(document.body).getPropertyValue("--panel"); c.fillRect(0, 0, cv.width, cv.height);
+  for (let i = 0; i < T; i++) for (let j = 0; j <= i; j++) {
+    c.fillStyle = blue(Math.min(1, get(d, l, h, i, j) * 1.1)); c.fillRect(j * px, i * px, px, px);
+  }
+}
+function drawThumbs() {
+  const d = ATTN_DATA[si];
+  let html = "<div></div>" + [...Array(12).keys()].map((h) => `<div class="lab">h${h}</div>`).join("");
+  for (let l = 0; l < 12; l++) {
+    html += `<div class="lab">L${l}</div>` + [...Array(12).keys()].map((h) => `<canvas data-l="${l}" data-h="${h}"></canvas>`).join("");
+  }
+  $("thumbs").innerHTML = html;
+  document.querySelectorAll("#thumbs canvas").forEach((cv) => {
+    drawMap(cv, d, +cv.dataset.l, +cv.dataset.h, 4);
+    cv.onclick = () => { L = +cv.dataset.l; H = +cv.dataset.h; drawHead(); };
+  });
+}
+function drawHead() {
+  const d = ATTN_DATA[si];
+  document.querySelectorAll("#thumbs canvas").forEach((cv) => cv.classList.toggle("on", +cv.dataset.l === L && +cv.dataset.h === H));
+  $("headTitle").textContent = `Laag ${L}, head ${H}`;
+  const T = d.tokens.length;
+  if (sel === null || sel >= T) sel = T - 1;
+  $("flow").innerHTML = d.tokens.map((t, j) => {
+    const a = j <= sel ? get(d, L, H, sel, j) : 0;
+    return `<span class="tok ${j === sel ? "sel" : ""}" data-j="${j}" style="background:${j > sel ? "transparent" : blue(0.06 + 0.94 * a)};color:${a > 0.55 ? "#fff" : "inherit"};${j > sel ? "opacity:.35" : ""}">${vis(t)}<small>${j <= sel ? Math.round(a * 100) + "%" : ""}</small></span>`;
+  }).join("");
+  document.querySelectorAll("#flow .tok").forEach((el) => el.onclick = () => { sel = +el.dataset.j; drawHead(); });
+  const cv = $("big"); drawMap(cv, d, L, H, 40);
+  cv.onmousemove = (e) => {
+    const r = cv.getBoundingClientRect(); const i = Math.floor((e.clientY - r.top) / r.height * T), j = Math.floor((e.clientX - r.left) / r.width * T);
+    if (i < 0 || j < 0 || i >= T || j >= T) return hideTip();
+    showTip(e, `<b>${vis(d.tokens[i])}</b> → <b>${vis(d.tokens[j])}</b><br>${j > i ? "gemaskeerd (toekomst)" : Math.round(get(d, L, H, i, j) * 100) + "% van de aandacht"}`);
+  };
+  cv.onmouseleave = hideTip;
+}
+$("sent").onchange = () => { si = +$("sent").value; sel = null; drawThumbs(); drawHead(); };
+document.querySelectorAll("button[data-h]").forEach((b) => b.onclick = () => {
+  [L, H, si] = b.dataset.h.split(",").map(Number); $("sent").value = si; sel = null; drawThumbs(); drawHead();
+});
+drawThumbs(); drawHead();
+</script>
+</body></html>

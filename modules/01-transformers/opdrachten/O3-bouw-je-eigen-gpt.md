@@ -30,6 +30,8 @@ Vink af terwijl je bouwt. Bij elke mijlpaal moet je code draaien.
 | ☐ | + Residuals + LayerNorm, gestapelde blocks | volledige transformer | ~2,0 |
 | ☐ | + Dropout, opschalen | een echte mini-GPT | ~1,5 (GPU) |
 
+> 💡 **Sanity check bij de eerste stap:** de loss van een onbetraind model hoort ongeveer **ln(65) ≈ 4,17** te zijn (65 = aantal verschillende tekens in Shakespeare). Waarom? Zie [Mini M4](../../../minis/M4-cross-entropy.md). Begint jouw loss veel hoger, dan klopt je initialisatie niet.
+
 ### Kleine config voor CPU
 
 | Hyperparameter | Karpathy (GPU) | CPU-vriendelijk |

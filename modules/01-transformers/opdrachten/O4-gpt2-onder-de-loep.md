@@ -70,7 +70,7 @@ plt.yticks(range(len(tokens)), tokens)
 plt.title(f"Laag {layer}, head {head}"); plt.tight_layout(); plt.show()
 ```
 
-**Opdracht:** zoek door verschillende lagen en heads en vind:
+**Opdracht:** zoek door verschillende lagen en heads en vind (tip: in de [Attention-speeltuin](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/attention.html) zie je alle 144 heads tegelijk, handig om eerst te verkennen):
 - een **previous-token head**: een diagonaal net onder de hoofddiagonaal;
 - een head die sterk naar het **eerste token** kijkt (een "attention sink", als een soort "niks te doen"-stand);
 - een head die vanaf de laatste positie naar **" Mary"** kijkt. Het model moet " Mary" voorspellen, niet " John"!

@@ -1,0 +1,64 @@
+:root {
+  --surface: #fcfcfb; --panel: #ffffff; --line: #e6e5e1; --ink: #0b0b0b; --ink2: #52514e; --muted: #8a8984;
+  --blue: #2a78d6; --blue-soft: #cde2fb; --orange: #eb6834; --aqua: #1baf7a;
+  --t1: #cde2fb; --t2: #fde0d2; --t3: #c9eedf; --t4: #fbe7b0;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #1a1a19; --panel: #232322; --line: #3a3a38; --ink: #f0efec; --ink2: #c3c2b7; --muted: #8f8e88;
+    --blue: #3987e5; --blue-soft: #1c3d66; --orange: #d95926; --aqua: #199e70;
+    --t1: #1e3a5f; --t2: #5a3020; --t3: #1d4a3a; --t4: #5a4a1a;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface); color: var(--ink);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: 28px 20px 80px; }
+nav { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+nav a { color: var(--ink2); text-decoration: none; margin-right: 14px; }
+nav a:hover, nav a.active { color: var(--blue); }
+h1 { font-size: 30px; margin: 4px 0 6px; letter-spacing: -0.01em; }
+h2 { font-size: 21px; margin: 40px 0 8px; }
+h3 { font-size: 16px; margin: 18px 0 6px; }
+p.lead { color: var(--ink2); font-size: 17px; margin-top: 0; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin: 14px 0; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+label { font-size: 14px; color: var(--ink2); }
+textarea, input[type=text], select { font: inherit; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+textarea { width: 100%; min-height: 70px; resize: vertical; }
+button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+button:hover { border-color: var(--blue); color: var(--blue); }
+button.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+button.primary:hover { filter: brightness(1.08); color: #fff; }
+input[type=range] { accent-color: var(--blue); width: 180px; vertical-align: middle; }
+.stat { display: inline-block; margin-right: 22px; }
+.stat b { font-size: 24px; display: block; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--muted); }
+.tokens { display: flex; flex-wrap: wrap; gap: 4px 3px; line-height: 1; margin-top: 10px; }
+.tok { font-family: var(--mono); font-size: 15px; padding: 7px 6px 5px; border-radius: 6px; white-space: pre;
+  display: inline-flex; flex-direction: column; align-items: center; min-width: 14px; cursor: default; }
+.tok small { font-size: 10px; color: var(--muted); margin-top: 5px; }
+.tok.c0 { background: var(--t1); } .tok.c1 { background: var(--t2); } .tok.c2 { background: var(--t3); } .tok.c3 { background: var(--t4); }
+.tok.byte { outline: 1.5px dashed var(--orange); }
+.tok.sel { outline: 2px solid var(--blue); }
+.hint { font-size: 14px; color: var(--muted); }
+.callout { border-left: 3px solid var(--blue); padding: 6px 14px; color: var(--ink2); background: var(--panel); border-radius: 0 8px 8px 0; margin: 14px 0; }
+table { border-collapse: collapse; font-size: 14px; }
+td, th { padding: 4px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+th { color: var(--ink2); font-weight: 600; }
+.mono { font-family: var(--mono); }
+#tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 13px;
+  padding: 6px 9px; border-radius: 6px; opacity: 0; transition: opacity .1s; z-index: 10; max-width: 280px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.card { display: block; text-decoration: none; color: inherit; }
+.card:hover .panel { border-color: var(--blue); }
+.card .panel { height: 100%; margin: 0; }
+.card h3 { margin-top: 0; }
+.bar { fill: var(--blue); }
+.bar.dim { fill: var(--line); }
+svg text { fill: var(--ink2); font-size: 12px; }
