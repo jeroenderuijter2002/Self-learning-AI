@@ -24,24 +24,6 @@ Na deze cursus kun je:
 
 ---
 
---|---|
-| Klassieke NLP | n-grams, HMM's, parsers: taalverwerking van vóór de transformer | grotendeels vervangen door LLM's; historisch interessant |
-| Spraak & audio | spraakherkenning, tekst-naar-spraak, audiomodellen | eigen vakgebied; de principes (transformers, diffusion) zie je in M1 en M6 |
-| 3D & graphics | NeRF, 3D-reconstructie, gaussian splatting | niche, ver van je doelen |
-| Self-supervised leren | leren zonder labels (contrastive learning, masked modelling) | deels in M2 (pretraining is self-supervised) |
-| Learning theory | PAC-learning, VC-dimensie, generalisatiebewijzen | voor onderzoekers, niet nodig als engineer |
-| Anomaly detection, AutoML, recommender systems | afwijkingen vinden, automatisch modellen kiezen, aanbevelingen | deels in M13 (recommenders als ontwerpcase) |
-| Evolutionaire algoritmen ✅ | genetische algoritmen, optimalisatie via "natuurlijke selectie" | al gehad |
-| Speltheorie & multi-agent | meerdere agenten die samenwerken of concurreren | specialistisch; komt kort terug bij agents (M3) |
-| Expert systems & fuzzy logic | regelgebaseerde AI uit de jaren '80–'90 | vooral historisch |
-| Robotica & embodied AI | AI in fysieke systemen | je regeltechniek-achtergrond is hier de basis; eigen vakgebied |
-| GPU-programmering & distributed training | CUDA, modellen trainen over duizenden GPU's | belangrijk bij AI-labs, zelden bij consultancies |
-| Verantwoorde AI & regelgeving ✅ | EU AI Act, fairness, bias | al gehad |
-| Privacy & federated learning | trainen zonder data te centraliseren, differential privacy | niche |
-| Quantum-ML & neuromorphic | ML op quantumcomputers en hersen-geïnspireerde chips | experimenteel, ver van de praktijk |
-
----
-
 ## Modules
 
 | # | Module | Status | Wat je leert | 🌍 Bekend van |
