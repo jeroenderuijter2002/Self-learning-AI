@@ -18,20 +18,20 @@ D = [  # titel, x, y, w, h, ncol, chips(tekst, status, badge)
    ("3D & graphics\n(NeRF)", N_, ""), ("Self-supervised &\nrepresentatie-leren", N_, "deels M2")]),
  ("Klassieke AI", 0, 12, 24, 29, 2, [
    ("Zoeken &\nplanning", R_, "M8"), ("Logica & kennis-\nrepresentatie", R_, "M8"), ("OR & beslissen\nonder onzekerheid", H_, "BSc"),
-   ("Evolutionaire\nalgoritmen", N_, ""), ("Speltheorie &\nmulti-agent", N_, ""), ("Expert systems\n& fuzzy logic", N_, "")]),
+   ("Evolutionaire\nalgoritmen", H_, ""), ("Speltheorie &\nmulti-agent", N_, ""), ("Expert systems\n& fuzzy logic", N_, "")]),
  ("Machine learning", 25.5, 12, 27, 29, 2, [
    ("Supervised: regressie,\nSVM, bomen", H_, ""), ("Unsupervised:\nclustering, PCA", H_, ""), ("Bayesiaanse ML &\ngraphical models", B_, "5SSD0"),
    ("Gaussian processes\n& surrogaten", H_, "stage"), ("Gradient boosting\nin de praktijk", R_, "M14"), ("Causal inference\n& time series", R_, "M9"),
    ("Learning theory", N_, ""), ("Anomaly detection,\nAutoML, recsys", N_, "deels M13")]),
  ("Beslissen & besturen", 54, 12, 22, 29, 1, [
-   ("MDP's & dynamic programming", H_, "SDT"), ("Regeltechniek & MPC", H_, "5LMB0"), ("Deep RL", R_, "M5 · thesis"), ("Robotica & embodied AI", N_, "")]),
+   ("MDP's & dynamic programming", H_, "SDT"), ("Regeltechniek & MPC", H_, "5LMB0"), ("Deep RL", B_, "M5 · deels gehad · thesis"), ("Robotica & embodied AI", N_, "")]),
  ("Wiskundige fundamenten", 0, 2, 76, 8.5, 4, [
    ("Lineaire algebra\n& calculus", H_, ""), ("Kansrekening\n& statistiek", H_, ""), ("Optimalisatie", H_, "4DM20"), ("Informatietheorie", B_, "5SSD0")]),
  ("Engineering", 78, 23, 22, 50, 1, [
    ("Software engineering", R_, "M10"), ("MLOps & LLMOps", R_, "M11"), ("Data engineering", R_, "M12 · SQL bezig"),
    ("Systeemontwerp\n& A/B-testen", R_, "M13"), ("GPU-programmering &\ndistributed training", N_, "")]),
  ("Randgebieden", 78, 2, 22, 19.5, 1, [
-   ("Verantwoorde AI\n& regelgeving", N_, ""), ("Privacy & federated\nlearning", N_, ""), ("Quantum-ML\n& neuromorphic", N_, "")]),
+   ("Verantwoorde AI\n& regelgeving", H_, ""), ("Privacy & federated\nlearning", N_, ""), ("Quantum-ML\n& neuromorphic", N_, "")]),
 ]
 fig, ax = plt.subplots(figsize=(17, 14)); fig.patch.set_facecolor(SURF)
 ax.set_xlim(-0.5, 100.5); ax.set_ylim(-0.5, 85); ax.axis("off")

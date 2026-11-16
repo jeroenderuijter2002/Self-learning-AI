@@ -16,7 +16,7 @@ RL is de techniek achter AlphaGo, robotica en (via module 2) RLHF en reasoning-m
 
 ## Wat je al kent (en wat we dus overslaan)
 
-> ⏭️ MDP's, Bellman-vergelijkingen, value iteration en policy iteration: die ken je uit stochastische beslistheorie. We starten waar de modelvrije methoden beginnen. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.
+> ⏭️ MDP's, Bellman-vergelijkingen, value/policy iteration én de RL-basis (Q-learning e.d.): die heb je al gehad, en je thesis gebruikt RL. Hoofdstuk 5.1 is daarom alleen een korte opfrisser; het zwaartepunt ligt op deep RL, PPO, MCTS en de link met LLM-training. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.
 
 ## Hoofdstukken (gepland)
 
