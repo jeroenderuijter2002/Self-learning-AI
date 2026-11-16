@@ -24,30 +24,19 @@ Na deze cursus kun je:
 
 ---
 
-## 🗺️ De landkaart: waar past alles?
-
-AI is breed, en het is lastig om alles te plaatsen. Deze kaart laat het hele vakgebied zien: wat je al hebt gehad, wat je in deze cursus leert, en wat bewust buiten de cursus valt.
-
-![Landkaart van AI en machine learning](assets/landkaart.png)
-
-**Hoe lees je hem?** Onderaan staat het fundament (wiskunde), daarboven de grote stromingen: klassieke AI, machine learning, en beslissen en besturen. Deep learning bouwt op machine learning, en taalmodellen bouwen op deep learning. Engineering staat ernaast, omdat je dat bij élke laag nodig hebt zodra iets in productie moet. De kaart wordt gemaakt met [`tools/landkaart.py`](tools/landkaart.py); pas daar de status aan als je iets afrondt.
-
-### Wat bewust buiten deze cursus valt
-
-| Onderwerp | Wat het is | Waarom niet (nu) |
-|---|---|---|
+--|---|
 | Klassieke NLP | n-grams, HMM's, parsers: taalverwerking van vóór de transformer | grotendeels vervangen door LLM's; historisch interessant |
 | Spraak & audio | spraakherkenning, tekst-naar-spraak, audiomodellen | eigen vakgebied; de principes (transformers, diffusion) zie je in M1 en M6 |
 | 3D & graphics | NeRF, 3D-reconstructie, gaussian splatting | niche, ver van je doelen |
 | Self-supervised leren | leren zonder labels (contrastive learning, masked modelling) | deels in M2 (pretraining is self-supervised) |
 | Learning theory | PAC-learning, VC-dimensie, generalisatiebewijzen | voor onderzoekers, niet nodig als engineer |
 | Anomaly detection, AutoML, recommender systems | afwijkingen vinden, automatisch modellen kiezen, aanbevelingen | deels in M13 (recommenders als ontwerpcase) |
-| Evolutionaire algoritmen | genetische algoritmen, optimalisatie via "natuurlijke selectie" | kleine niche naast gradient-gebaseerde methoden |
+| Evolutionaire algoritmen ✅ | genetische algoritmen, optimalisatie via "natuurlijke selectie" | al gehad |
 | Speltheorie & multi-agent | meerdere agenten die samenwerken of concurreren | specialistisch; komt kort terug bij agents (M3) |
 | Expert systems & fuzzy logic | regelgebaseerde AI uit de jaren '80–'90 | vooral historisch |
 | Robotica & embodied AI | AI in fysieke systemen | je regeltechniek-achtergrond is hier de basis; eigen vakgebied |
 | GPU-programmering & distributed training | CUDA, modellen trainen over duizenden GPU's | belangrijk bij AI-labs, zelden bij consultancies |
-| Verantwoorde AI & regelgeving | EU AI Act, fairness, bias | bewust weggelaten |
+| Verantwoorde AI & regelgeving ✅ | EU AI Act, fairness, bias | al gehad |
 | Privacy & federated learning | trainen zonder data te centraliseren, differential privacy | niche |
 | Quantum-ML & neuromorphic | ML op quantumcomputers en hersen-geïnspireerde chips | experimenteel, ver van de praktijk |
 
@@ -61,7 +50,7 @@ AI is breed, en het is lastig om alles te plaatsen. Deze kaart laat het hele vak
 | ⚪ 2 | [Van tekstvoorspeller naar assistent](modules/02-training/README.md) | 🔜 | pretraining, scaling laws, fine-tuning, RLHF, Constitutional AI, reasoning-modellen | ChatGPT: van GPT-3 naar assistent |
 | ⚪ 3 | [AI engineering: LLM's in systemen](modules/03-ai-engineering/README.md) | 🔜 | prompting, embeddings en vector search, RAG, tool use en agents, evals | Morgan Stanley AI-assistent (2023) |
 | ⚪ 4 | [Inference en efficiëntie](modules/04-inference/README.md) | 🔜 | quantization, LoRA, distillation, serving, lokaal draaien | LLaMA op een MacBook (2023) |
-| 🟢 5 | [Reinforcement learning](modules/05-reinforcement-learning/README.md) | 🔜 | Q-learning, DQN, policy gradients, PPO, MCTS | AlphaGo verslaat Lee Sedol (2016) |
+| 🟢 5 | [Reinforcement learning](modules/05-reinforcement-learning/README.md) | 🔜 (deels gehad) | Q-learning, DQN, policy gradients, PPO, MCTS | AlphaGo verslaat Lee Sedol (2016) |
 | 🟢 6 | [Generatieve modellen: beeld en multimodaal](modules/06-generatieve-modellen/README.md) | 🔜 | diffusion, flow matching, CLIP, vision transformers | Stable Diffusion (2022) |
 | 🟢 7 | [Interpretability en alignment](modules/07-interpretability/README.md) | 🔜 | circuits, superposition, sparse autoencoders, alignment-problemen | Golden Gate Claude (2024) |
 | 🔵 8 | [Klassieke en symbolische AI](modules/08-klassieke-ai/README.md) | 🔜 | zoeken, planning, logica, neuro-symbolisch | Deep Blue verslaat Kasparov (1997) |
@@ -92,7 +81,7 @@ flowchart LR
     M12["12 Data eng."] --> M11
     MLB --> M14
     M3 -.-> M4["4 Inference"]
-    M2 -.-> M5["5 RL"]
+    M2 -.-> M5["5 RL<br/>🟡 deels gehad"]
     MDP -.-> M5
     M2 -.-> M7["7 Interpretability"]
     M1 -.-> M6["6 Generatief"]
@@ -109,10 +98,10 @@ flowchart LR
         X10["Robotica ≈ 5 + MPC"]
         X2["Spraak & audio ≈ 6"]
         X3["3D & graphics ≈ 6"]
-        X7["Evolutionaire algoritmen ≈ 8"]
+        X7["Evolutionaire algoritmen ✅"]
         X8["Expert systems & fuzzy logic ≈ 8"]
         X12["Privacy & federated learning ≈ 11"]
-        X13["Verantwoorde AI ≈ 13"]
+        X13["Verantwoorde AI ✅"]
         X6["AutoML & anomaly detection ≈ 14"]
         X5["Learning theory ≈ ML-basis"]
         X14["Quantum-ML"]
@@ -131,9 +120,10 @@ flowchart LR
     classDef nu fill:#cde2fb,stroke:#2a78d6,stroke-width:3px,color:#0b0b0b
     classDef niet fill:#f4f3f0,stroke:#a8a7a2,color:#6b6a66,stroke-dasharray:4 3
     class W,OPT,MLB,NN,OR,MDP had
-    class BAY bezig
+    class BAY,M5 bezig
     class M1 nu
-    class X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14 niet
+    class X1,X2,X3,X4,X5,X6,X8,X9,X10,X11,X12,X14 niet
+    class X7,X13 had
     style NIET fill:#fafaf8,stroke:#d6d5d0,color:#52514e
 ```
 
@@ -141,6 +131,27 @@ flowchart LR
 - **Hoofdroute (doorgetrokken pijlen):** 1 → 2 → 3 geeft je de AI-kennis waarmee je opvalt. Daarna 10 → 11, waarin je het project uit module 3 in productie zet: samen je sterkste portfolioproject. Rond af met 13 voor sollicitaties.
 - **12 en 14** kun je parallel doen. 14 is vooral belangrijk voor consulting, waar veel klantdata tabeldata is.
 - **4–9** naar interesse. De stippellijnen tonen welke voorkennis handig is: RL (5) bouwt bijvoorbeeld voort op je MDP-kennis uit Stochastic Decision Theory.
+
+### Wat bewust buiten deze cursus valt
+
+De grijze vakjes rechts in het diagram, met uitleg:
+
+| Onderwerp | Wat het is | Waarom niet (nu) |
+|---|---|---|
+| Klassieke NLP | n-grams, HMM's, parsers: taalverwerking van vóór de transformer | grotendeels vervangen door LLM's; historisch interessant |
+| Spraak & audio | spraakherkenning, tekst-naar-spraak, audiomodellen | eigen vakgebied; de principes (transformers, diffusion) zie je in M1 en M6 |
+| 3D & graphics | NeRF, 3D-reconstructie, gaussian splatting | niche, ver van je doelen |
+| Self-supervised leren | leren zonder labels (contrastive learning, masked modelling) | deels in M2 (pretraining is self-supervised) |
+| Learning theory | PAC-learning, VC-dimensie, generalisatiebewijzen | voor onderzoekers, niet nodig als engineer |
+| Anomaly detection, AutoML, recommender systems | afwijkingen vinden, automatisch modellen kiezen, aanbevelingen | deels in M13 (recommenders als ontwerpcase) |
+| Evolutionaire algoritmen ✅ | genetische algoritmen, optimalisatie via "natuurlijke selectie" | al gehad |
+| Speltheorie & multi-agent | meerdere agenten die samenwerken of concurreren | specialistisch; komt kort terug bij agents (M3) |
+| Expert systems & fuzzy logic | regelgebaseerde AI uit de jaren '80–'90 | vooral historisch |
+| Robotica & embodied AI | AI in fysieke systemen | je regeltechniek-achtergrond is hier de basis; eigen vakgebied |
+| GPU-programmering & distributed training | CUDA, modellen trainen over duizenden GPU's | belangrijk bij AI-labs, zelden bij consultancies |
+| Verantwoorde AI & regelgeving ✅ | EU AI Act, fairness, bias | al gehad |
+| Privacy & federated learning | trainen zonder data te centraliseren, differential privacy | niche |
+| Quantum-ML & neuromorphic | ML op quantumcomputers en hersen-geïnspireerde chips | experimenteel, ver van de praktijk |
 
 ---
 
@@ -198,11 +209,9 @@ modules/
     opdrachten/         ← opdrachten + Python-skeletons
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
-assets/                  ← landkaart en andere afbeeldingen
 interactief/             ← speeltuinen (HTML), werken via GitHub Pages of lokaal
 tools/
   make_figures.py       ← maakt alle figuren opnieuw, met echte modeldata
-  landkaart.py          ← maakt de landkaart (pas hier statussen aan)
   export_interactive_data.py ← maakt de GPT-2-data voor de speeltuinen
 ```
 
