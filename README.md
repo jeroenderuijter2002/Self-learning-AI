@@ -1,31 +1,35 @@
 # Zelf AI aanleren
-### Van ML-basis naar hoe moderne AI (zoals Claude) écht werkt
+### Van ML-basis naar hoe moderne AI (zoals Claude) écht werkt, en hoe je het als ML engineer bouwt
 *Zelfstudie-cursus voor Jeroen — editie 2026-2027*
 
 ---
 
 ## Cursusdoelen
 
-Je kent machine learning: optimalisatie, generalisatie, regressie en classificatie, probabilistische modellen, Bayesiaanse inferentie. Deze cursus bouwt daarop verder, op twee terreinen waar de meeste ML-opleidingen stoppen:
+Je kent machine learning al: regressie en classificatie, neurale netwerken en CNN's, Bayesiaanse ML, optimalisatie en OR, MDP's, regeltechniek en MPC (het groene deel van het [routediagram](#aanbevolen-route)). Deze cursus bouwt daarop verder, op drie terreinen waar de meeste ML-opleidingen stoppen:
 
-1. **De technologie achter huidige AI-systemen:** hoe een model als Claude werkt en getraind wordt.
-2. **Het vak van ML engineer:** van een model in een notebook naar een systeem dat in productie draait.
+1. ⚪ **De technologie achter huidige AI-systemen** (modules 1–4): hoe een model als Claude werkt, getraind wordt en efficiënt draait.
+2. 🟢🔵 **De bredere AI-wereld** (modules 5–9 en 15–17): RL, generatieve modellen, interpretability, klassieke AI, self-supervised learning, anomaly detection en multi-agent systemen.
+3. 🟠 **Het vak van ML engineer** (modules 10–14 en 18): van een model in een notebook naar een systeem dat in productie draait, tot en met trainen op GPU-clusters.
 
 Na deze cursus kun je:
 - uitleggen, tot op matrixniveau, wat er gebeurt als een taalmodel een woord voorspelt;
 - beschrijven hoe een model als Claude wordt getraind: pretraining, post-training en RL;
 - zelf LLM-systemen bouwen en evalueren (RAG, agents, tools);
-- een ML-systeem ontwerpen, bouwen, uitrollen en bewaken zoals in het bedrijfsleven;
-- de bredere AI-wereld plaatsen: RL, generatieve beeldmodellen, interpretability, klassieke AI, self-supervised learning, anomaly detection en multi-agent systemen;
-- begrijpen hoe modellen op GPU's en over duizenden GPU's worden getraind.
+- de belangrijkste AI-deelgebieden buiten LLM's plaatsen en de kernmethode van elk zelf implementeren;
+- een ML-systeem ontwerpen, bouwen, uitrollen en bewaken zoals in het bedrijfsleven, inclusief data-pipelines en tabeldata;
+- begrijpen hoe modellen op één GPU en over duizenden GPU's worden getraind;
+- een ML-systeemontwerp-case doen zoals in sollicitaties bij consultancies en tech-bedrijven.
 
 **Uitgangspunt:** de ML-basis wordt **niet** opnieuw uitgelegd. Waar een module erop voortbouwt, staat een korte "🔁 Weet je nog?"-verwijzing in plaats van een herhaling. Elke module vermeldt bovenaan welke voorkennis wordt overgeslagen.
 
-**Filosofie:** zelf bouwen gaat boven lezen. Elke module heeft uitleg, figuren, speeltuinen en opdrachten waarin je dingen vanaf nul implementeert. Een module is een hoofdstuk, geen collegeblok. Werk in je eigen tempo.
+**Filosofie:** zelf bouwen gaat boven lezen. Elke module krijgt uitleg in verhaalvorm, figuren met echte data, speeltuinen en opdrachten waarin je dingen vanaf nul implementeert, plus een voorbeeld uit de praktijk (🌍) dat laat zien waarom het ertoe doet. Een module is een hoofdstuk, geen collegeblok. Werk in je eigen tempo.
 
 ---
 
 ## Modules
+
+**Status:** module 1 is volledig uitgewerkt (notes, figuren, speeltuinen, opdrachten, zelftoets). Modules 2–18 hebben al een overzichtspagina met motivatie, praktijkvoorbeeld, hoofdstukken, opdrachten en bronnen; de volledige uitwerking volgt module voor module.
 
 | # | Module | Status | Wat je leert | 🌍 Bekend van |
 |---|--------|--------|--------------|---|
@@ -141,14 +145,14 @@ De grijze vakjes rechts in het diagram, met uitleg:
 
 ## Mini's
 
-Korte deep-dives over één concept dat steeds terugkomt.
+Korte deep-dives over één concept dat steeds terugkomt. De notes verwijzen ernaar op het moment dat je ze nodig hebt; een opfrisser is voor stof die je in principe al kent.
 
 | Mini | Onderwerp |
 |------|-----------|
-| 🟡 M1 | [Softmax en temperatuur](minis/M1-softmax-en-temperatuur.md) |
-| 🟡 M2 | [Waarom delen door √d_k?](minis/M2-waarom-wortel-dk.md) |
-| 🟡 M3 | [Het inproduct als "hoeveel lijken deze op elkaar?"](minis/M3-inproduct-en-matrices.md) (voorkennis-opfrisser) |
-| 🟡 M4 | [Cross-entropy, of "hoe verrast was het model?"](minis/M4-cross-entropy.md) (voorkennis-opfrisser) |
+| M1 | [Softmax en temperatuur](minis/M1-softmax-en-temperatuur.md) |
+| M2 | [Waarom delen door √d_k?](minis/M2-waarom-wortel-dk.md) |
+| M3 | [Het inproduct als "hoeveel lijken deze op elkaar?"](minis/M3-inproduct-en-matrices.md) (voorkennis-opfrisser) |
+| M4 | [Cross-entropy, of "hoe verrast was het model?"](minis/M4-cross-entropy.md) (voorkennis-opfrisser) |
 
 ---
 
@@ -163,7 +167,7 @@ Bij de notes horen interactieve pagina's die in je browser draaien, met echte GP
 | [🔭 Logit lens](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/logitlens.html) | zien wat GPT-2 "denkt" na elke laag | 1.3 |
 | [🎲 Sampling](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/sampling.html) | temperatuur, top-k en top-p op echte voorspellingen | 1.4, M1 |
 
-> **Eenmalig aanzetten:** de links werken zodra GitHub Pages aan staat. Ga op GitHub naar *Settings → Pages*, kies bij *Source* "Deploy from a branch", branch `main`, map `/ (root)`, en klik *Save*. Na een minuut of twee staat alles online. Je kunt de bestanden in `interactief/` ook gewoon lokaal openen met een dubbelklik.
+Alle speeltuinen staan ook op het [overzicht](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/). Offline werken ze ook: open de bestanden in `interactief/` met een dubbelklik. Nieuwe modules krijgen hier hun eigen speeltuinen.
 
 ---
 
@@ -176,6 +180,9 @@ Bij de notes horen interactieve pagina's die in je browser draaien, met echte GP
 - 3Blue1Brown, *[Deep Learning-serie](https://www.3blue1brown.com/topics/neural-networks)*: visuele intuïtie
 - Stanford CS336, *[Language Modeling from Scratch](https://stanford-cs336.github.io/)*: universitair niveau, voor als je dieper wilt
 - Lilian Weng, *[Lil'Log](https://lilianweng.github.io/)*: heldere overzichtsposts over vrijwel elk onderwerp
+- Chip Huyen, *Designing Machine Learning Systems* (O'Reilly, 2022): het standaardboek voor de engineering-modules 10–14
+
+Elke module noemt daarnaast zijn eigen papers, boeken en tools onder *Belangrijkste bronnen*.
 
 ---
 
@@ -193,6 +200,8 @@ modules/
     opdrachten/         ← opdrachten + Python-skeletons
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
+  02-training/ … 18-gpu-distributed/
+    README.md           ← overzicht; notes en opdrachten volgen
 interactief/             ← speeltuinen (HTML), werken via GitHub Pages of lokaal
 tools/
   make_figures.py       ← maakt alle figuren opnieuw, met echte modeldata
@@ -203,7 +212,8 @@ tools/
 
 ## Hoe werk je een module door?
 
-1. Lees de **module-README** voor de leerdoelen en het leespad.
+1. Lees de **module-README**: waarom de module ertoe doet (🌍), wat je al kent en dus overslaat (⏭️), de leerdoelen en het leespad.
 2. Wissel **notes** af met **video's** en **speeltuinen**. De notes zeggen wanneer je wat opent (▶ Probeer het zelf).
 3. Doe de **opdrachten**. De code-opdrachten hebben ingebouwde tests: als `python oX_....py` "Alle tests geslaagd!" print, ben je klaar.
 4. Maak de **zelftoets** zonder te spieken. Kun je een vraag niet beantwoorden, ga dan terug naar de notes.
+5. Zet de module in het [routediagram](#aanbevolen-route) op groen: pas `class ... had` aan en verplaats de 📍 naar je volgende module.
