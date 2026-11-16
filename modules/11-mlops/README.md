@@ -6,6 +6,10 @@
 
 Een model dat in een notebook werkt is pas het begin. Bij een klant is de vraag: werkt het over een half jaar nog, kunnen we zien wanneer het slechter wordt, en kunnen we het veilig vervangen? Dat is MLOps, en precies wat consultancies voor klanten bouwen.
 
+## 🌍 In de praktijk
+
+**Zillow Offers, 2021.** Zillow, de grootste vastgoedsite van de VS, ging huizen kopen op basis van een algoritme dat de waarde voorspelde, om ze daarna met winst door te verkopen. Toen de huizenmarkt omsloeg, bleef het model te hoge prijzen bieden. Op 2 november 2021 stopte Zillow de hele tak: [$407,9 miljoen afgeschreven op huizen](https://www.sec.gov/Archives/edgar/data/1617640/000161764022000013/z-20211231.htm) die ze te duur hadden gekocht, en ongeveer een kwart van het personeel ontslagen. Dit is het schoolvoorbeeld van wat **MLOps** moet voorkomen: een model dat in de training goed werkte, maar waarvan niemand op tijd zag dat de wereld veranderde (data drift, hoofdstuk 11.5).
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Modellen trainen en evalueren op een testset. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

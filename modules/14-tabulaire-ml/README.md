@@ -6,6 +6,12 @@
 
 Je kent de theorie. Maar in het bedrijfsleven gaat het meeste ML-werk nog steeds over tabeldata (klanten, transacties, sensoren), en daar wint gradient boosting vaak van neurale netwerken. Dit is de praktijkkant: hoe win je echt op rommelige bedrijfsdata?
 
+## 🌍 In de praktijk
+
+**De Higgs Boson Challenge, 2014.** CERN zette een wedstrijd op Kaggle: wie kan met machine learning het Higgs-deeltje het beste onderscheiden van achtergrondruis? Er deden [1.785 teams mee](https://atlas.cern/updates/news/machine-learning-wins-higgs-challenge), een record. De winnaars gebruikten boosted decision trees, en een destijds onbekende bibliotheek van promovendus Tianqi Chen won een speciale prijs: **XGBoost**. Daarna domineerde het Kaggle: van de 29 winnende oplossingen in 2015 gebruikten er [17 XGBoost](https://arxiv.org/abs/1603.02754).
+
+**In het bedrijfsleven:** Uber Eats voorspelt de bezorgtijd van je maaltijd met [gradient boosted trees](https://www.uber.com/blog/michelangelo-machine-learning-platform/), geen neuraal netwerk. Bij tabeldata is dit vaak nog steeds het beste gereedschap.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Regressie, logistische regressie, beslisbomen, bias-variance, cross-validatie, regularisatie. Dat ken je allemaal; we beginnen bij de praktijk. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

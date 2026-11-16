@@ -6,6 +6,12 @@
 
 Dit is wat bedrijven nu het meest bouwen en wat consultancies als QuantumBlack en BCG X verkopen: systemen rond een LLM. Het model is een onderdeel; het systeem eromheen bepaalt of het werkt.
 
+## 🌍 In de praktijk
+
+**Morgan Stanley, september 2023.** De zakenbank lanceerde de *AI @ Morgan Stanley Assistant*: een GPT-4-assistent voor hun financieel adviseurs, gebouwd op een kennisbank van [ongeveer 100.000 interne onderzoeksrapporten en documenten](https://fortune.com/2023/09/20/morgan-stanley-ai-assistant-answer-investing-personal-finance-queries/). Dat is precies RAG uit deze module: zoek de relevante documenten op, geef ze aan het model, laat het antwoorden mét bronvermelding. Volgens OpenAI gebruikt inmiddels [meer dan 98% van de adviseursteams](https://openai.com/index/morgan-stanley/) het dagelijks. En het hielp dat ze eerst evals bouwden (hoofdstuk 3.5) voordat ze iets uitrolden.
+
+**En dichterbij:** dit is ook wat je bij je ASML-stage deed met de agentic co-pilot. In deze module leer je de principes eronder, zodat je het de volgende keer beter (en meetbaar beter) bouwt.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Hoe een LLM intern werkt (module 1). Basis-API-gebruik. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

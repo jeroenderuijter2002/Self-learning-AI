@@ -6,6 +6,10 @@
 
 In de praktijk is een ML engineer voor een groot deel software engineer. Sollicitaties en echte projecten stranden vaker op slordige code dan op gebrekkige ML-kennis. Deze module maakt van 'code die in mijn notebook werkt' code die een team kan onderhouden.
 
+## 🌍 In de praktijk
+
+**Knight Capital, 1 augustus 2012.** Een grote Amerikaanse beurshandelaar rolde nieuwe handelssoftware uit naar acht servers. Op één server werd de nieuwe code niet geïnstalleerd, en daar ging een oude, vergeten functie weer aan. Toen de beurs opende, verstuurde die server miljoenen ongewenste orders. Na 45 minuten had het bedrijf [$440 miljoen verloren](https://www.nextgov.com/digital-government/2012/08/trading-firm-lost-10-million-minute-because-computer-glitch/57188/), ongeveer $10 miljoen per minuut, en stond het aan de rand van faillissement. Geen slecht model, geen slechte strategie: slechte **software engineering**. Er was geen vaste, gecontroleerde uitrolprocedure, niemand checkte of alle servers dezelfde code draaiden, en er was geen automatische noodstop. Precies de dingen uit deze module.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Python-basis en programmeerconcepten (lussen, functies, classes). Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

@@ -6,6 +6,14 @@
 
 RL is de techniek achter AlphaGo, robotica en (via module 2) RLHF en reasoning-modellen. Met je achtergrond in stochastische beslistheorie heb je de basis al.
 
+## 🌍 In de praktijk
+
+**AlphaGo tegen Lee Sedol, maart 2016.** Go werd gezien als het "onkraakbare" bordspel: er zijn meer mogelijke posities dan atomen in het heelal, dus brute rekenkracht werkt niet. Experts dachten dat een computer pas over een decennium zou winnen. Toch versloeg DeepMinds AlphaGo de 18-voudig wereldkampioen Lee Sedol [met 4–1 in Seoul](https://deepmind.google/en/research/alphago/), voor meer dan 200 miljoen kijkers. AlphaGo leerde door miljoenen keren tegen zichzelf te spelen: reinforcement learning. Beroemd werd **zet 37** in partij 2: een zet die geen mens zou spelen, en die geniaal bleek.
+
+**In de financiële wereld:** J.P. Morgan begon in 2017 met LOXM, een systeem dat met [deep reinforcement learning](https://marketsmedia.com/j-p-morgan-ai-trading-global) leerde om grote aandelenorders zo snel en goedkoop mogelijk uit te voeren, getraind op miljarden historische en gesimuleerde trades.
+
+**En dichterbij:** je thesis bij ASML gebruikt RL om wafer-handler-architecturen te evalueren, geïnspireerd door AlphaChip. Na deze module snap je die methoden van binnen.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ MDP's, Bellman-vergelijkingen, value iteration en policy iteration: die ken je uit stochastische beslistheorie. We starten waar de modelvrije methoden beginnen. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

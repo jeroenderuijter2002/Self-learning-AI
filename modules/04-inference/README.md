@@ -6,6 +6,10 @@
 
 Een model trainen gebeurt één keer; het draaien gebeurt miljarden keren. Kosten, snelheid en 'kan dit op onze eigen server?' bepalen in de praktijk welk model een klant kiest.
 
+## 🌍 In de praktijk
+
+**10 maart 2023, één avond hacken.** Een Bulgaarse ontwikkelaar, Georgi Gerganov, publiceerde *llama.cpp*: een programma om Meta's LLaMA-taalmodel op een gewone MacBook te draaien. De truc was [4-bit quantization](https://simonwillison.net/2023/Mar/11/llama/), uit hoofdstuk 4.2: het 7B-model kromp tot zo'n 4 GB. Een dag later draaide iemand het al op een Raspberry Pi. Simon Willison noemde het *"het Stable Diffusion-moment van taalmodellen"*. Sindsdien draait iedereen open modellen lokaal, ook jij met LM Studio en Ollama.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ KV-cache en GQA (module 1.4). Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

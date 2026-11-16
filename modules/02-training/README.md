@@ -6,6 +6,10 @@
 
 Module 1 eindigde met een raadsel: GPT-2 en Claude hebben grofweg dezelfde architectuur, maar het ene is een tekstvoorspeller en het andere een behulpzame assistent die nadenkt. Het verschil zit volledig in de training. Na deze module kun je het hele trainingsproces van een frontier-model uitleggen.
 
+## 🌍 In de praktijk
+
+**Van GPT-3 naar ChatGPT (2022).** GPT-3 bestond al sinds 2020, maar was een pure tekstvoorspeller: stel het een vraag en het verzint misschien nog drie vragen erbij. Het verschil met ChatGPT zat niet in de architectuur maar in de **training uit deze module**: supervised fine-tuning plus RLHF. In het [InstructGPT-paper](https://arxiv.org/abs/2203.02155) (januari 2022) vonden mensen de antwoorden van een model van 1,3 miljard parameters, getraind met RLHF, beter dan die van het 100× grotere GPT-3 (175 miljard). Betere training versloeg brute grootte. Een paar maanden later was ChatGPT er.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Gradient descent, cross-entropy, overfitting, regularisatie. Bekend uit je ML-vakken en module 1. Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

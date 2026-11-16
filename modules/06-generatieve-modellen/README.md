@@ -6,6 +6,10 @@
 
 Tekst is niet de enige modaliteit. Hoe genereert een model een foto uit ruis, en hoe 'ziet' Claude een afbeelding?
 
+## 🌍 In de praktijk
+
+**Stable Diffusion, 22 augustus 2022.** Begin 2022 konden alleen grote labs foto's laten genereren uit tekst (DALL·E 2 van OpenAI, achter een wachtlijst). Toen bracht Stability AI, samen met de universiteit van München en Runway, [Stable Diffusion openlijk uit](https://en.wikipedia.org/wiki/Stable_Diffusion): een diffusion-model dat op een gewone gaming-videokaart in een paar seconden een afbeelding maakt. Binnen weken bouwde de hele wereld er apps omheen. Het kan op een thuis-GPU draaien dankzij latent diffusion (hoofdstuk 6.3): het werkt niet op pixels, maar in een compacte, gecomprimeerde ruimte.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Autoencoders als concept en de transformer (module 1). Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

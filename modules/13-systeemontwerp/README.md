@@ -6,6 +6,10 @@
 
 'Ontwerp een aanbevelingssysteem voor een streamingdienst' is een standaardvraag bij sollicitaties voor ML engineers, en de dagelijkse realiteit bij een consultancy. Het gaat om de keuzes rond het model: wat optimaliseer je, met welke data, hoe meet je succes, wat kan er misgaan?
 
+## 🌍 In de praktijk
+
+**Bing, 2012.** Een medewerker van Microsofts zoekmachine Bing had een klein idee: de koppen van advertenties iets langer maken. Het belandde onderaan de takenlijst, want niemand verwachtte er veel van. Maanden later testte een engineer het snel met een **A/B-test** (hoofdstuk 13.3). Binnen een paar uur ging er een alarm af: de omzet was "te hoog om waar te zijn". Het bleek echt: [+12% omzet, ruim $100 miljoen per jaar alleen al in de VS](https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/introduction-and-motivation/701E908D3B64F6948FDCE242465B1862), zonder dat gebruikers er last van hadden. Het beste omzetidee in Bings geschiedenis. De les: meten verslaat de mening van experts.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Losse modeltypen en standaardmetrics (accuracy, precision/recall, AUC). Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.

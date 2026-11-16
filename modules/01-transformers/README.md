@@ -10,6 +10,12 @@ Als iemand vraagt "hoe werkt Claude?", is het eerlijke antwoord in twee delen te
 
 Na deze module kun je deel 1 uitleggen op whiteboard-niveau én in code.
 
+## 🌍 In de praktijk
+
+**Google Search, oktober 2019.** Google nam BERT in gebruik, een transformer-model, om zoekvragen beter te begrijpen. Google noemde het [*de grootste sprong vooruit in vijf jaar*](https://blog.google/products/search/search-language-understanding-bert/): het veranderde de resultaten van ongeveer 1 op de 10 Engelstalige zoekopdrachten in de VS. Het mooie voorbeeld van Google zelf: bij *"2019 brazil traveler to usa need a visa"* negeerde de oude zoekmachine het woordje "to" en gaf info voor Amerikanen die naar Brazilië reizen. Attention (hoofdstuk 1.2) kijkt naar elk woord in relatie tot alle andere, en snapt dat het om de omgekeerde richting gaat.
+
+**ChatGPT, 30 november 2022.** Een transformer met een chatvenster eromheen. Volgens een analyse van UBS had het [binnen twee maanden 100 miljoen gebruikers](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/): de snelst groeiende consumentenapp ooit. TikTok deed er negen maanden over, Instagram tweeënhalf jaar. Alles wat je in deze module bouwt, zit daar letterlijk in.
+
 ## Leerdoelen
 
 Na deze module kun je:

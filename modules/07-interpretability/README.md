@@ -6,6 +6,10 @@
 
 Wat gebeurt er écht in de gewichten? In module 1 zag je al previous-token heads, induction heads en de logit lens. Dit is de volledige versie van dat onderzoek, plus de vraag hoe je zorgt dat modellen doen wat je bedoelt.
 
+## 🌍 In de praktijk
+
+**Golden Gate Claude, mei 2024.** Onderzoekers van Anthropic trainden een sparse autoencoder (hoofdstuk 7.3) op de binnenkant van Claude 3 Sonnet, en vonden miljoenen herkenbare "features": één ervan ging aan bij de Golden Gate Bridge. Daarna draaiden ze die ene feature handmatig hoog. Het resultaat: [Claude dacht dat hij de Golden Gate Bridge *was*](https://www.anthropic.com/news/golden-gate-claude), en begon over de brug in vrijwel elk antwoord. Ze zetten het 24 uur online als demo. Het was het eerste overtuigende bewijs dat je in een groot, echt taalmodel kunt **zien** waar een begrip zit, en het kunt **sturen**.
+
 ## Wat je al kent (en wat we dus overslaan)
 
 > ⏭️ Attention heads, residual stream, logit lens (module 1). Waar het nodig is, verwijzen de notes kort terug ("🔁 Weet je nog?") in plaats van het opnieuw uit te leggen.
