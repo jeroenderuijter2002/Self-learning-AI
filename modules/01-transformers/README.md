@@ -6,7 +6,7 @@
 
 Als iemand vraagt "hoe werkt Claude?", is het eerlijke antwoord in twee delen te splitsen:
 1. **De architectuur**: een *decoder-only transformer* die gegeven tekst steeds het volgende token voorspelt. **(Deze module.)**
-2. **De training**: hoe je dat ding zo traint dat het een behulpzame assistent wordt. (Module 2.)
+2. **De training**: hoe je dat ding zo traint dat het een behulpzame assistent wordt. ([Module 2](../02-training/README.md).)
 
 Na deze module kun je deel 1 uitleggen op whiteboard-niveau én in code.
 

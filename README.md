@@ -29,12 +29,12 @@ Na deze cursus kun je:
 
 ## Modules
 
-**Status:** module 1 is volledig uitgewerkt (notes, figuren, speeltuinen, opdrachten, zelftoets). Modules 2–20 hebben al een overzichtspagina met motivatie, praktijkvoorbeeld, hoofdstukken, opdrachten en bronnen; de volledige uitwerking volgt module voor module.
+**Status:** modules 1 en 2 zijn volledig uitgewerkt (notes, figuren, speeltuinen, opdrachten, zelftoets, praktijkopdracht). Modules 3–20 hebben al een overzichtspagina met motivatie, praktijkvoorbeeld, hoofdstukken, opdrachten en bronnen; de volledige uitwerking volgt module voor module.
 
 | # | Module | Status | Wat je leert | 🌍 Bekend van |
 |---|--------|--------|--------------|---|
 | ⚪ 1 | [**Transformers van binnen**](modules/01-transformers/README.md) | ✅ beschikbaar | tokens, embeddings, attention, het transformer-block, generatie, KV-cache | Google Search (2019), ChatGPT (2022) |
-| ⚪ 2 | [Van tekstvoorspeller naar assistent](modules/02-training/README.md) | 🔜 | pretraining, scaling laws, fine-tuning, RLHF, Constitutional AI, reasoning-modellen | ChatGPT: van GPT-3 naar assistent |
+| ⚪ 2 | [**Van tekstvoorspeller naar assistent**](modules/02-training/README.md) | ✅ beschikbaar | pretraining, scaling laws, fine-tuning, RLHF, Constitutional AI, reasoning-modellen | ChatGPT: van GPT-3 naar assistent |
 | ⚪ 3 | [AI engineering: LLM's in systemen](modules/03-ai-engineering/README.md) | 🔜 | prompting, embeddings en vector search, RAG, tool use en agents, evals | Morgan Stanley AI-assistent (2023) |
 | ⚪ 4 | [Inference en efficiëntie](modules/04-inference/README.md) | 🔜 | quantization, LoRA, distillation, serving, lokaal draaien | LLaMA op een MacBook (2023) |
 | 🟢 5 | [Reinforcement learning](modules/05-reinforcement-learning/README.md) | 🔜 (deels gehad) | Q-learning, DQN, policy gradients, PPO, MCTS | AlphaGo verslaat Lee Sedol (2016) |
@@ -66,8 +66,8 @@ flowchart LR
     MLB --> BAY["Bayesiaanse ML<br/>& GP's 🟡✅"]
     OR["OR ✅"] --> MDP["MDP's & DP ✅<br/>regeltechniek & MPC ✅"]
 
-    NN --> M1["1 Transformers<br/>📍 je bent hier"]
-    M1 --> M2["2 Training"] --> M3["3 AI engineering"]
+    NN --> M1["1 Transformers ✅"]
+    M1 --> M2["2 Training ✅"] --> M3["3 AI engineering<br/>📍 je bent hier"]
     M3 --> M10["10 Software eng."] --> M11["11 MLOps"]
     M11 --> M13["13 Systeemontwerp"]
     M14["14 Tabulaire ML"] --> M13
@@ -113,9 +113,9 @@ flowchart LR
     classDef bezig fill:#fbe7b0,stroke:#c98500,color:#0b0b0b
     classDef nu fill:#cde2fb,stroke:#2a78d6,stroke-width:3px,color:#0b0b0b
     classDef niet fill:#f4f3f0,stroke:#a8a7a2,color:#6b6a66,stroke-dasharray:4 3
-    class W,OPT,MLB,NN,OR,MDP had
+    class W,OPT,MLB,NN,OR,MDP,M1,M2 had
     class BAY,M5,M19,M20 bezig
-    class M1 nu
+    class M3 nu
     class X1,X2,X3,X5,X8,X10,X12,X14 niet
     class X7,X13 had
     style NIET fill:#fafaf8,stroke:#d6d5d0,color:#52514e
@@ -155,12 +155,13 @@ Korte deep-dives over één concept dat steeds terugkomt. De notes verwijzen ern
 | M2 | [Waarom delen door √d_k?](minis/M2-waarom-wortel-dk.md) |
 | M3 | [Het inproduct als "hoeveel lijken deze op elkaar?"](minis/M3-inproduct-en-matrices.md) (voorkennis-opfrisser) |
 | M4 | [Cross-entropy, of "hoe verrast was het model?"](minis/M4-cross-entropy.md) (voorkennis-opfrisser) |
+| M5 | [KL-divergentie, of "hoe ver ben je afgedreven?"](minis/M5-kl-divergentie.md) |
 
 ---
 
 ## ▶ Speeltuinen (interactief)
 
-Bij de notes horen interactieve pagina's die in je browser draaien, met echte GPT-2-data:
+Bij de notes horen interactieve pagina's die in je browser draaien, met echte modeldata:
 
 | Speeltuin | Wat je doet | Hoort bij |
 |---|---|---|
@@ -168,6 +169,8 @@ Bij de notes horen interactieve pagina's die in je browser draaien, met echte GP
 | [👀 Attention](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/attention.html) | de formule met de hand, en alle 144 heads van GPT-2 verkennen | 1.2, O2, O4 |
 | [🔭 Logit lens](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/logitlens.html) | zien wat GPT-2 "denkt" na elke laag | 1.3 |
 | [🎲 Sampling](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/sampling.html) | temperatuur, top-k en top-p op echte voorspellingen | 1.4, M1 |
+| [🤖 Basismodel vs assistent](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/basis-vs-assistent.html) | GPT-2, een basismodel, een slimme prompt en een assistent op dezelfde vraag; welke tokens verandert SFT? | 2.1, 2.3 |
+| [📈 Scaling-calculator](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/scaling.html) | compute-budget kiezen, Chinchilla-optimum, echte modellen, en inference meegerekend | 2.2, O1 |
 
 Alle speeltuinen staan ook op het [overzicht](https://jeroenderuijter2002.github.io/Self-learning-AI/interactief/). Offline werken ze ook: open de bestanden in `interactief/` met een dubbelklik. Nieuwe modules krijgen hier hun eigen speeltuinen.
 
@@ -204,12 +207,16 @@ modules/
     opdrachten/         ← opdrachten + Python-skeletons + 💼 praktijkopdracht
     oplossingen/        ← pas kijken als je vastzit
     zelftoets.md        ← check of je het echt snapt
-  02-training/ … 20-recommender-systems/
+  02-training/          ← zelfde opbouw als 01
+  03-ai-engineering/ … 20-recommender-systems/
     README.md           ← overzicht; notes en opdrachten volgen
 interactief/             ← speeltuinen (HTML), werken via GitHub Pages of lokaal
 tools/
-  make_figures.py       ← maakt alle figuren opnieuw, met echte modeldata
-  export_interactive_data.py ← maakt de GPT-2-data voor de speeltuinen
+  make_figures.py       ← maakt alle figuren van module 1 en de mini's opnieuw, met echte modeldata
+  export_interactive_data.py ← maakt de GPT-2-data voor de speeltuinen van module 1
+  m2_experiments.py     ← de metingen van module 2 (scaling, Pythia, reward model, DPO, GSM8K)
+  make_figures_module02.py, export_interactive_data_module02.py ← figuren en speeltuindata van module 2
+  results/              ← kleine JSON-bestanden met de metingen, zodat je figuren kunt hermaken
 ```
 
 **Over de figuren:** waar mogelijk zijn de figuren gemaakt met **echte data**: attention-patronen en voorspellingen van GPT-2, de echte GPT-4-tokenizer, en tijdmetingen. Ze zijn dus geen illustraties, maar resultaten die je zelf kunt reproduceren met `python tools/make_figures.py`. Het script zelf lezen is ook leerzaam: het laat zien hoe je in een model kijkt.

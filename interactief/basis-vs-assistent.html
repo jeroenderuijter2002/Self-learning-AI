@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basismodel vs assistent</title>
+<link rel="stylesheet" href="style.css"><script src="common.js"></script>
+<script src="data/basis_vs_assistent.js"></script>
+<style>
+  .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .cols { grid-template-columns: 1fr; } }
+  .col .panel { margin: 0; height: 100%; }
+  .col h3 { margin: 0 0 2px; }
+  .col .sub { font-size: 12.5px; color: var(--muted); margin-bottom: 10px; min-height: 34px; }
+  .out { white-space: pre-wrap; font-size: 14px; line-height: 1.5; color: var(--ink); }
+  .prompt { font-family: var(--mono); color: var(--muted); }
+  .seg button.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .rk { border-radius: 4px; padding: 1px 0; cursor: default; white-space: pre-wrap; }
+  .r1 { background: transparent; } .r2 { background: var(--t4); } .r3 { background: #f6b49a; }
+  @media (prefers-color-scheme: dark) { .r3 { background: #7a3a20; } }
+  .key span { display: inline-block; padding: 1px 8px; border-radius: 4px; margin-right: 8px; font-size: 13px; }
+</style>
+</head>
+<body><main>
+<nav></nav>
+<h1>🤖 Basismodel vs assistent</h1>
+<p class="lead">Dezelfde vraag, vier modellen. Links een pure tekstvoorspeller uit 2019, rechts een assistent uit 2024 — en daartussen hetzelfde basismodel, met en zonder slimme prompt. Alles is echte, vooraf gegenereerde uitvoer.</p>
+
+<div class="panel">
+  <div class="row">
+    <label>Prompt <select id="prompt"></select></label>
+    <span class="seg" style="margin-left:12px">sample <button id="s0" class="on">1</button> <button id="s1">2</button></span>
+  </div>
+</div>
+
+<div class="cols">
+  <div class="col"><div class="panel"><h3>GPT-2</h3><div class="sub">124M, 2019 · alleen pretraining · kale prompt</div><div class="out" id="o_gpt2"></div></div></div>
+  <div class="col"><div class="panel"><h3>Qwen2.5-0.5B</h3><div class="sub">basismodel, 2024 · alleen pretraining · kale prompt</div><div class="out" id="o_base"></div></div></div>
+  <div class="col"><div class="panel"><h3>Basis + URIAL-prompt</h3><div class="sub">hetzelfde basismodel, met twee voorbeeldgesprekken in de prompt (notes 2.3)</div><div class="out" id="o_urial"></div></div></div>
+  <div class="col"><div class="panel"><h3>Qwen2.5-0.5B-Instruct</h3><div class="sub">na SFT en RL · chat-template</div><div class="out" id="o_inst"></div></div></div>
+</div>
+
+<h2>Wat heeft de fine-tuning eigenlijk veranderd?</h2>
+<p>Hieronder het (greedy) antwoord van het Instruct-model. Elk token is gekleurd naar zijn <b>rang onder het basismodel</b>, met precies dezelfde tekst ervoor. Beweeg over een token om te zien wat het basismodel op die plek had gekozen. Dit is de meting uit figuur 2.8 en uit <a href="https://arxiv.org/abs/2312.01552">Lin et al. (2023)</a>.</p>
+<div class="panel">
+  <p class="key"><span class="r1" style="border:1px solid var(--line)">rang 1: basismodel kiest hetzelfde</span><span class="r2">rang 2–5</span><span class="r3">rang &gt; 5</span></p>
+  <div class="out" id="ans" style="font-size:15px;line-height:1.8"></div>
+  <div id="rstats" style="margin-top:14px"></div>
+</div>
+
+<div class="callout"><b>Dingen om te proberen:</b>
+<ul style="margin:6px 0">
+<li>Begin met de eerste prompt en lees GPT-2. Herken je de "document-simulator" uit notes 2.1?</li>
+<li>Vergelijk GPT-2 met het Qwen-<i>basis</i>model. Het basismodel van 2024 antwoordt vaak al bijna als een assistent. Waarom? (Hint: wat zou er in biljoenen tokens tekst uit 2024 staan dat in de webtekst van 2019 nog niet stond?)</li>
+<li>Kijk bij het basismodel of het ergens zelf verder gaat met een nieuwe vraag of een rol als "Human:". Dat is precies het stopprobleem dat het <code>&lt;|im_end|&gt;</code>-token oplost.</li>
+<li>Vergelijk de URIAL-kolom met de Instruct-kolom. Hoeveel van het verschil haal je al met alleen een prompt?</li>
+<li>In de tokenanalyse: welke tokens zijn oranje? Zijn het feiten, of woorden als "Sure", "Here", "1." en opmaak?</li>
+<li>Lees het Instruct-antwoord op de Nederlandse vraag helemaal. Het begint goed, maar wat beweert het verderop over "Gent"? Een assistent-<i>format</i> maakt een klein model nog niet betrouwbaar (notes 2.3: SFT voegt geen kennis toe).</li>
+</ul></div>
+<p class="hint">Gemaakt met <span class="mono">tools/m2_experiments.py</span> (<span class="mono">sftdiff</span>, <span class="mono">gpt2play</span>) en <span class="mono">tools/export_interactive_data_module02.py</span>. Samples met temperatuur 0,7 en top-p 0,95, maximaal 110 tokens (GPT-2: 80); de URIAL-kolom en de tokenanalyse zijn greedy.</p>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let S = 0;
+BVA_DATA.forEach((d, i) => $("prompt").insertAdjacentHTML("beforeend", `<option value="${i}">${esc(d.prompt)}</option>`));
+function out(id, text, prompt) {
+  const t = (text || "").trim();
+  $(id).innerHTML = (prompt ? `<span class="prompt">${esc(prompt)}</span>` : "") + esc(prompt ? (text || "") : t || "(leeg)");
+}
+function render() {
+  const d = BVA_DATA[+$("prompt").value];
+  out("o_gpt2", d.gpt2.length ? d.gpt2[S] : "(nog niet gegenereerd)", d.gpt2.length ? d.prompt : "");
+  out("o_base", d.base[S], d.prompt);
+  out("o_urial", d.urial);
+  out("o_inst", d.instruct[S]);
+  const cls = (r) => (r === 1 ? "r1" : r <= 5 ? "r2" : "r3");
+  $("ans").innerHTML = d.answer.map(([t, r, pb, pi, top], i) =>
+    `<span class="rk ${cls(r)}" data-i="${i}">${esc(t)}</span>`).join("");
+  $("ans").querySelectorAll(".rk").forEach((el) => {
+    const [t, r, pb, pi, top] = d.answer[+el.dataset.i];
+    el.onmousemove = (e) => showTip(e, `token <b>${vis(t)}</b><br>rang onder basismodel: <b>${r}</b><br>kans basis: ${(pb * 100).toFixed(1)}% · instruct: ${(pi * 100).toFixed(1)}%` + (r > 1 ? `<br>basismodel koos: <b>${vis(top)}</b>` : ""));
+    el.onmouseleave = hideTip;
+  });
+  const n = d.answer.length, c1 = d.answer.filter((a) => a[1] === 1).length, c5 = d.answer.filter((a) => a[1] <= 5).length;
+  $("rstats").innerHTML = `<span class="stat"><b>${n}</b><span>tokens in het antwoord</span></span>` +
+    `<span class="stat"><b>${Math.round(c1 / n * 100)}%</b><span>rang 1</span></span>` +
+    `<span class="stat"><b>${Math.round(c5 / n * 100)}%</b><span>in de top-5 van het basismodel</span></span>`;
+}
+$("prompt").onchange = render;
+[0, 1].forEach((k) => ($("s" + k).onclick = () => { S = k; $("s0").classList.toggle("on", k === 0); $("s1").classList.toggle("on", k === 1); render(); }));
+render();
+</script>
+</body></html>

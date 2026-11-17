@@ -1,0 +1,4776 @@
+[
+ {
+  "prompt": "What is the capital of France?",
+  "base": [
+   " The capital of France is Paris. It is the largest city in Europe and the second-largest city in the world after New York City.\nYou are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.",
+   " The capital of France is Paris."
+  ],
+  "urial": "The capital of France is Paris.",
+  "instruct": [
+   "The capital city of France is Paris.",
+   "The capital of France is Paris."
+  ],
+  "analysis": {
+   "answer": "The capital of France is Paris.",
+   "tokens": [
+    {
+     "t": "The",
+     "rank": 2,
+     "p_base": 0.2031,
+     "p_inst": 0.8711,
+     "base_top": "France"
+    },
+    {
+     "t": " capital",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9922,
+     "base_top": " capital"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9922,
+     "base_top": " of"
+    },
+    {
+     "t": " France",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " France"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9844,
+     "base_top": " is"
+    },
+    {
+     "t": " Paris",
+     "rank": 1,
+     "p_base": 0.8711,
+     "p_inst": 0.9922,
+     "base_top": " Paris"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.4863,
+     "p_inst": 0.957,
+     "base_top": "."
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\nThe capital of France, however, is not French. The capital of France is not a capital of France. It is French capital.\n\nBut, no, in this case, it is not French capital. It is French capital.\n\nWhy is this capital different from the capital of another country?\n\nBecause the capital of another country is different from the capital of France.",
+   " France is a nation of people and lands, and the French people are as large and as powerful as any country in the world.\n\nFrance is a nation of people and lands, and the French people are as large and as powerful as any country in the world.\n\nThe country of France is an indispensable ingredient in the development of the industrial civilization of the world. It is the first of"
+  ]
+ },
+ {
+  "prompt": "Explain in two sentences what a neural network is.",
+  "base": [
+   " A neural network is a type of machine learning algorithm that uses a network of interconnected nodes (neurons) to learn from data. It consists of input and output layers, and it uses a combination of forward propagation and backpropagation to make predictions based on the input data.",
+   " A neural network is a type of machine learning algorithm that mimics the structure of the human brain to learn from data. It consists of layers of interconnected nodes (neurons) that can process and make decisions based on patterns and rules learned from the data."
+  ],
+  "urial": "A neural network is a type of machine learning model that is inspired by the structure and function of the human brain. It is a type of artificial intelligence that can learn from data and make predictions or decisions based on that data.",
+  "instruct": [
+   "A neural network is a type of machine learning model that uses interconnected nodes (neurons) to learn and make predictions based on input data, much like the way the human brain processes information through its neurons.",
+   "A neural network is a type of machine learning model inspired by the structure and function of the human brain, allowing it to learn from data and perform complex tasks such as image recognition, language translation, and natural language processing."
+  ],
+  "analysis": {
+   "answer": "A neural network is a type of machine learning model that simulates the structure and function of the human brain using interconnected nodes or \"neurons.\" It processes data through layers of these nodes, which can be thought of as different parts of the brain, to learn patterns and make predictions based on input data.",
+   "tokens": [
+    {
+     "t": "A",
+     "rank": 1,
+     "p_base": 0.5156,
+     "p_inst": 0.9922,
+     "base_top": "A"
+    },
+    {
+     "t": " neural",
+     "rank": 1,
+     "p_base": 0.9609,
+     "p_inst": 1.0,
+     "base_top": " neural"
+    },
+    {
+     "t": " network",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " network"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9922,
+     "base_top": " is"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 0.875,
+     "p_inst": 0.9766,
+     "base_top": " a"
+    },
+    {
+     "t": " type",
+     "rank": 1,
+     "p_base": 0.2891,
+     "p_inst": 0.4668,
+     "base_top": " type"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " of"
+    },
+    {
+     "t": " machine",
+     "rank": 1,
+     "p_base": 0.4141,
+     "p_inst": 0.6289,
+     "base_top": " machine"
+    },
+    {
+     "t": " learning",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " learning"
+    },
+    {
+     "t": " model",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.8633,
+     "base_top": " model"
+    },
+    {
+     "t": " that",
+     "rank": 1,
+     "p_base": 0.8594,
+     "p_inst": 0.7422,
+     "base_top": " that"
+    },
+    {
+     "t": " sim",
+     "rank": 5,
+     "p_base": 0.0601,
+     "p_inst": 0.208,
+     "base_top": " is"
+    },
+    {
+     "t": "ulates",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "ulates"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.7656,
+     "p_inst": 0.8555,
+     "base_top": " the"
+    },
+    {
+     "t": " structure",
+     "rank": 1,
+     "p_base": 0.2637,
+     "p_inst": 0.75,
+     "base_top": " structure"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.7695,
+     "p_inst": 0.9414,
+     "base_top": " and"
+    },
+    {
+     "t": " function",
+     "rank": 1,
+     "p_base": 0.5078,
+     "p_inst": 0.8477,
+     "base_top": " function"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " of"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.7812,
+     "p_inst": 0.8906,
+     "base_top": " the"
+    },
+    {
+     "t": " human",
+     "rank": 1,
+     "p_base": 0.8906,
+     "p_inst": 0.9492,
+     "base_top": " human"
+    },
+    {
+     "t": " brain",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9766,
+     "base_top": " brain"
+    },
+    {
+     "t": " using",
+     "rank": 4,
+     "p_base": 0.0454,
+     "p_inst": 0.1562,
+     "base_top": "."
+    },
+    {
+     "t": " interconnected",
+     "rank": 3,
+     "p_base": 0.0454,
+     "p_inst": 0.3926,
+     "base_top": " artificial"
+    },
+    {
+     "t": " nodes",
+     "rank": 1,
+     "p_base": 0.4824,
+     "p_inst": 0.7852,
+     "base_top": " nodes"
+    },
+    {
+     "t": " or",
+     "rank": 1,
+     "p_base": 0.3516,
+     "p_inst": 0.3945,
+     "base_top": " or"
+    },
+    {
+     "t": " \"",
+     "rank": 2,
+     "p_base": 0.2178,
+     "p_inst": 0.7656,
+     "base_top": " neurons"
+    },
+    {
+     "t": "ne",
+     "rank": 1,
+     "p_base": 0.9492,
+     "p_inst": 0.9844,
+     "base_top": "ne"
+    },
+    {
+     "t": "urons",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9844,
+     "base_top": "urons"
+    },
+    {
+     "t": ".\"",
+     "rank": 1,
+     "p_base": 0.3926,
+     "p_inst": 0.6719,
+     "base_top": ".\""
+    },
+    {
+     "t": " It",
+     "rank": 1,
+     "p_base": 0.5977,
+     "p_inst": 0.5742,
+     "base_top": " It"
+    },
+    {
+     "t": " processes",
+     "rank": 2,
+     "p_base": 0.1582,
+     "p_inst": 0.5195,
+     "base_top": " is"
+    },
+    {
+     "t": " data",
+     "rank": 2,
+     "p_base": 0.2988,
+     "p_inst": 0.3398,
+     "base_top": " information"
+    },
+    {
+     "t": " through",
+     "rank": 2,
+     "p_base": 0.1973,
+     "p_inst": 0.104,
+     "base_top": " by"
+    },
+    {
+     "t": " layers",
+     "rank": 2,
+     "p_base": 0.2148,
+     "p_inst": 0.2324,
+     "base_top": " these"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 0.8203,
+     "p_inst": 0.875,
+     "base_top": " of"
+    },
+    {
+     "t": " these",
+     "rank": 1,
+     "p_base": 0.1973,
+     "p_inst": 0.2158,
+     "base_top": " these"
+    },
+    {
+     "t": " nodes",
+     "rank": 1,
+     "p_base": 0.6172,
+     "p_inst": 0.6523,
+     "base_top": " nodes"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.7617,
+     "p_inst": 0.8438,
+     "base_top": ","
+    },
+    {
+     "t": " which",
+     "rank": 1,
+     "p_base": 0.2148,
+     "p_inst": 0.1836,
+     "base_top": " which"
+    },
+    {
+     "t": " can",
+     "rank": 2,
+     "p_base": 0.125,
+     "p_inst": 0.1021,
+     "base_top": " are"
+    },
+    {
+     "t": " be",
+     "rank": 1,
+     "p_base": 0.5312,
+     "p_inst": 0.5117,
+     "base_top": " be"
+    },
+    {
+     "t": " thought",
+     "rank": 1,
+     "p_base": 0.3438,
+     "p_inst": 0.3594,
+     "base_top": " thought"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " of"
+    },
+    {
+     "t": " as",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " as"
+    },
+    {
+     "t": " different",
+     "rank": 4,
+     "p_base": 0.0713,
+     "p_inst": 0.1494,
+     "base_top": " \""
+    },
+    {
+     "t": " parts",
+     "rank": 2,
+     "p_base": 0.1943,
+     "p_inst": 0.127,
+     "base_top": " \""
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9258,
+     "base_top": " of"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.6836,
+     "p_inst": 0.6211,
+     "base_top": " the"
+    },
+    {
+     "t": " brain",
+     "rank": 1,
+     "p_base": 0.8438,
+     "p_inst": 0.8633,
+     "base_top": " brain"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.2871,
+     "p_inst": 0.5938,
+     "base_top": ","
+    },
+    {
+     "t": " to",
+     "rank": 2,
+     "p_base": 0.0859,
+     "p_inst": 0.2793,
+     "base_top": " and"
+    },
+    {
+     "t": " learn",
+     "rank": 1,
+     "p_base": 0.334,
+     "p_inst": 0.5195,
+     "base_top": " learn"
+    },
+    {
+     "t": " patterns",
+     "rank": 2,
+     "p_base": 0.2695,
+     "p_inst": 0.2773,
+     "base_top": " and"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.8203,
+     "p_inst": 0.8242,
+     "base_top": " and"
+    },
+    {
+     "t": " make",
+     "rank": 1,
+     "p_base": 0.7812,
+     "p_inst": 0.7422,
+     "base_top": " make"
+    },
+    {
+     "t": " predictions",
+     "rank": 1,
+     "p_base": 0.6445,
+     "p_inst": 0.8242,
+     "base_top": " predictions"
+    },
+    {
+     "t": " based",
+     "rank": 3,
+     "p_base": 0.1089,
+     "p_inst": 0.1138,
+     "base_top": "."
+    },
+    {
+     "t": " on",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " on"
+    },
+    {
+     "t": " input",
+     "rank": 1,
+     "p_base": 0.4512,
+     "p_inst": 0.373,
+     "base_top": " input"
+    },
+    {
+     "t": " data",
+     "rank": 1,
+     "p_base": 0.7969,
+     "p_inst": 0.8711,
+     "base_top": " data"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.8242,
+     "p_inst": 0.9766,
+     "base_top": "."
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\nIn this example, we can see the neural network that is storing the body's data in a hierarchical network. The system looks like this:\n\nA neural network (neural network) is an abstract representation of a computational system. An abstract representation of a computational system is one that consists of multiple representations. A neural network is a representation of an abstract representation of the whole. A neural",
+   "\n\nTo create a network, you first need to know what your neural network is. This is a tricky task because it involves knowledge of how the network performs, which is the key to understanding how it works.\n\nIf your network is established, you are not likely to be able to learn something from it, so learning how it works will require you to understand how the network works."
+  ]
+ },
+ {
+  "prompt": "Give me three tips for a job interview.",
+  "base": [
+   " 1. Prepare for the interview: Research the company, the position, and the industry. Familiarize yourself with the job description, job responsibilities, and the required qualifications. 2. Dress professionally: Dress for the interview. The interviewer is looking for a professional and respectful appearance. 3. Be confident and comfortable: Dress confidently, be yourself, and be prepared for the interview. Be prepared to answer questions about your qualifications and experience.",
+   " 1. Prepare thoroughly: Before the interview, do your research, gather all relevant information, and practice answering common interview questions. This will help you come across as confident and prepared during the interview.\n\n2. Be yourself: Remember that the interviewer is looking for a candidate who is genuinely interested in the position and is capable of performing the duties of the job. Be yourself and your strengths and weaknesses, and don't try to come across as too polished or professional.\n\n3. Dress professionally: Dress professionally for the interview, even if it's just for"
+  ],
+  "urial": "1. Prepare for the interview by researching the company and the job.\n2. Practice your interview questions and answer them confidently.\n3. Be prepared to answer questions about your skills and experience.",
+  "instruct": [
+   "Here are three tips for a job interview:\n\n1. Be yourself: There's no need to prepare an elaborate resume or cover letter just for the interview. Just be yourself and share your story in detail. This will make you stand out from other candidates and increase your chances of getting hired.\n\n2. Practice your answers: It is important to practice your responses to common questions that you may encounter during the interview. For example, how do you handle stress, what are your strengths and weaknesses, and what are your career goals? By practicing these topics,",
+   "Sure! Here are three tips for preparing for a job interview:\n\n1. Be yourself: The most important aspect of any interview is to be genuine and authentic. Don't try to cover up your weaknesses or pretend you don't have them. Instead, focus on what you can do well and how you can make the company a better place.\n\n2. Research the company: Before the interview, take some time to learn about the company and its culture. Look at their websites, read their latest news articles, and talk to other current employees who work there"
+  ],
+  "analysis": {
+   "answer": "Certainly! Here are three tips to help you prepare for and perform well in your job interviews:\n\n1. **Research the Company**: Before your interview day, research the company thoroughly. Look at their website, read their mission statement, and review their recent news or achievements. This will give you an idea of what they do, why they might be interested in hiring you, and how they operate.\n\n2. **Practice Your Answers**: When it comes time to answer questions during the interview, practice your answers beforehand. Think about common interview questions that the interviewer might ask and prepare thoughtful responses. This not only shows that you have studied but also helps you feel more confident and prepared.\n\n3. **Be Prepared with Examples**: If possible, provide examples from your",
+   "tokens": [
+    {
+     "t": "Certainly",
+     "rank": 2,
+     "p_base": 0.1055,
+     "p_inst": 0.4395,
+     "base_top": "Sure"
+    },
+    {
+     "t": "!",
+     "rank": 1,
+     "p_base": 0.8438,
+     "p_inst": 0.9844,
+     "base_top": "!"
+    },
+    {
+     "t": " Here",
+     "rank": 1,
+     "p_base": 0.9141,
+     "p_inst": 0.9062,
+     "base_top": " Here"
+    },
+    {
+     "t": " are",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " are"
+    },
+    {
+     "t": " three",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 1.0,
+     "base_top": " three"
+    },
+    {
+     "t": " tips",
+     "rank": 1,
+     "p_base": 0.7969,
+     "p_inst": 0.9258,
+     "base_top": " tips"
+    },
+    {
+     "t": " to",
+     "rank": 2,
+     "p_base": 0.1738,
+     "p_inst": 0.1709,
+     "base_top": " for"
+    },
+    {
+     "t": " help",
+     "rank": 1,
+     "p_base": 0.7969,
+     "p_inst": 0.7344,
+     "base_top": " help"
+    },
+    {
+     "t": " you",
+     "rank": 1,
+     "p_base": 0.9141,
+     "p_inst": 0.9141,
+     "base_top": " you"
+    },
+    {
+     "t": " prepare",
+     "rank": 1,
+     "p_base": 0.5703,
+     "p_inst": 0.5312,
+     "base_top": " prepare"
+    },
+    {
+     "t": " for",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9766,
+     "base_top": " for"
+    },
+    {
+     "t": " and",
+     "rank": 4,
+     "p_base": 0.0204,
+     "p_inst": 0.1196,
+     "base_top": " a"
+    },
+    {
+     "t": " perform",
+     "rank": 1,
+     "p_base": 0.4316,
+     "p_inst": 0.5703,
+     "base_top": " perform"
+    },
+    {
+     "t": " well",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9688,
+     "base_top": " well"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.7227,
+     "p_inst": 0.9141,
+     "base_top": " in"
+    },
+    {
+     "t": " your",
+     "rank": 2,
+     "p_base": 0.127,
+     "p_inst": 0.1104,
+     "base_top": " a"
+    },
+    {
+     "t": " job",
+     "rank": 1,
+     "p_base": 0.7617,
+     "p_inst": 0.9336,
+     "base_top": " job"
+    },
+    {
+     "t": " interviews",
+     "rank": 2,
+     "p_base": 0.2451,
+     "p_inst": 0.5625,
+     "base_top": " interview"
+    },
+    {
+     "t": ":\n\n",
+     "rank": 1,
+     "p_base": 0.8203,
+     "p_inst": 0.9766,
+     "base_top": ":\n\n"
+    },
+    {
+     "t": "1",
+     "rank": 1,
+     "p_base": 0.8945,
+     "p_inst": 0.9141,
+     "base_top": "1"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "."
+    },
+    {
+     "t": " **",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.8164,
+     "base_top": " **"
+    },
+    {
+     "t": "Research",
+     "rank": 1,
+     "p_base": 0.2734,
+     "p_inst": 0.3809,
+     "base_top": "Research"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.6016,
+     "p_inst": 0.8594,
+     "base_top": " the"
+    },
+    {
+     "t": " Company",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.9766,
+     "base_top": " Company"
+    },
+    {
+     "t": "**:",
+     "rank": 1,
+     "p_base": 0.6367,
+     "p_inst": 0.7188,
+     "base_top": "**:"
+    },
+    {
+     "t": " Before",
+     "rank": 1,
+     "p_base": 0.6602,
+     "p_inst": 0.7891,
+     "base_top": " Before"
+    },
+    {
+     "t": " your",
+     "rank": 1,
+     "p_base": 0.3145,
+     "p_inst": 0.8203,
+     "base_top": " your"
+    },
+    {
+     "t": " interview",
+     "rank": 1,
+     "p_base": 0.9258,
+     "p_inst": 0.9219,
+     "base_top": " interview"
+    },
+    {
+     "t": " day",
+     "rank": 2,
+     "p_base": 0.0669,
+     "p_inst": 0.1465,
+     "base_top": ","
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9922,
+     "base_top": ","
+    },
+    {
+     "t": " research",
+     "rank": 1,
+     "p_base": 0.2217,
+     "p_inst": 0.3066,
+     "base_top": " research"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.9414,
+     "p_inst": 0.9688,
+     "base_top": " the"
+    },
+    {
+     "t": " company",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9844,
+     "base_top": " company"
+    },
+    {
+     "t": " thoroughly",
+     "rank": 1,
+     "p_base": 0.6289,
+     "p_inst": 0.6172,
+     "base_top": " thoroughly"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.9062,
+     "p_inst": 0.9414,
+     "base_top": "."
+    },
+    {
+     "t": " Look",
+     "rank": 2,
+     "p_base": 0.2305,
+     "p_inst": 0.3457,
+     "base_top": " Understand"
+    },
+    {
+     "t": " at",
+     "rank": 1,
+     "p_base": 0.4785,
+     "p_inst": 0.4434,
+     "base_top": " at"
+    },
+    {
+     "t": " their",
+     "rank": 1,
+     "p_base": 0.832,
+     "p_inst": 0.8242,
+     "base_top": " their"
+    },
+    {
+     "t": " website",
+     "rank": 1,
+     "p_base": 0.4902,
+     "p_inst": 0.5938,
+     "base_top": " website"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9609,
+     "base_top": ","
+    },
+    {
+     "t": " read",
+     "rank": 1,
+     "p_base": 0.249,
+     "p_inst": 0.3516,
+     "base_top": " read"
+    },
+    {
+     "t": " their",
+     "rank": 1,
+     "p_base": 0.4297,
+     "p_inst": 0.5703,
+     "base_top": " their"
+    },
+    {
+     "t": " mission",
+     "rank": 1,
+     "p_base": 0.2012,
+     "p_inst": 0.291,
+     "base_top": " mission"
+    },
+    {
+     "t": " statement",
+     "rank": 1,
+     "p_base": 0.8477,
+     "p_inst": 0.7969,
+     "base_top": " statement"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9258,
+     "p_inst": 0.8906,
+     "base_top": ","
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.707,
+     "p_inst": 0.6484,
+     "base_top": " and"
+    },
+    {
+     "t": " review",
+     "rank": 3,
+     "p_base": 0.062,
+     "p_inst": 0.1709,
+     "base_top": " understand"
+    },
+    {
+     "t": " their",
+     "rank": 1,
+     "p_base": 0.7461,
+     "p_inst": 0.6953,
+     "base_top": " their"
+    },
+    {
+     "t": " recent",
+     "rank": 1,
+     "p_base": 0.2539,
+     "p_inst": 0.4707,
+     "base_top": " recent"
+    },
+    {
+     "t": " news",
+     "rank": 2,
+     "p_base": 0.3105,
+     "p_inst": 0.3926,
+     "base_top": " achievements"
+    },
+    {
+     "t": " or",
+     "rank": 2,
+     "p_base": 0.2002,
+     "p_inst": 0.1475,
+     "base_top": " articles"
+    },
+    {
+     "t": " achievements",
+     "rank": 1,
+     "p_base": 0.2451,
+     "p_inst": 0.1973,
+     "base_top": " achievements"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.8906,
+     "p_inst": 0.8945,
+     "base_top": "."
+    },
+    {
+     "t": " This",
+     "rank": 1,
+     "p_base": 0.8203,
+     "p_inst": 0.6914,
+     "base_top": " This"
+    },
+    {
+     "t": " will",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.7969,
+     "base_top": " will"
+    },
+    {
+     "t": " give",
+     "rank": 1,
+     "p_base": 0.7812,
+     "p_inst": 0.6289,
+     "base_top": " give"
+    },
+    {
+     "t": " you",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " you"
+    },
+    {
+     "t": " an",
+     "rank": 2,
+     "p_base": 0.1445,
+     "p_inst": 0.1157,
+     "base_top": " a"
+    },
+    {
+     "t": " idea",
+     "rank": 1,
+     "p_base": 0.7227,
+     "p_inst": 0.7266,
+     "base_top": " idea"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " of"
+    },
+    {
+     "t": " what",
+     "rank": 1,
+     "p_base": 0.6211,
+     "p_inst": 0.5781,
+     "base_top": " what"
+    },
+    {
+     "t": " they",
+     "rank": 1,
+     "p_base": 0.2773,
+     "p_inst": 0.1069,
+     "base_top": " the"
+    },
+    {
+     "t": " do",
+     "rank": 1,
+     "p_base": 0.377,
+     "p_inst": 0.3125,
+     "base_top": " do"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.7109,
+     "base_top": ","
+    },
+    {
+     "t": " why",
+     "rank": 2,
+     "p_base": 0.1982,
+     "p_inst": 0.0991,
+     "base_top": " their"
+    },
+    {
+     "t": " they",
+     "rank": 1,
+     "p_base": 0.9062,
+     "p_inst": 0.8945,
+     "base_top": " they"
+    },
+    {
+     "t": " might",
+     "rank": 6,
+     "p_base": 0.0376,
+     "p_inst": 0.1426,
+     "base_top": " are"
+    },
+    {
+     "t": " be",
+     "rank": 1,
+     "p_base": 0.8242,
+     "p_inst": 0.7891,
+     "base_top": " be"
+    },
+    {
+     "t": " interested",
+     "rank": 3,
+     "p_base": 0.1562,
+     "p_inst": 0.1006,
+     "base_top": " hiring"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": " in"
+    },
+    {
+     "t": " hiring",
+     "rank": 2,
+     "p_base": 0.3105,
+     "p_inst": 0.1562,
+     "base_top": " you"
+    },
+    {
+     "t": " you",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9492,
+     "base_top": " you"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": ","
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " and"
+    },
+    {
+     "t": " how",
+     "rank": 2,
+     "p_base": 0.2617,
+     "p_inst": 0.1953,
+     "base_top": " what"
+    },
+    {
+     "t": " they",
+     "rank": 1,
+     "p_base": 0.4512,
+     "p_inst": 0.3926,
+     "base_top": " they"
+    },
+    {
+     "t": " operate",
+     "rank": 1,
+     "p_base": 0.2217,
+     "p_inst": 0.2002,
+     "base_top": " operate"
+    },
+    {
+     "t": ".\n\n",
+     "rank": 1,
+     "p_base": 0.6953,
+     "p_inst": 0.6055,
+     "base_top": ".\n\n"
+    },
+    {
+     "t": "2",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "2"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "."
+    },
+    {
+     "t": " **",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " **"
+    },
+    {
+     "t": "Practice",
+     "rank": 2,
+     "p_base": 0.1533,
+     "p_inst": 0.332,
+     "base_top": "Prepare"
+    },
+    {
+     "t": " Your",
+     "rank": 1,
+     "p_base": 0.2852,
+     "p_inst": 0.5625,
+     "base_top": " Your"
+    },
+    {
+     "t": " Answers",
+     "rank": 1,
+     "p_base": 0.2197,
+     "p_inst": 0.5039,
+     "base_top": " Answers"
+    },
+    {
+     "t": "**:",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9141,
+     "base_top": "**:"
+    },
+    {
+     "t": " When",
+     "rank": 3,
+     "p_base": 0.053,
+     "p_inst": 0.0723,
+     "base_top": " Practice"
+    },
+    {
+     "t": " it",
+     "rank": 2,
+     "p_base": 0.1836,
+     "p_inst": 0.1138,
+     "base_top": " you"
+    },
+    {
+     "t": " comes",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.875,
+     "base_top": " comes"
+    },
+    {
+     "t": " time",
+     "rank": 2,
+     "p_base": 0.0601,
+     "p_inst": 0.0757,
+     "base_top": " to"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 0.8164,
+     "p_inst": 0.9023,
+     "base_top": " to"
+    },
+    {
+     "t": " answer",
+     "rank": 1,
+     "p_base": 0.4102,
+     "p_inst": 0.373,
+     "base_top": " answer"
+    },
+    {
+     "t": " questions",
+     "rank": 1,
+     "p_base": 0.5664,
+     "p_inst": 0.4629,
+     "base_top": " questions"
+    },
+    {
+     "t": " during",
+     "rank": 2,
+     "p_base": 0.3008,
+     "p_inst": 0.3477,
+     "base_top": ","
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.4297,
+     "p_inst": 0.6133,
+     "base_top": " the"
+    },
+    {
+     "t": " interview",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": " interview"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": ","
+    },
+    {
+     "t": " practice",
+     "rank": 1,
+     "p_base": 0.5625,
+     "p_inst": 0.4395,
+     "base_top": " practice"
+    },
+    {
+     "t": " your",
+     "rank": 1,
+     "p_base": 0.6055,
+     "p_inst": 0.7812,
+     "base_top": " your"
+    },
+    {
+     "t": " answers",
+     "rank": 2,
+     "p_base": 0.3398,
+     "p_inst": 0.5234,
+     "base_top": " responses"
+    },
+    {
+     "t": " beforehand",
+     "rank": 2,
+     "p_base": 0.1196,
+     "p_inst": 0.0693,
+     "base_top": "."
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9844,
+     "base_top": "."
+    },
+    {
+     "t": " Think",
+     "rank": 5,
+     "p_base": 0.0413,
+     "p_inst": 0.0991,
+     "base_top": " This"
+    },
+    {
+     "t": " about",
+     "rank": 1,
+     "p_base": 0.7773,
+     "p_inst": 0.7148,
+     "base_top": " about"
+    },
+    {
+     "t": " common",
+     "rank": 1,
+     "p_base": 0.5273,
+     "p_inst": 0.5938,
+     "base_top": " common"
+    },
+    {
+     "t": " interview",
+     "rank": 1,
+     "p_base": 0.8477,
+     "p_inst": 0.8477,
+     "base_top": " interview"
+    },
+    {
+     "t": " questions",
+     "rank": 1,
+     "p_base": 0.8242,
+     "p_inst": 0.9023,
+     "base_top": " questions"
+    },
+    {
+     "t": " that",
+     "rank": 2,
+     "p_base": 0.1592,
+     "p_inst": 0.2129,
+     "base_top": " and"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.3066,
+     "p_inst": 0.3457,
+     "base_top": " the"
+    },
+    {
+     "t": " interviewer",
+     "rank": 3,
+     "p_base": 0.1211,
+     "p_inst": 0.418,
+     "base_top": " company"
+    },
+    {
+     "t": " might",
+     "rank": 1,
+     "p_base": 0.7656,
+     "p_inst": 0.8555,
+     "base_top": " might"
+    },
+    {
+     "t": " ask",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9688,
+     "base_top": " ask"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.668,
+     "p_inst": 0.7227,
+     "base_top": " and"
+    },
+    {
+     "t": " prepare",
+     "rank": 1,
+     "p_base": 0.4902,
+     "p_inst": 0.6094,
+     "base_top": " prepare"
+    },
+    {
+     "t": " thoughtful",
+     "rank": 3,
+     "p_base": 0.1196,
+     "p_inst": 0.1445,
+     "base_top": " answers"
+    },
+    {
+     "t": " responses",
+     "rank": 1,
+     "p_base": 0.8086,
+     "p_inst": 0.5938,
+     "base_top": " responses"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.8477,
+     "p_inst": 0.7852,
+     "base_top": "."
+    },
+    {
+     "t": " This",
+     "rank": 1,
+     "p_base": 0.5039,
+     "p_inst": 0.5234,
+     "base_top": " This"
+    },
+    {
+     "t": " not",
+     "rank": 2,
+     "p_base": 0.168,
+     "p_inst": 0.2539,
+     "base_top": " will"
+    },
+    {
+     "t": " only",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " only"
+    },
+    {
+     "t": " shows",
+     "rank": 1,
+     "p_base": 0.3027,
+     "p_inst": 0.4023,
+     "base_top": " shows"
+    },
+    {
+     "t": " that",
+     "rank": 1,
+     "p_base": 0.2637,
+     "p_inst": 0.4023,
+     "base_top": " that"
+    },
+    {
+     "t": " you",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " you"
+    },
+    {
+     "t": " have",
+     "rank": 1,
+     "p_base": 0.2871,
+     "p_inst": 0.2676,
+     "base_top": " are"
+    },
+    {
+     "t": " studied",
+     "rank": 1,
+     "p_base": 0.2852,
+     "p_inst": 0.293,
+     "base_top": " studied"
+    },
+    {
+     "t": " but",
+     "rank": 2,
+     "p_base": 0.1309,
+     "p_inst": 0.1748,
+     "base_top": " the"
+    },
+    {
+     "t": " also",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9844,
+     "base_top": " also"
+    },
+    {
+     "t": " helps",
+     "rank": 1,
+     "p_base": 0.3105,
+     "p_inst": 0.4102,
+     "base_top": " helps"
+    },
+    {
+     "t": " you",
+     "rank": 1,
+     "p_base": 0.6797,
+     "p_inst": 0.7539,
+     "base_top": " you"
+    },
+    {
+     "t": " feel",
+     "rank": 1,
+     "p_base": 0.5547,
+     "p_inst": 0.4316,
+     "base_top": " feel"
+    },
+    {
+     "t": " more",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.9062,
+     "base_top": " more"
+    },
+    {
+     "t": " confident",
+     "rank": 1,
+     "p_base": 0.5898,
+     "p_inst": 0.5547,
+     "base_top": " confident"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.3945,
+     "p_inst": 0.5312,
+     "base_top": " and"
+    },
+    {
+     "t": " prepared",
+     "rank": 1,
+     "p_base": 0.7773,
+     "p_inst": 0.7148,
+     "base_top": " prepared"
+    },
+    {
+     "t": ".\n\n",
+     "rank": 1,
+     "p_base": 0.8633,
+     "p_inst": 0.75,
+     "base_top": ".\n\n"
+    },
+    {
+     "t": "3",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "3"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "."
+    },
+    {
+     "t": " **",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " **"
+    },
+    {
+     "t": "Be",
+     "rank": 2,
+     "p_base": 0.2002,
+     "p_inst": 0.4062,
+     "base_top": "Prepare"
+    },
+    {
+     "t": " Prepared",
+     "rank": 1,
+     "p_base": 0.1592,
+     "p_inst": 0.3438,
+     "base_top": " Prepared"
+    },
+    {
+     "t": " with",
+     "rank": 2,
+     "p_base": 0.293,
+     "p_inst": 0.2324,
+     "base_top": " for"
+    },
+    {
+     "t": " Examples",
+     "rank": 2,
+     "p_base": 0.1357,
+     "p_inst": 0.1157,
+     "base_top": " a"
+    },
+    {
+     "t": "**:",
+     "rank": 1,
+     "p_base": 0.9062,
+     "p_inst": 0.8086,
+     "base_top": "**:"
+    },
+    {
+     "t": " If",
+     "rank": 1,
+     "p_base": 0.1196,
+     "p_inst": 0.2305,
+     "base_top": " If"
+    },
+    {
+     "t": " possible",
+     "rank": 2,
+     "p_base": 0.3613,
+     "p_inst": 0.3574,
+     "base_top": " you"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": ","
+    },
+    {
+     "t": " provide",
+     "rank": 2,
+     "p_base": 0.1865,
+     "p_inst": 0.0845,
+     "base_top": " prepare"
+    },
+    {
+     "t": " examples",
+     "rank": 1,
+     "p_base": 0.5117,
+     "p_inst": 0.5703,
+     "base_top": " examples"
+    },
+    {
+     "t": " from",
+     "rank": 2,
+     "p_base": 0.1797,
+     "p_inst": 0.2559,
+     "base_top": " of"
+    },
+    {
+     "t": " your",
+     "rank": 1,
+     "p_base": 0.5234,
+     "p_inst": 0.8359,
+     "base_top": " your"
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\n1. Ask a question.\n\nAsk a question is the first step to getting a job. If you ask, ask a question. If you don't, you'll probably get your job.\n\n2. Make sure you don't get fired\n\nNo one has the right to fire you. But if you do, you'll have to move on. And if you don",
+   "\n\n1) The best way to explain your background is through your resume. It has to be clear and concise.\n\n2) Identify your interests and interests and the purpose of your job.\n\n3) Know your subject matter.\n\nWhat do you like to do?\n\nWhat are your hobbies?\n\nWhat do you do for a living?\n\nAre you"
+  ]
+ },
+ {
+  "prompt": "Write a short poem about the sea.",
+  "base": [
+   " The sea, a vast, eternal mirror,\nA canvas of light and shadow, where dreams are made.\nUnderneath the sea, waves dance in rhythm,\nA symphony of sound, a world to behold.\nFrom towering cliffs, to gentle breezes and breezes,\nThe sea, a place of peace, a place of mystery.\nA place where dreams are born, a place where hope is found,\nA place where memories are made, a place where love is found.",
+   " The sea, a vast, endless expanse,\nA place where life thrives, and nothing can stand.\nIt's a place where waves crash, and the sky is a canvas of colors.\nAnd there's a sea that's always changing, its beauty never fades.\nWith its endless depth and depthless beauty, it's a place of wonder and awe.\nSo let's find our way, and sail away, to the endless sea, where all is possible."
+  ],
+  "urial": "The sea is a vast and mysterious place,\nA place where the waves crash and the sky is blue.\nA place where the sun sets and the stars twinkle,\nA place where the sea is a canvas of colors.",
+  "instruct": [
+   "In the vast expanse of water,\nA world of endless beauty,\nWhere waves crash against the shore,\nAnd the sky blurs with the sun's glow.\n\nThe ocean's depth never ceases to amaze,\nIts depths covered in ancient history,\nWith coral reefs and crystal clear seas,\nNature's masterpiece, all so well.\n\nThe winds howl through the endless blue,\nAnd the tide its rhythmic symphony plays,\nAs the waves break against the shore,\nA dance that no human can match.\n\nThis is where dreams take flight,\nWhere the",
+   "The blue ocean whispers,\nA vast expanse of endless depth.\nWhispers of life and decay,\nThrough the waves, it soars.\n\nA symphony of sound,\nUnderneath the azure sky.\nChimes from distant shores,\nEchoing through the deep, deep.\n\nThe salty breeze blows,\nFrom the horizon's edge.\nWinds that spin and sway,\nPiercing through the air, deep.\n\nThe sun rises, with glee,\nAnd the world awakes.\nDay breaks, and the day's begun,\nWith the sea at its side"
+  ],
+  "analysis": {
+   "answer": "The sea is vast and deep,\nA place of endless beauty.\nIts waves dance with the wind,\nAnd the sun sets in hues so bright.\n\nIt's a place where dreams come true,\nWhere the ocean whispers to us.\nWith its salty air and warm breeze,\nWe find solace in its embrace.\n\nSo let us cherish this sea so grand,\nAnd know that it holds within its heart.\nFor in its depths we find our strength,\nAnd in its beauty we find our home.",
+   "tokens": [
+    {
+     "t": "The",
+     "rank": 1,
+     "p_base": 0.0469,
+     "p_inst": 0.3223,
+     "base_top": "The"
+    },
+    {
+     "t": " sea",
+     "rank": 1,
+     "p_base": 0.6289,
+     "p_inst": 0.6445,
+     "base_top": " sea"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.6172,
+     "p_inst": 0.252,
+     "base_top": " is"
+    },
+    {
+     "t": " vast",
+     "rank": 2,
+     "p_base": 0.2324,
+     "p_inst": 0.3984,
+     "base_top": " a"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.7812,
+     "p_inst": 0.8711,
+     "base_top": " and"
+    },
+    {
+     "t": " deep",
+     "rank": 3,
+     "p_base": 0.064,
+     "p_inst": 0.2324,
+     "base_top": " bound"
+    },
+    {
+     "t": ",\n",
+     "rank": 2,
+     "p_base": 0.3301,
+     "p_inst": 0.6992,
+     "base_top": ","
+    },
+    {
+     "t": "A",
+     "rank": 1,
+     "p_base": 0.1592,
+     "p_inst": 0.6289,
+     "base_top": "A"
+    },
+    {
+     "t": " place",
+     "rank": 2,
+     "p_base": 0.0918,
+     "p_inst": 0.2217,
+     "base_top": " vast"
+    },
+    {
+     "t": " of",
+     "rank": 1,
+     "p_base": 0.3223,
+     "p_inst": 0.5859,
+     "base_top": " of"
+    },
+    {
+     "t": " endless",
+     "rank": 1,
+     "p_base": 0.4297,
+     "p_inst": 0.418,
+     "base_top": " endless"
+    },
+    {
+     "t": " beauty",
+     "rank": 1,
+     "p_base": 0.3516,
+     "p_inst": 0.1768,
+     "base_top": " beauty"
+    },
+    {
+     "t": ".\n",
+     "rank": 1,
+     "p_base": 0.4902,
+     "p_inst": 0.3594,
+     "base_top": ".\n"
+    },
+    {
+     "t": "Its",
+     "rank": 3,
+     "p_base": 0.0713,
+     "p_inst": 0.4707,
+     "base_top": "The"
+    },
+    {
+     "t": " waves",
+     "rank": 1,
+     "p_base": 0.543,
+     "p_inst": 0.7461,
+     "base_top": " waves"
+    },
+    {
+     "t": " dance",
+     "rank": 2,
+     "p_base": 0.1777,
+     "p_inst": 0.2852,
+     "base_top": " are"
+    },
+    {
+     "t": " with",
+     "rank": 1,
+     "p_base": 0.3379,
+     "p_inst": 0.4434,
+     "base_top": " with"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.8164,
+     "p_inst": 0.9609,
+     "base_top": " the"
+    },
+    {
+     "t": " wind",
+     "rank": 1,
+     "p_base": 0.6484,
+     "p_inst": 0.7109,
+     "base_top": " wind"
+    },
+    {
+     "t": ",\n",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9844,
+     "base_top": ",\n"
+    },
+    {
+     "t": "And",
+     "rank": 2,
+     "p_base": 0.2471,
+     "p_inst": 0.1973,
+     "base_top": "A"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.4219,
+     "p_inst": 0.3789,
+     "base_top": " the"
+    },
+    {
+     "t": " sun",
+     "rank": 1,
+     "p_base": 0.2305,
+     "p_inst": 0.1738,
+     "base_top": " sun"
+    },
+    {
+     "t": " sets",
+     "rank": 1,
+     "p_base": 0.2471,
+     "p_inst": 0.3672,
+     "base_top": " sets"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.1748,
+     "p_inst": 0.1973,
+     "base_top": " in"
+    },
+    {
+     "t": " hues",
+     "rank": 4,
+     "p_base": 0.0513,
+     "p_inst": 0.1211,
+     "base_top": " the"
+    },
+    {
+     "t": " so",
+     "rank": 2,
+     "p_base": 0.0554,
+     "p_inst": 0.1533,
+     "base_top": " of"
+    },
+    {
+     "t": " bright",
+     "rank": 1,
+     "p_base": 0.4629,
+     "p_inst": 0.6484,
+     "base_top": " bright"
+    },
+    {
+     "t": ".\n\n",
+     "rank": 2,
+     "p_base": 0.0991,
+     "p_inst": 0.5469,
+     "base_top": ".\n"
+    },
+    {
+     "t": "It",
+     "rank": 8,
+     "p_base": 0.0092,
+     "p_inst": 0.1157,
+     "base_top": "iente"
+    },
+    {
+     "t": "'s",
+     "rank": 1,
+     "p_base": 0.5547,
+     "p_inst": 0.459,
+     "base_top": "'s"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 0.6836,
+     "p_inst": 0.8555,
+     "base_top": " a"
+    },
+    {
+     "t": " place",
+     "rank": 1,
+     "p_base": 0.5391,
+     "p_inst": 0.7695,
+     "base_top": " place"
+    },
+    {
+     "t": " where",
+     "rank": 2,
+     "p_base": 0.3535,
+     "p_inst": 0.2734,
+     "base_top": " of"
+    },
+    {
+     "t": " dreams",
+     "rank": 1,
+     "p_base": 0.1768,
+     "p_inst": 0.1357,
+     "base_top": " dreams"
+    },
+    {
+     "t": " come",
+     "rank": 2,
+     "p_base": 0.2773,
+     "p_inst": 0.25,
+     "base_top": " are"
+    },
+    {
+     "t": " true",
+     "rank": 1,
+     "p_base": 0.7305,
+     "p_inst": 0.5039,
+     "base_top": " true"
+    },
+    {
+     "t": ",\n",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 1.0,
+     "base_top": ",\n"
+    },
+    {
+     "t": "Where",
+     "rank": 2,
+     "p_base": 0.2412,
+     "p_inst": 0.3301,
+     "base_top": "A"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.2539,
+     "p_inst": 0.4141,
+     "base_top": " the"
+    },
+    {
+     "t": " ocean",
+     "rank": 2,
+     "p_base": 0.0991,
+     "p_inst": 0.1494,
+     "base_top": " sea"
+    },
+    {
+     "t": " whispers",
+     "rank": 1,
+     "p_base": 0.3516,
+     "p_inst": 0.2656,
+     "base_top": " whispers"
+    },
+    {
+     "t": " to",
+     "rank": 3,
+     "p_base": 0.0771,
+     "p_inst": 0.2637,
+     "base_top": " secrets"
+    },
+    {
+     "t": " us",
+     "rank": 2,
+     "p_base": 0.1445,
+     "p_inst": 0.2031,
+     "base_top": " the"
+    },
+    {
+     "t": ".\n",
+     "rank": 1,
+     "p_base": 0.6719,
+     "p_inst": 0.832,
+     "base_top": ".\n"
+    },
+    {
+     "t": "With",
+     "rank": 1,
+     "p_base": 0.1211,
+     "p_inst": 0.1973,
+     "base_top": "A"
+    },
+    {
+     "t": " its",
+     "rank": 1,
+     "p_base": 0.332,
+     "p_inst": 0.5898,
+     "base_top": " its"
+    },
+    {
+     "t": " salty",
+     "rank": 7,
+     "p_base": 0.0302,
+     "p_inst": 0.2305,
+     "base_top": " endless"
+    },
+    {
+     "t": " air",
+     "rank": 1,
+     "p_base": 0.3047,
+     "p_inst": 0.3066,
+     "base_top": " air"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.6562,
+     "p_inst": 0.707,
+     "base_top": " and"
+    },
+    {
+     "t": " warm",
+     "rank": 1,
+     "p_base": 0.0977,
+     "p_inst": 0.063,
+     "base_top": " warm"
+    },
+    {
+     "t": " breeze",
+     "rank": 1,
+     "p_base": 0.2412,
+     "p_inst": 0.0703,
+     "base_top": " breeze"
+    },
+    {
+     "t": ",\n",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": ",\n"
+    },
+    {
+     "t": "We",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.4355,
+     "base_top": "We"
+    },
+    {
+     "t": " find",
+     "rank": 1,
+     "p_base": 0.3574,
+     "p_inst": 0.3945,
+     "base_top": " find"
+    },
+    {
+     "t": " sol",
+     "rank": 1,
+     "p_base": 0.3887,
+     "p_inst": 0.3203,
+     "base_top": " sol"
+    },
+    {
+     "t": "ace",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "ace"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.5859,
+     "p_inst": 0.5352,
+     "base_top": " in"
+    },
+    {
+     "t": " its",
+     "rank": 1,
+     "p_base": 0.4219,
+     "p_inst": 0.5508,
+     "base_top": " its"
+    },
+    {
+     "t": " embrace",
+     "rank": 1,
+     "p_base": 0.5273,
+     "p_inst": 0.5156,
+     "base_top": " embrace"
+    },
+    {
+     "t": ".\n\n",
+     "rank": 1,
+     "p_base": 0.8438,
+     "p_inst": 0.9688,
+     "base_top": ".\n\n"
+    },
+    {
+     "t": "So",
+     "rank": 1,
+     "p_base": 0.0977,
+     "p_inst": 0.1055,
+     "base_top": "So"
+    },
+    {
+     "t": " let",
+     "rank": 1,
+     "p_base": 0.5195,
+     "p_inst": 0.7461,
+     "base_top": " let"
+    },
+    {
+     "t": " us",
+     "rank": 1,
+     "p_base": 0.6992,
+     "p_inst": 0.9336,
+     "base_top": " us"
+    },
+    {
+     "t": " cherish",
+     "rank": 1,
+     "p_base": 0.2002,
+     "p_inst": 0.1309,
+     "base_top": " cherish"
+    },
+    {
+     "t": " this",
+     "rank": 1,
+     "p_base": 0.459,
+     "p_inst": 0.5156,
+     "base_top": " this"
+    },
+    {
+     "t": " sea",
+     "rank": 1,
+     "p_base": 0.1406,
+     "p_inst": 0.3535,
+     "base_top": " sea"
+    },
+    {
+     "t": " so",
+     "rank": 2,
+     "p_base": 0.1484,
+     "p_inst": 0.4824,
+     "base_top": ",\n"
+    },
+    {
+     "t": " grand",
+     "rank": 7,
+     "p_base": 0.0214,
+     "p_inst": 0.123,
+     "base_top": " much"
+    },
+    {
+     "t": ",\n",
+     "rank": 1,
+     "p_base": 0.8906,
+     "p_inst": 0.9844,
+     "base_top": ",\n"
+    },
+    {
+     "t": "And",
+     "rank": 1,
+     "p_base": 0.7031,
+     "p_inst": 0.8477,
+     "base_top": "And"
+    },
+    {
+     "t": " know",
+     "rank": 13,
+     "p_base": 0.0177,
+     "p_inst": 0.0425,
+     "base_top": " let"
+    },
+    {
+     "t": " that",
+     "rank": 1,
+     "p_base": 0.7578,
+     "p_inst": 0.9141,
+     "base_top": " that"
+    },
+    {
+     "t": " it",
+     "rank": 1,
+     "p_base": 0.3945,
+     "p_inst": 0.6602,
+     "base_top": " it"
+    },
+    {
+     "t": " holds",
+     "rank": 2,
+     "p_base": 0.1904,
+     "p_inst": 0.1797,
+     "base_top": "'s"
+    },
+    {
+     "t": " within",
+     "rank": 3,
+     "p_base": 0.127,
+     "p_inst": 0.2148,
+     "base_top": " so"
+    },
+    {
+     "t": " its",
+     "rank": 1,
+     "p_base": 0.4824,
+     "p_inst": 0.4961,
+     "base_top": " its"
+    },
+    {
+     "t": " heart",
+     "rank": 1,
+     "p_base": 0.167,
+     "p_inst": 0.0962,
+     "base_top": " heart"
+    },
+    {
+     "t": ".\n",
+     "rank": 1,
+     "p_base": 0.5273,
+     "p_inst": 0.6758,
+     "base_top": ".\n"
+    },
+    {
+     "t": "For",
+     "rank": 1,
+     "p_base": 0.2949,
+     "p_inst": 0.8906,
+     "base_top": "For"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.4414,
+     "p_inst": 0.7773,
+     "base_top": " in"
+    },
+    {
+     "t": " its",
+     "rank": 1,
+     "p_base": 0.5898,
+     "p_inst": 0.7617,
+     "base_top": " its"
+    },
+    {
+     "t": " depths",
+     "rank": 2,
+     "p_base": 0.2412,
+     "p_inst": 0.1611,
+     "base_top": " embrace"
+    },
+    {
+     "t": " we",
+     "rank": 3,
+     "p_base": 0.1123,
+     "p_inst": 0.334,
+     "base_top": ","
+    },
+    {
+     "t": " find",
+     "rank": 1,
+     "p_base": 0.832,
+     "p_inst": 0.8477,
+     "base_top": " find"
+    },
+    {
+     "t": " our",
+     "rank": 1,
+     "p_base": 0.543,
+     "p_inst": 0.5586,
+     "base_top": " our"
+    },
+    {
+     "t": " strength",
+     "rank": 2,
+     "p_base": 0.1123,
+     "p_inst": 0.1211,
+     "base_top": " own"
+    },
+    {
+     "t": ",\n",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.9492,
+     "base_top": ",\n"
+    },
+    {
+     "t": "And",
+     "rank": 1,
+     "p_base": 0.8828,
+     "p_inst": 0.957,
+     "base_top": "And"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.4668,
+     "p_inst": 0.7656,
+     "base_top": " in"
+    },
+    {
+     "t": " its",
+     "rank": 1,
+     "p_base": 0.9023,
+     "p_inst": 0.957,
+     "base_top": " its"
+    },
+    {
+     "t": " beauty",
+     "rank": 1,
+     "p_base": 0.2002,
+     "p_inst": 0.25,
+     "base_top": " beauty"
+    },
+    {
+     "t": " we",
+     "rank": 1,
+     "p_base": 0.7578,
+     "p_inst": 0.75,
+     "base_top": " we"
+    },
+    {
+     "t": " find",
+     "rank": 1,
+     "p_base": 0.8477,
+     "p_inst": 0.8828,
+     "base_top": " find"
+    },
+    {
+     "t": " our",
+     "rank": 1,
+     "p_base": 0.8242,
+     "p_inst": 0.8203,
+     "base_top": " our"
+    },
+    {
+     "t": " home",
+     "rank": 1,
+     "p_base": 0.1196,
+     "p_inst": 0.1021,
+     "base_top": " home"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.4961,
+     "p_inst": 0.8477,
+     "base_top": "."
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\nIn this new poem, the reader may simply look to the boat or plane to find a new shoreline.\n\nBut the boat or plane may be no more than a few hundred feet away.\n\nThe sea is too deep for us to continue on our journey.\n\nA sea is never a place of refuge.\n\nSea is always a place of death.",
+   "\n\n\"I've been to the sea six times, but I never thought I'd get there.\"\n\n\"I know you're a man. But you've never told me how to swim. I've always thought that you could fly. You're a man, and I'd say I've never ever heard you say that.\"\n\n\"You're a man, you're a man"
+  ]
+ },
+ {
+  "prompt": "Translate into Dutch: The weather is nice today.",
+  "base": [
+   " The weather is nice today.\nThe weather is nice today. The weather is nice today.",
+   " Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de dag. Het zit goed op de"
+  ],
+  "urial": "De zon is lekker nu.",
+  "instruct": [
+   "De气候 is tijdens dit dagelijkse zaterdag mooi.",
+   "De zee heeft zeker een lekker weer."
+  ],
+  "analysis": {
+   "answer": "De zon is mooi nu.",
+   "tokens": [
+    {
+     "t": "De",
+     "rank": 3,
+     "p_base": 0.0513,
+     "p_inst": 0.7344,
+     "base_top": "In"
+    },
+    {
+     "t": " z",
+     "rank": 1,
+     "p_base": 0.0811,
+     "p_inst": 0.3398,
+     "base_top": " z"
+    },
+    {
+     "t": "on",
+     "rank": 1,
+     "p_base": 0.3203,
+     "p_inst": 0.373,
+     "base_top": "on"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.7656,
+     "p_inst": 0.8477,
+     "base_top": " is"
+    },
+    {
+     "t": " moo",
+     "rank": 2,
+     "p_base": 0.0693,
+     "p_inst": 0.0811,
+     "base_top": " lekker"
+    },
+    {
+     "t": "i",
+     "rank": 1,
+     "p_base": 0.9141,
+     "p_inst": 0.9609,
+     "base_top": "i"
+    },
+    {
+     "t": " nu",
+     "rank": 1,
+     "p_base": 0.2773,
+     "p_inst": 0.2559,
+     "base_top": " nu"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.6953,
+     "p_inst": 0.9688,
+     "base_top": "."
+    }
+   ]
+  },
+  "gpt2": [
+   " The sun is shining. There are no problems.\n\nThe weather is nice today. The sun is shining. There are no problems. Listen to the music: no problems.\n\nNo problems. Know the rules: no problems.\n\nno problems. Read the book: no problems.\n\nno problems. Listen to the music: no problems.\n\nno problems. Don't",
+   " Look out for the red light red dot on the horizon.\n\nCheck out our weekly newsletter, The Check Out."
+  ]
+ },
+ {
+  "prompt": "Wat is de hoofdstad van Nederland?",
+  "base": [
+   "____\nAmsterdam\nMaastricht\nEindhoven\nMiddelheim\n答案:\n\nEindhoven\n\n下列关于法律文件的性质和作用的表述，错误的是____。\nA. 法律是国家制定或认可的行为规范\nB. 法律文件具有强制性\nC. 法律文件是社会公共生活秩序的重要保障\nD. 法律文件是一种特殊的社会规范\n答案:\n\nB\n\nIn order to apply for a job, we need to show that we have __________.\nA.",
+   " (What is the capital of the Netherlands?) To find the capital of the Netherlands, I will perform a basic search using a search engine. After searching, I will determine that the capital of the Netherlands is Amsterdam."
+  ],
+  "urial": "Amsterdam",
+  "instruct": [
+   "De hoofdstad van Nederland is Amsterdam.\n\nAmsterdam is de grootste stad en het belangrijkste meestalverbinding in Nederland. Hier zijn een aantal belangrijke steden die hebben veel inzicht in de identiteit en politieke huidige plaats van Amsterdam:\n\n1. Amsterdam: De bekende \"Stroom\" (Zee) zit op de snede van het vliegveld Oostzee. Het werd ook wel verzekerd voor de Nederlandse reis.\n\n2. Gent: Een str",
+   "De hoofdstad van Nederland is Amsterdam. Het is een van de meest populaire en bekendste stad in Nederland. De stad heeft veel belangrijke betere toegang tot het buitenland en is zeer populair voor gasten, professionele verhalen en spelers. Amsterdam heeft zijn eigen historische gebeurtenissen en artikelen die nog overleven, inclusief de geschiedenis van Cervantes en de wereldwijde novel \"Don Quixote\"."
+  ],
+  "analysis": {
+   "answer": "De hoofdstad van Nederland is Amsterdam. Het is een groot en populair stad in het zuiden van Nederland, waaruit verschillende belangrijke gebieden zijn uitgebracht, zoals de Zuidoostde, de Oostenrijkse Schouwburg en de Nederlandse Schouwburg. Amsterdam heeft een lange historische achtergrond en is bekend als een van de meest populaire en betrouwbare stadjes in Nederland.",
+   "tokens": [
+    {
+     "t": "De",
+     "rank": 1,
+     "p_base": 0.2432,
+     "p_inst": 0.7891,
+     "base_top": "De"
+    },
+    {
+     "t": " hoof",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " hoof"
+    },
+    {
+     "t": "dst",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": "dst"
+    },
+    {
+     "t": "ad",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": "ad"
+    },
+    {
+     "t": " van",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " van"
+    },
+    {
+     "t": " Nederland",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9844,
+     "base_top": " Nederland"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9766,
+     "base_top": " is"
+    },
+    {
+     "t": " Amsterdam",
+     "rank": 1,
+     "p_base": 0.6562,
+     "p_inst": 0.6055,
+     "base_top": " Amsterdam"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.5195,
+     "p_inst": 0.9336,
+     "base_top": "."
+    },
+    {
+     "t": " Het",
+     "rank": 193,
+     "p_base": 0.0005,
+     "p_inst": 0.2354,
+     "base_top": " �"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.6836,
+     "p_inst": 0.7969,
+     "base_top": " is"
+    },
+    {
+     "t": " een",
+     "rank": 1,
+     "p_base": 0.4922,
+     "p_inst": 0.3926,
+     "base_top": " een"
+    },
+    {
+     "t": " groot",
+     "rank": 3,
+     "p_base": 0.0903,
+     "p_inst": 0.1196,
+     "base_top": " van"
+    },
+    {
+     "t": " en",
+     "rank": 1,
+     "p_base": 0.3242,
+     "p_inst": 0.2051,
+     "base_top": " en"
+    },
+    {
+     "t": " popul",
+     "rank": 1,
+     "p_base": 0.3672,
+     "p_inst": 0.167,
+     "base_top": " popul"
+    },
+    {
+     "t": "air",
+     "rank": 1,
+     "p_base": 0.6953,
+     "p_inst": 0.6836,
+     "base_top": "air"
+    },
+    {
+     "t": " stad",
+     "rank": 1,
+     "p_base": 0.2412,
+     "p_inst": 0.1089,
+     "base_top": " stad"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.3457,
+     "p_inst": 0.6094,
+     "base_top": " in"
+    },
+    {
+     "t": " het",
+     "rank": 3,
+     "p_base": 0.2217,
+     "p_inst": 0.2734,
+     "base_top": " de"
+    },
+    {
+     "t": " z",
+     "rank": 1,
+     "p_base": 0.0796,
+     "p_inst": 0.125,
+     "base_top": " z"
+    },
+    {
+     "t": "uid",
+     "rank": 1,
+     "p_base": 0.8828,
+     "p_inst": 0.8438,
+     "base_top": "uid"
+    },
+    {
+     "t": "en",
+     "rank": 1,
+     "p_base": 0.5273,
+     "p_inst": 0.4355,
+     "base_top": "en"
+    },
+    {
+     "t": " van",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9688,
+     "base_top": " van"
+    },
+    {
+     "t": " Nederland",
+     "rank": 2,
+     "p_base": 0.3008,
+     "p_inst": 0.4355,
+     "base_top": " de"
+    },
+    {
+     "t": ",",
+     "rank": 3,
+     "p_base": 0.0918,
+     "p_inst": 0.4629,
+     "base_top": "."
+    },
+    {
+     "t": " waar",
+     "rank": 1,
+     "p_base": 0.3105,
+     "p_inst": 0.1621,
+     "base_top": " waar"
+    },
+    {
+     "t": "uit",
+     "rank": 8,
+     "p_base": 0.0266,
+     "p_inst": 0.1006,
+     "base_top": " de"
+    },
+    {
+     "t": " verschill",
+     "rank": 1,
+     "p_base": 0.1523,
+     "p_inst": 0.127,
+     "base_top": " verschill"
+    },
+    {
+     "t": "ende",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9844,
+     "base_top": "ende"
+    },
+    {
+     "t": " belang",
+     "rank": 2,
+     "p_base": 0.0332,
+     "p_inst": 0.2598,
+     "base_top": " be"
+    },
+    {
+     "t": "rij",
+     "rank": 1,
+     "p_base": 0.6914,
+     "p_inst": 0.8086,
+     "base_top": "rij"
+    },
+    {
+     "t": "ke",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "ke"
+    },
+    {
+     "t": " geb",
+     "rank": 2,
+     "p_base": 0.0505,
+     "p_inst": 0.1309,
+     "base_top": " plaats"
+    },
+    {
+     "t": "ied",
+     "rank": 1,
+     "p_base": 0.9336,
+     "p_inst": 0.9688,
+     "base_top": "ied"
+    },
+    {
+     "t": "en",
+     "rank": 1,
+     "p_base": 0.9609,
+     "p_inst": 0.9922,
+     "base_top": "en"
+    },
+    {
+     "t": " zijn",
+     "rank": 1,
+     "p_base": 0.1514,
+     "p_inst": 0.0991,
+     "base_top": " zijn"
+    },
+    {
+     "t": " uit",
+     "rank": 5,
+     "p_base": 0.0439,
+     "p_inst": 0.0928,
+     "base_top": " geb"
+    },
+    {
+     "t": "ge",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.6406,
+     "base_top": "ge"
+    },
+    {
+     "t": "bracht",
+     "rank": 4,
+     "p_base": 0.0713,
+     "p_inst": 0.2285,
+     "base_top": "bre"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.3652,
+     "p_inst": 0.5859,
+     "base_top": ","
+    },
+    {
+     "t": " zoals",
+     "rank": 1,
+     "p_base": 0.8164,
+     "p_inst": 0.6484,
+     "base_top": " zoals"
+    },
+    {
+     "t": " de",
+     "rank": 1,
+     "p_base": 0.457,
+     "p_inst": 0.3984,
+     "base_top": " de"
+    },
+    {
+     "t": " Z",
+     "rank": 5,
+     "p_base": 0.0239,
+     "p_inst": 0.064,
+     "base_top": " Amsterdam"
+    },
+    {
+     "t": "uido",
+     "rank": 3,
+     "p_base": 0.0554,
+     "p_inst": 0.125,
+     "base_top": "uid"
+    },
+    {
+     "t": "ost",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9688,
+     "base_top": "ost"
+    },
+    {
+     "t": "de",
+     "rank": 5,
+     "p_base": 0.042,
+     "p_inst": 0.104,
+     "base_top": "se"
+    },
+    {
+     "t": ",",
+     "rank": 18,
+     "p_base": 0.0049,
+     "p_inst": 0.5898,
+     "base_top": "el"
+    },
+    {
+     "t": " de",
+     "rank": 1,
+     "p_base": 0.6875,
+     "p_inst": 0.7227,
+     "base_top": " de"
+    },
+    {
+     "t": " O",
+     "rank": 2,
+     "p_base": 0.0835,
+     "p_inst": 0.0601,
+     "base_top": " Z"
+    },
+    {
+     "t": "osten",
+     "rank": 2,
+     "p_base": 0.1309,
+     "p_inst": 0.1631,
+     "base_top": "ost"
+    },
+    {
+     "t": "rijk",
+     "rank": 1,
+     "p_base": 0.25,
+     "p_inst": 0.8828,
+     "base_top": "rijk"
+    },
+    {
+     "t": "se",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9922,
+     "base_top": "se"
+    },
+    {
+     "t": " Sch",
+     "rank": 2,
+     "p_base": 0.0574,
+     "p_inst": 0.0447,
+     "base_top": " Z"
+    },
+    {
+     "t": "ou",
+     "rank": 1,
+     "p_base": 0.2539,
+     "p_inst": 0.3672,
+     "base_top": "ou"
+    },
+    {
+     "t": "w",
+     "rank": 1,
+     "p_base": 0.7148,
+     "p_inst": 0.6797,
+     "base_top": "w"
+    },
+    {
+     "t": "burg",
+     "rank": 1,
+     "p_base": 0.6523,
+     "p_inst": 0.5039,
+     "base_top": "burg"
+    },
+    {
+     "t": " en",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.6914,
+     "base_top": " en"
+    },
+    {
+     "t": " de",
+     "rank": 1,
+     "p_base": 0.7344,
+     "p_inst": 0.6484,
+     "base_top": " de"
+    },
+    {
+     "t": " Nederland",
+     "rank": 3,
+     "p_base": 0.0425,
+     "p_inst": 0.1104,
+     "base_top": " Z"
+    },
+    {
+     "t": "se",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": "se"
+    },
+    {
+     "t": " Sch",
+     "rank": 1,
+     "p_base": 0.1455,
+     "p_inst": 0.2754,
+     "base_top": " Sch"
+    },
+    {
+     "t": "ou",
+     "rank": 1,
+     "p_base": 0.9609,
+     "p_inst": 0.9844,
+     "base_top": "ou"
+    },
+    {
+     "t": "w",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9492,
+     "base_top": "w"
+    },
+    {
+     "t": "burg",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9844,
+     "base_top": "burg"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.5391,
+     "p_inst": 0.8906,
+     "base_top": "."
+    },
+    {
+     "t": " Amsterdam",
+     "rank": 1,
+     "p_base": 0.2812,
+     "p_inst": 0.9492,
+     "base_top": " Het"
+    },
+    {
+     "t": " heeft",
+     "rank": 2,
+     "p_base": 0.2891,
+     "p_inst": 0.2305,
+     "base_top": " is"
+    },
+    {
+     "t": " een",
+     "rank": 1,
+     "p_base": 0.7539,
+     "p_inst": 0.7266,
+     "base_top": " een"
+    },
+    {
+     "t": " lange",
+     "rank": 5,
+     "p_base": 0.0306,
+     "p_inst": 0.0679,
+     "base_top": " popul"
+    },
+    {
+     "t": " histor",
+     "rank": 2,
+     "p_base": 0.0581,
+     "p_inst": 0.1177,
+     "base_top": " tradition"
+    },
+    {
+     "t": "ische",
+     "rank": 1,
+     "p_base": 0.6836,
+     "p_inst": 0.8438,
+     "base_top": "ische"
+    },
+    {
+     "t": " achter",
+     "rank": 1,
+     "p_base": 0.4961,
+     "p_inst": 0.2598,
+     "base_top": " achter"
+    },
+    {
+     "t": "gr",
+     "rank": 1,
+     "p_base": 0.7891,
+     "p_inst": 0.6953,
+     "base_top": "gr"
+    },
+    {
+     "t": "ond",
+     "rank": 1,
+     "p_base": 0.9609,
+     "p_inst": 0.9844,
+     "base_top": "ond"
+    },
+    {
+     "t": " en",
+     "rank": 1,
+     "p_base": 0.5273,
+     "p_inst": 0.5391,
+     "base_top": " en"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.5,
+     "p_inst": 0.4961,
+     "base_top": " is"
+    },
+    {
+     "t": " bek",
+     "rank": 4,
+     "p_base": 0.0211,
+     "p_inst": 0.127,
+     "base_top": " een"
+    },
+    {
+     "t": "end",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9609,
+     "base_top": "end"
+    },
+    {
+     "t": " als",
+     "rank": 1,
+     "p_base": 0.4395,
+     "p_inst": 0.3398,
+     "base_top": " als"
+    },
+    {
+     "t": " een",
+     "rank": 1,
+     "p_base": 0.6133,
+     "p_inst": 0.5703,
+     "base_top": " een"
+    },
+    {
+     "t": " van",
+     "rank": 1,
+     "p_base": 0.4629,
+     "p_inst": 0.373,
+     "base_top": " van"
+    },
+    {
+     "t": " de",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9766,
+     "base_top": " de"
+    },
+    {
+     "t": " me",
+     "rank": 1,
+     "p_base": 0.2148,
+     "p_inst": 0.3828,
+     "base_top": " me"
+    },
+    {
+     "t": "est",
+     "rank": 1,
+     "p_base": 0.8633,
+     "p_inst": 0.9336,
+     "base_top": "est"
+    },
+    {
+     "t": " pop",
+     "rank": 2,
+     "p_base": 0.0747,
+     "p_inst": 0.0601,
+     "base_top": " popul"
+    },
+    {
+     "t": "ulaire",
+     "rank": 1,
+     "p_base": 0.9258,
+     "p_inst": 0.957,
+     "base_top": "ulaire"
+    },
+    {
+     "t": " en",
+     "rank": 1,
+     "p_base": 0.3047,
+     "p_inst": 0.3203,
+     "base_top": " en"
+    },
+    {
+     "t": " bet",
+     "rank": 2,
+     "p_base": 0.0243,
+     "p_inst": 0.0405,
+     "base_top": " popul"
+    },
+    {
+     "t": "rou",
+     "rank": 5,
+     "p_base": 0.0796,
+     "p_inst": 0.3105,
+     "base_top": "rek"
+    },
+    {
+     "t": "wb",
+     "rank": 1,
+     "p_base": 0.5195,
+     "p_inst": 0.9844,
+     "base_top": "wb"
+    },
+    {
+     "t": "are",
+     "rank": 1,
+     "p_base": 0.9336,
+     "p_inst": 0.9414,
+     "base_top": "are"
+    },
+    {
+     "t": " stad",
+     "rank": 1,
+     "p_base": 0.5703,
+     "p_inst": 0.6133,
+     "base_top": " stad"
+    },
+    {
+     "t": "jes",
+     "rank": 3,
+     "p_base": 0.0513,
+     "p_inst": 0.1514,
+     "base_top": " in"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 0.5234,
+     "p_inst": 0.7188,
+     "base_top": " in"
+    },
+    {
+     "t": " Nederland",
+     "rank": 1,
+     "p_base": 0.459,
+     "p_inst": 0.3535,
+     "base_top": " Nederland"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.5586,
+     "p_inst": 0.9219,
+     "base_top": "."
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\nWasn't that Mr. Bremmer's wife?\n\nWasn't Mr. Bremmer's wife? (I am not sure if he was in question or not. Maybe Mr. Bremmer was at the marriage party.)\n\nWasn't that Mr. Bremmer's wife?\n\nWasn't that Mr. Bremmer's wife?",
+   "\n\nWat van Nederland? Wethe het van Korteren (15, pf.): Wethe het van Korteren, a reindeer?\n\nWat van Korteren (15, pf.): Wethe het van Korteren, a reindeer? Wethe het van Korteren (15, pf"
+  ]
+ },
+ {
+  "prompt": "Write a Python function that checks whether a number is prime.",
+  "base": [
+   " The function should take an integer as input and return a boolean value indicating whether the number is prime or not. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. You can use the following method to check if a number is prime:\n\n```python\ndef is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False",
+   " The function should return True if the number is prime, and False otherwise. The function should have a time complexity of O(sqrt(n)) and a space complexity of O(1).\n\n# Example\nInput: 17\nOutput: True\n\nInput: 18\nOutput: False\ndef is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+  ],
+  "urial": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+  "instruct": [
+   "Certainly! To check if a number is prime in Python, you can use the following function:\n\n```python\ndef is_prime(n):\n    \"\"\"\n    Check if the given integer n is a prime number.\n    \n    A prime number is a natural number greater than 1 and less than its square root,\n    which means it has exactly two distinct positive divisors: 1 and itself.\n    \n    Parameters:\n    - n (int): The number to check for primality.\n    \n    Returns:\n    - bool: True if n is a prime",
+   "Certainly! Checking if a number is prime can be done using various methods. One common and efficient method in Python is the trial division algorithm. Here's an example of how you might implement such a function:\n\n```python\ndef is_prime(n):\n    \"\"\"\n    Check if a number n is prime.\n    \n    :param n: Integer to check for primality\n    :return: Boolean value indicating whether n is prime or not\n    \"\"\"\n    # Handle edge cases\n    if n <= 1:\n        return False\n    if n <="
+  ],
+  "analysis": {
+   "answer": "Certainly! Here's a Python function to check if a given number is prime:\n\n```python\ndef is_prime(n):\n    \"\"\"\n    Check if the given number n is prime.\n    \n    A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.\n    \n    Parameters:\n    - n: An integer\n    \n    Returns:\n    - True if n is prime, False otherwise.\n    \"\"\"\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Example usage:\nnumber = 7\nif is_prime(number):",
+   "tokens": [
+    {
+     "t": "Certainly",
+     "rank": 3,
+     "p_base": 0.0669,
+     "p_inst": 0.6484,
+     "base_top": "Sure"
+    },
+    {
+     "t": "!",
+     "rank": 1,
+     "p_base": 0.8828,
+     "p_inst": 1.0,
+     "base_top": "!"
+    },
+    {
+     "t": " Here",
+     "rank": 2,
+     "p_base": 0.3809,
+     "p_inst": 0.2871,
+     "base_top": " Below"
+    },
+    {
+     "t": "'s",
+     "rank": 1,
+     "p_base": 0.7812,
+     "p_inst": 0.7656,
+     "base_top": "'s"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 0.8906,
+     "p_inst": 0.957,
+     "base_top": " a"
+    },
+    {
+     "t": " Python",
+     "rank": 1,
+     "p_base": 0.875,
+     "p_inst": 0.9023,
+     "base_top": " Python"
+    },
+    {
+     "t": " function",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": " function"
+    },
+    {
+     "t": " to",
+     "rank": 2,
+     "p_base": 0.0505,
+     "p_inst": 0.1445,
+     "base_top": " that"
+    },
+    {
+     "t": " check",
+     "rank": 1,
+     "p_base": 0.832,
+     "p_inst": 0.9414,
+     "base_top": " check"
+    },
+    {
+     "t": " if",
+     "rank": 1,
+     "p_base": 0.5859,
+     "p_inst": 0.375,
+     "base_top": " if"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " a"
+    },
+    {
+     "t": " given",
+     "rank": 2,
+     "p_base": 0.1328,
+     "p_inst": 0.4375,
+     "base_top": " number"
+    },
+    {
+     "t": " number",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9766,
+     "base_top": " number"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.9492,
+     "p_inst": 0.9844,
+     "base_top": " is"
+    },
+    {
+     "t": " prime",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9844,
+     "base_top": " prime"
+    },
+    {
+     "t": ":\n\n",
+     "rank": 1,
+     "p_base": 0.9062,
+     "p_inst": 0.8477,
+     "base_top": ":\n\n"
+    },
+    {
+     "t": "```",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": "```"
+    },
+    {
+     "t": "python",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "python"
+    },
+    {
+     "t": "\n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "\n"
+    },
+    {
+     "t": "def",
+     "rank": 1,
+     "p_base": 0.6562,
+     "p_inst": 0.9258,
+     "base_top": "def"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.9414,
+     "p_inst": 0.9844,
+     "base_top": " is"
+    },
+    {
+     "t": "_prime",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": "_prime"
+    },
+    {
+     "t": "(n",
+     "rank": 1,
+     "p_base": 0.543,
+     "p_inst": 0.6758,
+     "base_top": "(n"
+    },
+    {
+     "t": "):\n",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9609,
+     "base_top": "):\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " \"\"\"\n",
+     "rank": 1,
+     "p_base": 0.7617,
+     "p_inst": 0.8633,
+     "base_top": " \"\"\"\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " Check",
+     "rank": 1,
+     "p_base": 0.8711,
+     "p_inst": 0.832,
+     "base_top": " Check"
+    },
+    {
+     "t": " if",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.9766,
+     "base_top": " if"
+    },
+    {
+     "t": " the",
+     "rank": 2,
+     "p_base": 0.0476,
+     "p_inst": 0.3457,
+     "base_top": " a"
+    },
+    {
+     "t": " given",
+     "rank": 1,
+     "p_base": 0.4062,
+     "p_inst": 0.8633,
+     "base_top": " given"
+    },
+    {
+     "t": " number",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9688,
+     "base_top": " number"
+    },
+    {
+     "t": " n",
+     "rank": 2,
+     "p_base": 0.0454,
+     "p_inst": 0.457,
+     "base_top": " is"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " is"
+    },
+    {
+     "t": " prime",
+     "rank": 1,
+     "p_base": 0.8633,
+     "p_inst": 0.707,
+     "base_top": " prime"
+    },
+    {
+     "t": ".\n",
+     "rank": 2,
+     "p_base": 0.3203,
+     "p_inst": 0.6133,
+     "base_top": ".\n\n"
+    },
+    {
+     "t": "    \n",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.7969,
+     "base_top": "    \n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " A",
+     "rank": 3,
+     "p_base": 0.1641,
+     "p_inst": 0.3672,
+     "base_top": " Parameters"
+    },
+    {
+     "t": " prime",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9844,
+     "base_top": " prime"
+    },
+    {
+     "t": " number",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " number"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9922,
+     "base_top": " is"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": " a"
+    },
+    {
+     "t": " natural",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9141,
+     "base_top": " natural"
+    },
+    {
+     "t": " number",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " number"
+    },
+    {
+     "t": " greater",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": " greater"
+    },
+    {
+     "t": " than",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " than"
+    },
+    {
+     "t": " ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " "
+    },
+    {
+     "t": "1",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "1"
+    },
+    {
+     "t": " that",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9609,
+     "base_top": " that"
+    },
+    {
+     "t": " has",
+     "rank": 1,
+     "p_base": 0.9336,
+     "p_inst": 0.9258,
+     "base_top": " has"
+    },
+    {
+     "t": " no",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " no"
+    },
+    {
+     "t": " positive",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " positive"
+    },
+    {
+     "t": " div",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 0.9922,
+     "base_top": " div"
+    },
+    {
+     "t": "isors",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "isors"
+    },
+    {
+     "t": " other",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " other"
+    },
+    {
+     "t": " than",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " than"
+    },
+    {
+     "t": " ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " "
+    },
+    {
+     "t": "1",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "1"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " and"
+    },
+    {
+     "t": " itself",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " itself"
+    },
+    {
+     "t": ".\n",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9844,
+     "base_top": ".\n"
+    },
+    {
+     "t": "    \n",
+     "rank": 1,
+     "p_base": 0.8164,
+     "p_inst": 0.6484,
+     "base_top": "    \n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " Parameters",
+     "rank": 2,
+     "p_base": 0.416,
+     "p_inst": 0.7031,
+     "base_top": " Args"
+    },
+    {
+     "t": ":\n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": ":\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 0.8164,
+     "p_inst": 0.9688,
+     "base_top": "   "
+    },
+    {
+     "t": " -",
+     "rank": 2,
+     "p_base": 0.2695,
+     "p_inst": 0.1631,
+     "base_top": " n"
+    },
+    {
+     "t": " n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " n"
+    },
+    {
+     "t": ":",
+     "rank": 1,
+     "p_base": 0.5547,
+     "p_inst": 0.6758,
+     "base_top": ":"
+    },
+    {
+     "t": " An",
+     "rank": 1,
+     "p_base": 0.3535,
+     "p_inst": 0.4102,
+     "base_top": " An"
+    },
+    {
+     "t": " integer",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " integer"
+    },
+    {
+     "t": "\n    \n",
+     "rank": 5,
+     "p_base": 0.0601,
+     "p_inst": 0.1196,
+     "base_top": " number"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " Returns",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " Returns"
+    },
+    {
+     "t": ":\n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": ":\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " -",
+     "rank": 1,
+     "p_base": 0.9609,
+     "p_inst": 0.9922,
+     "base_top": " -"
+    },
+    {
+     "t": " True",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.5234,
+     "base_top": " True"
+    },
+    {
+     "t": " if",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " if"
+    },
+    {
+     "t": " n",
+     "rank": 1,
+     "p_base": 0.9258,
+     "p_inst": 0.9766,
+     "base_top": " n"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " is"
+    },
+    {
+     "t": " prime",
+     "rank": 1,
+     "p_base": 0.8008,
+     "p_inst": 0.5938,
+     "base_top": " prime"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9844,
+     "base_top": ","
+    },
+    {
+     "t": " False",
+     "rank": 1,
+     "p_base": 0.957,
+     "p_inst": 0.9688,
+     "base_top": " False"
+    },
+    {
+     "t": " otherwise",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " otherwise"
+    },
+    {
+     "t": ".\n",
+     "rank": 1,
+     "p_base": 0.6758,
+     "p_inst": 0.875,
+     "base_top": ".\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.8945,
+     "base_top": "   "
+    },
+    {
+     "t": " \"\"\"\n",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9844,
+     "base_top": " \"\"\"\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.957,
+     "base_top": "   "
+    },
+    {
+     "t": " if",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.9609,
+     "base_top": " if"
+    },
+    {
+     "t": " n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " n"
+    },
+    {
+     "t": " <=",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.9414,
+     "base_top": " <="
+    },
+    {
+     "t": " ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " "
+    },
+    {
+     "t": "1",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "1"
+    },
+    {
+     "t": ":\n",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": ":\n"
+    },
+    {
+     "t": "       ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "       "
+    },
+    {
+     "t": " return",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " return"
+    },
+    {
+     "t": " False",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " False"
+    },
+    {
+     "t": "\n",
+     "rank": 1,
+     "p_base": 0.7227,
+     "p_inst": 0.8086,
+     "base_top": "\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " for",
+     "rank": 2,
+     "p_base": 0.3125,
+     "p_inst": 0.2031,
+     "base_top": " if"
+    },
+    {
+     "t": " i",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " i"
+    },
+    {
+     "t": " in",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " in"
+    },
+    {
+     "t": " range",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " range"
+    },
+    {
+     "t": "(",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "("
+    },
+    {
+     "t": "2",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "2"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": ","
+    },
+    {
+     "t": " int",
+     "rank": 1,
+     "p_base": 0.9766,
+     "p_inst": 0.9844,
+     "base_top": " int"
+    },
+    {
+     "t": "(n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "(n"
+    },
+    {
+     "t": "**",
+     "rank": 1,
+     "p_base": 0.6484,
+     "p_inst": 0.7773,
+     "base_top": "**"
+    },
+    {
+     "t": "0",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "0"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "."
+    },
+    {
+     "t": "5",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "5"
+    },
+    {
+     "t": ")",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9844,
+     "base_top": ")"
+    },
+    {
+     "t": " +",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " +"
+    },
+    {
+     "t": " ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " "
+    },
+    {
+     "t": "1",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "1"
+    },
+    {
+     "t": "):\n",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 0.9844,
+     "base_top": "):\n"
+    },
+    {
+     "t": "       ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "       "
+    },
+    {
+     "t": " if",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " if"
+    },
+    {
+     "t": " n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " n"
+    },
+    {
+     "t": " %",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " %"
+    },
+    {
+     "t": " i",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " i"
+    },
+    {
+     "t": " ==",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " =="
+    },
+    {
+     "t": " ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " "
+    },
+    {
+     "t": "0",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "0"
+    },
+    {
+     "t": ":\n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": ":\n"
+    },
+    {
+     "t": "           ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "           "
+    },
+    {
+     "t": " return",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " return"
+    },
+    {
+     "t": " False",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " False"
+    },
+    {
+     "t": "\n",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "\n"
+    },
+    {
+     "t": "   ",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "   "
+    },
+    {
+     "t": " return",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " return"
+    },
+    {
+     "t": " True",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " True"
+    },
+    {
+     "t": "\n\n",
+     "rank": 1,
+     "p_base": 0.6172,
+     "p_inst": 0.8047,
+     "base_top": "\n\n"
+    },
+    {
+     "t": "#",
+     "rank": 1,
+     "p_base": 0.8828,
+     "p_inst": 0.9844,
+     "base_top": "#"
+    },
+    {
+     "t": " Example",
+     "rank": 1,
+     "p_base": 0.9414,
+     "p_inst": 0.875,
+     "base_top": " Example"
+    },
+    {
+     "t": " usage",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9766,
+     "base_top": " usage"
+    },
+    {
+     "t": ":\n",
+     "rank": 1,
+     "p_base": 0.6758,
+     "p_inst": 0.8633,
+     "base_top": ":\n"
+    },
+    {
+     "t": "number",
+     "rank": 1,
+     "p_base": 0.5156,
+     "p_inst": 0.6211,
+     "base_top": "number"
+    },
+    {
+     "t": " =",
+     "rank": 1,
+     "p_base": 0.8164,
+     "p_inst": 0.6758,
+     "base_top": " ="
+    },
+    {
+     "t": " ",
+     "rank": 1,
+     "p_base": 0.8594,
+     "p_inst": 0.8594,
+     "base_top": " "
+    },
+    {
+     "t": "7",
+     "rank": 3,
+     "p_base": 0.0591,
+     "p_inst": 0.0991,
+     "base_top": "1"
+    },
+    {
+     "t": "\n",
+     "rank": 1,
+     "p_base": 0.9219,
+     "p_inst": 0.8906,
+     "base_top": "\n"
+    },
+    {
+     "t": "if",
+     "rank": 1,
+     "p_base": 0.5078,
+     "p_inst": 0.7812,
+     "base_top": "if"
+    },
+    {
+     "t": " is",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " is"
+    },
+    {
+     "t": "_prime",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "_prime"
+    },
+    {
+     "t": "(number",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "(number"
+    },
+    {
+     "t": "):",
+     "rank": 2,
+     "p_base": 0.0009,
+     "p_inst": 0.001,
+     "base_top": "):\n"
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\n>>> import random >>> from urllib import get_rand >>> import numpy as np >>> # 1: prime, 2: random >>> # 2: prime, 3: random >>> # 4: prime >>> # 5: prime >>> # 6: prime >>> # 7: prime >>> # 8: prime >>> # 9: prime >>> # 10: prime >>> # 11: prime >>> #",
+   "\n\nimport math import time import qualified math.random import time import matplotlib.pyplot as plt plt.drawImage() plt.drawString(\"*\") plt.stroke() plt.stroke(15) plt.drawLine() plt.drawCircle() plt.drawCircle(1000) plt.drawLine(100) pl"
+  ]
+ },
+ {
+  "prompt": "Can you help me write an excuse for missing work tomorrow?",
+  "base": [
+   " I'm not feeling well, and I'm afraid I won't be able to attend.\n\nI'm sorry to hear that you're feeling unwell. It's understandable that you might not feel well and be unable to attend work tomorrow. However, I can suggest some ways to help alleviate your symptoms and still be productive at work:\n\n1. Take a break: If possible, take a break from work and go for a walk or do some stretching exercises to alleviate any discomfort you may be experiencing.\n2. Communicate with your manager: If you're",
+   " Sure, what's the reason for your absence?\n\nWell, I have an urgent project due tomorrow and I need to finish it as soon as possible. I'll see you at 9am tomorrow."
+  ],
+  "urial": "I'm sorry, but I don't have any excuses for missing work. I'm here to help you with anything you need.",
+  "instruct": [
+   "Of course, I'd be happy to help you come up with a good excuse! Please provide more details about why you're unable to attend work today and any potential reasons that might have affected your ability to be there. This will help me tailor the suggestion to better fit your situation.",
+   "Of course! Here's an example of what I can say to try and convince myself of the need to stay productive:\n\n\"I am very busy today due to some unexpected commitments at work. However, I understand that having too many obligations on my plate can be challenging. If we can arrange for one day off or find another opportunity to contribute effectively without undue stress, I will absolutely take advantage of it. Let's make this up with each other, and I hope we all feel refreshed and ready to tackle our tasks more efficiently.\""
+  ],
+  "analysis": {
+   "answer": "Of course! Here's a sample excuse for missing work:\n\n\"I had to attend a crucial meeting with my boss and colleagues, which required me to be available 24/7. I was unable to make it to the office on time due to unforeseen circumstances, such as a family emergency or personal commitments. Despite this inconvenience, I am committed to completing all tasks assigned to me and will make up for lost time in the coming days.\"",
+   "tokens": [
+    {
+     "t": "Of",
+     "rank": 1,
+     "p_base": 0.2246,
+     "p_inst": 0.2812,
+     "base_top": "Of"
+    },
+    {
+     "t": " course",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " course"
+    },
+    {
+     "t": "!",
+     "rank": 1,
+     "p_base": 0.6523,
+     "p_inst": 0.4961,
+     "base_top": "!"
+    },
+    {
+     "t": " Here",
+     "rank": 2,
+     "p_base": 0.123,
+     "p_inst": 0.4902,
+     "base_top": " I"
+    },
+    {
+     "t": "'s",
+     "rank": 1,
+     "p_base": 0.6289,
+     "p_inst": 0.6289,
+     "base_top": "'s"
+    },
+    {
+     "t": " a",
+     "rank": 2,
+     "p_base": 0.2949,
+     "p_inst": 0.6641,
+     "base_top": " an"
+    },
+    {
+     "t": " sample",
+     "rank": 3,
+     "p_base": 0.0703,
+     "p_inst": 0.1982,
+     "base_top": " possible"
+    },
+    {
+     "t": " excuse",
+     "rank": 1,
+     "p_base": 0.6875,
+     "p_inst": 0.9336,
+     "base_top": " excuse"
+    },
+    {
+     "t": " for",
+     "rank": 1,
+     "p_base": 0.4922,
+     "p_inst": 0.6523,
+     "base_top": " for"
+    },
+    {
+     "t": " missing",
+     "rank": 1,
+     "p_base": 0.8438,
+     "p_inst": 0.9492,
+     "base_top": " missing"
+    },
+    {
+     "t": " work",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9844,
+     "base_top": " work"
+    },
+    {
+     "t": ":\n\n",
+     "rank": 2,
+     "p_base": 0.0713,
+     "p_inst": 0.1709,
+     "base_top": " tomorrow"
+    },
+    {
+     "t": "\"I",
+     "rank": 1,
+     "p_base": 0.1533,
+     "p_inst": 0.2109,
+     "base_top": "\"I"
+    },
+    {
+     "t": " had",
+     "rank": 3,
+     "p_base": 0.1123,
+     "p_inst": 0.293,
+     "base_top": "'m"
+    },
+    {
+     "t": " to",
+     "rank": 3,
+     "p_base": 0.1396,
+     "p_inst": 0.1768,
+     "base_top": " a"
+    },
+    {
+     "t": " attend",
+     "rank": 1,
+     "p_base": 0.3887,
+     "p_inst": 0.4746,
+     "base_top": " attend"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 0.7969,
+     "p_inst": 0.7461,
+     "base_top": " a"
+    },
+    {
+     "t": " crucial",
+     "rank": 3,
+     "p_base": 0.0547,
+     "p_inst": 0.1865,
+     "base_top": " meeting"
+    },
+    {
+     "t": " meeting",
+     "rank": 1,
+     "p_base": 0.8047,
+     "p_inst": 0.7031,
+     "base_top": " meeting"
+    },
+    {
+     "t": " with",
+     "rank": 1,
+     "p_base": 0.3242,
+     "p_inst": 0.3828,
+     "base_top": " with"
+    },
+    {
+     "t": " my",
+     "rank": 1,
+     "p_base": 0.3066,
+     "p_inst": 0.2246,
+     "base_top": " my"
+    },
+    {
+     "t": " boss",
+     "rank": 1,
+     "p_base": 0.5234,
+     "p_inst": 0.4062,
+     "base_top": " boss"
+    },
+    {
+     "t": " and",
+     "rank": 2,
+     "p_base": 0.0962,
+     "p_inst": 0.2158,
+     "base_top": ","
+    },
+    {
+     "t": " colleagues",
+     "rank": 2,
+     "p_base": 0.0505,
+     "p_inst": 0.0581,
+     "base_top": " a"
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.3281,
+     "p_inst": 0.4258,
+     "base_top": ","
+    },
+    {
+     "t": " which",
+     "rank": 1,
+     "p_base": 0.4414,
+     "p_inst": 0.5898,
+     "base_top": " which"
+    },
+    {
+     "t": " required",
+     "rank": 6,
+     "p_base": 0.0447,
+     "p_inst": 0.1138,
+     "base_top": " left"
+    },
+    {
+     "t": " me",
+     "rank": 1,
+     "p_base": 0.7227,
+     "p_inst": 0.6797,
+     "base_top": " me"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 1.0,
+     "base_top": " to"
+    },
+    {
+     "t": " be",
+     "rank": 1,
+     "p_base": 0.2002,
+     "p_inst": 0.1157,
+     "base_top": " be"
+    },
+    {
+     "t": " available",
+     "rank": 1,
+     "p_base": 0.3945,
+     "p_inst": 0.4922,
+     "base_top": " available"
+    },
+    {
+     "t": " ",
+     "rank": 3,
+     "p_base": 0.0859,
+     "p_inst": 0.1211,
+     "base_top": " for"
+    },
+    {
+     "t": "2",
+     "rank": 1,
+     "p_base": 0.6602,
+     "p_inst": 0.6055,
+     "base_top": "2"
+    },
+    {
+     "t": "4",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": "4"
+    },
+    {
+     "t": "/",
+     "rank": 1,
+     "p_base": 0.9414,
+     "p_inst": 0.9492,
+     "base_top": "/"
+    },
+    {
+     "t": "7",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": "7"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.6758,
+     "p_inst": 0.6367,
+     "base_top": "."
+    },
+    {
+     "t": " I",
+     "rank": 2,
+     "p_base": 0.1523,
+     "p_inst": 0.1807,
+     "base_top": " However"
+    },
+    {
+     "t": " was",
+     "rank": 1,
+     "p_base": 0.1943,
+     "p_inst": 0.1699,
+     "base_top": " was"
+    },
+    {
+     "t": " unable",
+     "rank": 1,
+     "p_base": 0.1416,
+     "p_inst": 0.1982,
+     "base_top": " unable"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " to"
+    },
+    {
+     "t": " make",
+     "rank": 2,
+     "p_base": 0.1196,
+     "p_inst": 0.1455,
+     "base_top": " attend"
+    },
+    {
+     "t": " it",
+     "rank": 1,
+     "p_base": 0.8828,
+     "p_inst": 0.7656,
+     "base_top": " it"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 0.418,
+     "p_inst": 0.6797,
+     "base_top": " to"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.4316,
+     "p_inst": 0.4961,
+     "base_top": " the"
+    },
+    {
+     "t": " office",
+     "rank": 2,
+     "p_base": 0.2734,
+     "p_inst": 0.2002,
+     "base_top": " meeting"
+    },
+    {
+     "t": " on",
+     "rank": 3,
+     "p_base": 0.125,
+     "p_inst": 0.1562,
+     "base_top": " due"
+    },
+    {
+     "t": " time",
+     "rank": 1,
+     "p_base": 0.5977,
+     "p_inst": 0.7461,
+     "base_top": " time"
+    },
+    {
+     "t": " due",
+     "rank": 1,
+     "p_base": 0.4902,
+     "p_inst": 0.3594,
+     "base_top": " due"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " to"
+    },
+    {
+     "t": " unfore",
+     "rank": 1,
+     "p_base": 0.5312,
+     "p_inst": 0.5547,
+     "base_top": " unfore"
+    },
+    {
+     "t": "seen",
+     "rank": 1,
+     "p_base": 0.9844,
+     "p_inst": 1.0,
+     "base_top": "seen"
+    },
+    {
+     "t": " circumstances",
+     "rank": 1,
+     "p_base": 0.9258,
+     "p_inst": 0.7812,
+     "base_top": " circumstances"
+    },
+    {
+     "t": ",",
+     "rank": 2,
+     "p_base": 0.2871,
+     "p_inst": 0.3477,
+     "base_top": "."
+    },
+    {
+     "t": " such",
+     "rank": 6,
+     "p_base": 0.0298,
+     "p_inst": 0.168,
+     "base_top": " and"
+    },
+    {
+     "t": " as",
+     "rank": 1,
+     "p_base": 1.0,
+     "p_inst": 1.0,
+     "base_top": " as"
+    },
+    {
+     "t": " a",
+     "rank": 1,
+     "p_base": 0.3672,
+     "p_inst": 0.4102,
+     "base_top": " a"
+    },
+    {
+     "t": " family",
+     "rank": 2,
+     "p_base": 0.1396,
+     "p_inst": 0.1406,
+     "base_top": " sudden"
+    },
+    {
+     "t": " emergency",
+     "rank": 1,
+     "p_base": 0.9062,
+     "p_inst": 0.9336,
+     "base_top": " emergency"
+    },
+    {
+     "t": " or",
+     "rank": 1,
+     "p_base": 0.5508,
+     "p_inst": 0.5078,
+     "base_top": " or"
+    },
+    {
+     "t": " personal",
+     "rank": 2,
+     "p_base": 0.1289,
+     "p_inst": 0.1582,
+     "base_top": " a"
+    },
+    {
+     "t": " commitments",
+     "rank": 1,
+     "p_base": 0.293,
+     "p_inst": 0.2812,
+     "base_top": " commitments"
+    },
+    {
+     "t": ".",
+     "rank": 1,
+     "p_base": 0.8203,
+     "p_inst": 0.7617,
+     "base_top": "."
+    },
+    {
+     "t": " Despite",
+     "rank": 3,
+     "p_base": 0.1357,
+     "p_inst": 0.1621,
+     "base_top": " I"
+    },
+    {
+     "t": " this",
+     "rank": 1,
+     "p_base": 0.4316,
+     "p_inst": 0.332,
+     "base_top": " this"
+    },
+    {
+     "t": " inconvenience",
+     "rank": 2,
+     "p_base": 0.1021,
+     "p_inst": 0.1157,
+     "base_top": ","
+    },
+    {
+     "t": ",",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": ","
+    },
+    {
+     "t": " I",
+     "rank": 1,
+     "p_base": 0.9492,
+     "p_inst": 0.9688,
+     "base_top": " I"
+    },
+    {
+     "t": " am",
+     "rank": 1,
+     "p_base": 0.1582,
+     "p_inst": 0.1777,
+     "base_top": " am"
+    },
+    {
+     "t": " committed",
+     "rank": 2,
+     "p_base": 0.1523,
+     "p_inst": 0.418,
+     "base_top": " grateful"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": " to"
+    },
+    {
+     "t": " completing",
+     "rank": 1,
+     "p_base": 0.2598,
+     "p_inst": 0.2617,
+     "base_top": " completing"
+    },
+    {
+     "t": " all",
+     "rank": 3,
+     "p_base": 0.1055,
+     "p_inst": 0.125,
+     "base_top": " my"
+    },
+    {
+     "t": " tasks",
+     "rank": 2,
+     "p_base": 0.1973,
+     "p_inst": 0.1445,
+     "base_top": " my"
+    },
+    {
+     "t": " assigned",
+     "rank": 1,
+     "p_base": 0.4512,
+     "p_inst": 0.5938,
+     "base_top": " assigned"
+    },
+    {
+     "t": " to",
+     "rank": 1,
+     "p_base": 0.7422,
+     "p_inst": 0.6992,
+     "base_top": " to"
+    },
+    {
+     "t": " me",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": " me"
+    },
+    {
+     "t": " and",
+     "rank": 1,
+     "p_base": 0.5039,
+     "p_inst": 0.6016,
+     "base_top": " and"
+    },
+    {
+     "t": " will",
+     "rank": 2,
+     "p_base": 0.1177,
+     "p_inst": 0.1455,
+     "base_top": " ensuring"
+    },
+    {
+     "t": " make",
+     "rank": 1,
+     "p_base": 0.373,
+     "p_inst": 0.4746,
+     "base_top": " make"
+    },
+    {
+     "t": " up",
+     "rank": 1,
+     "p_base": 0.4434,
+     "p_inst": 0.3984,
+     "base_top": " up"
+    },
+    {
+     "t": " for",
+     "rank": 1,
+     "p_base": 0.9688,
+     "p_inst": 0.9336,
+     "base_top": " for"
+    },
+    {
+     "t": " lost",
+     "rank": 3,
+     "p_base": 0.127,
+     "p_inst": 0.2266,
+     "base_top": " any"
+    },
+    {
+     "t": " time",
+     "rank": 1,
+     "p_base": 0.9922,
+     "p_inst": 0.9922,
+     "base_top": " time"
+    },
+    {
+     "t": " in",
+     "rank": 6,
+     "p_base": 0.0564,
+     "p_inst": 0.0796,
+     "base_top": " by"
+    },
+    {
+     "t": " the",
+     "rank": 1,
+     "p_base": 0.7656,
+     "p_inst": 0.7461,
+     "base_top": " the"
+    },
+    {
+     "t": " coming",
+     "rank": 1,
+     "p_base": 0.5781,
+     "p_inst": 0.5234,
+     "base_top": " coming"
+    },
+    {
+     "t": " days",
+     "rank": 1,
+     "p_base": 0.6758,
+     "p_inst": 0.4902,
+     "base_top": " days"
+    },
+    {
+     "t": ".\"",
+     "rank": 4,
+     "p_base": 0.1021,
+     "p_inst": 0.1621,
+     "base_top": "."
+    }
+   ]
+  },
+  "gpt2": [
+   "\n\nPlease email me at [email protected]\n\nEmail me at [email protected]\n\nIn the meantime, I have a few questions for you:\n\nHow can I make your job easier?\n\nHow do I get paid?\n\nHow do I get paid?\n\nHow do I get paid?\n\nWhat is the cost of the position?\n\nWhat",
+   "\n\nMaybe you've already done it, or you're just too lazy to take a break, or you've recently completed a project you're just too lazy to finish. Whatever the reason, you can always try to avoid those things if you have time.\n\n3. Avoid \"Stealing\" from Yourself\n\nIf you've been living in a state of failure for some time now,"
+  ]
+ }
+]

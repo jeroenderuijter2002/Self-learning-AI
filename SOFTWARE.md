@@ -16,7 +16,13 @@ Check of het werkt:
 python -c "import torch, numpy, tiktoken; print('torch', torch.__version__)"
 ```
 
-Een GPU is **niet** nodig voor module 1. Alles draait op een laptop-CPU, alleen O3 is dan wat trager. Op een Mac met Apple Silicon kan PyTorch de GPU gebruiken via `device="mps"`.
+Voor module 2 komen er drie pakketten bij (Hugging Face-datasets, LoRA en een fit-functie voor de figuren):
+
+```bash
+pip install datasets peft scipy
+```
+
+Een GPU is **niet** nodig voor module 1. Alles draait op een laptop-CPU, alleen O3 is dan wat trager. Ook de opdrachten van module 2 draaien op een CPU (reken op 10–30 minuten rekentijd per opdracht); voor de praktijkopdracht P2 is een gratis Colab-GPU handig. Op een Mac met Apple Silicon kan PyTorch de GPU gebruiken via `device="mps"`.
 
 ## Optie B: Google Colab
 

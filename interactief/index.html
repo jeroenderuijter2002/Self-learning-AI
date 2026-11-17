@@ -2,13 +2,15 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Speeltuinen: module 1</title>
+<title>Speeltuinen</title>
 <link rel="stylesheet" href="style.css"><script src="common.js"></script>
 </head>
 <body><main>
 <nav></nav>
-<h1>Speeltuinen bij module 1</h1>
-<p class="lead">Lezen is één ding, zelf aan de knoppen draaien is iets anders. Elke speeltuin hoort bij een hoofdstuk uit de notes. Alles draait in je browser; de modeldata komt uit het echte GPT-2.</p>
+<h1>Speeltuinen</h1>
+<p class="lead">Lezen is één ding, zelf aan de knoppen draaien is iets anders. Elke speeltuin hoort bij een hoofdstuk uit de notes. Alles draait in je browser; de modeldata komt uit echte modellen (GPT-2, Qwen2.5).</p>
+
+<h2>Module 1: Transformers van binnen</h2>
 
 <div class="cards">
   <a class="card" href="tokenizer.html"><div class="panel">
@@ -29,5 +31,17 @@
     <p class="hint">Hoort bij notes 1.4 en mini M1</p></div></a>
 </div>
 
-<div class="callout">De tokenizer-pagina haalt de echte tokenizers op van internet, dus die heeft een verbinding nodig. De andere pagina's werken ook offline. De data is gemaakt met <span class="mono">tools/export_interactive_data.py</span>.</div>
+<h2>Module 2: Van tekstvoorspeller naar assistent</h2>
+<div class="cards">
+  <a class="card" href="basis-vs-assistent.html"><div class="panel">
+    <h3>🤖 Basismodel vs assistent</h3>
+    <p>Dezelfde vraag aan GPT-2, een modern basismodel, dat basismodel met een slimme prompt, en de assistent-versie. Plus: welke tokens heeft de fine-tuning echt veranderd?</p>
+    <p class="hint">Hoort bij notes 2.1 en 2.3</p></div></a>
+  <a class="card" href="scaling.html"><div class="panel">
+    <h3>📈 Scaling-calculator</h3>
+    <p>Kies een compute-budget en zie de optimale modelgrootte volgens Chinchilla, waar echte modellen liggen, en wat er verandert als je inference meerekent.</p>
+    <p class="hint">Hoort bij notes 2.2 en opdracht O1</p></div></a>
+</div>
+
+<div class="callout">De tokenizer-pagina haalt de echte tokenizers op van internet, dus die heeft een verbinding nodig. De andere pagina's werken ook offline. De data is gemaakt met <span class="mono">tools/export_interactive_data.py</span> (module 1) en <span class="mono">tools/export_interactive_data_module02.py</span> (module 2).</div>
 </main></body></html>
